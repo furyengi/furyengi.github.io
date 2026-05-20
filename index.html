@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mahmud — furyengi</title>
+  <meta name="description" content="mahmud (@furyengi) — Backend & DevOps Engineer based in Lagos, Nigeria." />
+  <meta property="og:title" content="mahmud — furyengi" />
+  <meta property="og:description" content="Backend & DevOps Engineer. Builder of Orvel, VaultGate, BroilerTrack." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="mahmud — furyengi" />
+  <meta name="twitter:description" content="Backend & DevOps Engineer. Builder of Orvel, VaultGate, BroilerTrack." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --text-primary: #0a0a0a;
+      --text-secondary: #6b6b6b;
+      --text-tertiary: #aaaaaa;
+      --border: #e4e4e4;
+      --bg: #ffffff;
+      --amber: #BA7517;
+      --amber-hover: #EF9F27;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: #f0f0f0;
+        --text-secondary: #888888;
+        --text-tertiary: #555555;
+        --border: #2a2a2a;
+        --bg: #0d0d0d;
+        --amber: #EF9F27;
+        --amber-hover: #FAC775;
+      }
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 13.5px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--text-primary);
+      background: var(--bg);
+    }
+
+    .wrap {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    /* Nav */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 4rem;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    nav a:hover {
+      color: var(--text-primary);
+    }
+
+    nav .sep {
+      opacity: 0.3;
+    }
+
+    /* Header */
+    .name-block {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2.75rem;
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .handle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--amber);
+      letter-spacing: 0.02em;
+    }
+
+    .role {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .creator {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+    }
+
+    .creator a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.15s;
+    }
+
+    .creator a:hover {
+      color: var(--amber);
+    }
+
+    /* Socials */
+    .socials {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .socials a:hover {
+      color: var(--amber);
+      border-color: var(--amber-hover);
+    }
+
+    /* Section label */
+    h2 {
+      font-size: 10.5px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    /* Projects */
+    .projects {
+      list-style: none;
+      margin-bottom: 3.5rem;
+    }
+
+    .projects li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem;
+      align-items: start;
+      border-top: 1px solid var(--border);
+      padding: 0.85rem 0;
+    }
+
+    .projects li:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .proj-name {
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .proj-name:hover {
+      color: var(--amber);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .proj-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 3px;
+      line-height: 1.6;
+    }
+
+    .proj-url {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      text-align: right;
+      padding-top: 3px;
+      white-space: nowrap;
+    }
+
+    /* Footer */
+    footer {
+      font-size: 11px;
+      color: var(--text-tertiary);
+    }
+
+    footer span {
+      color: var(--amber);
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .wrap {
+        padding: 2rem 1.25rem 4rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      nav {
+        margin-bottom: 3rem;
+      }
+
+      .socials {
+        gap: 1.1rem;
+        margin-bottom: 3rem;
+      }
+
+      .projects li {
+        grid-template-columns: 1fr;
+      }
+
+      .proj-url {
+        text-align: left;
+        padding-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <nav>
+      <a href="/">mahmud</a>
+      <span class="sep">/</span>
+      <a href="#projects">projects</a>
+    </nav>
+
+    <div class="name-block">
+      <h1>mahmud</h1>
+      <span class="handle">@furyengi</span>
+    </div>
+
+    <p class="role">Backend &amp; DevOps Engineer</p>
+
+    <p class="creator">
+      Builder of <a href="https://orvel.dev" target="_blank" rel="noopener">Orvel</a>,
+      <a href="#" target="_blank" rel="noopener">VaultGate</a>, and
+      <a href="#" target="_blank" rel="noopener">BroilerTrack</a>.
+    </p>
+
+    <div class="socials">
+      <a href="https://github.com/furyengi" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/furyengi" target="_blank" rel="noopener">X</a>
+      <a href="https://tiktok.com/@furyengi" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:furyengi@gmail.com">Email</a>
+    </div>
+
+    <h2 id="projects">Projects</h2>
+
+    <ul class="projects">
+      <li>
+        <div>
+          <a class="proj-name" href="https://orvel.dev" target="_blank" rel="noopener">Orvel</a>
+          <p class="proj-desc">Push. Test. Deploy. Self-hosted CI/CD with AI-powered failure diagnosis.</p>
+        </div>
+        <span class="proj-url">orvel.dev</span>
+      </li>
+      <li>
+        <div>
+          <a class="proj-name" href="#" target="_blank" rel="noopener">VaultGate</a>
+          <p class="proj-desc">WireGuard &amp; OpenVPN management with real-time stats and QR config generation.</p>
+        </div>
+        <span class="proj-url">github.com</span>
+      </li>
+      <li>
+        <div>
+          <a class="proj-name" href="#" target="_blank" rel="noopener">BroilerTrack</a>
+          <p class="proj-desc">Offline-first PWA for broiler farm daily reporting, mortality tracking, and PDF export.</p>
+        </div>
+        <span class="proj-url">github.com</span>
+      </li>
+      <li>
+        <div>
+          <a class="proj-name" href="#" target="_blank" rel="noopener">Envar</a>
+          <p class="proj-desc">Self-hosted secrets manager. Your own Doppler, on your own infra.</p>
+        </div>
+        <span class="proj-url">envar.dev</span>
+      </li>
+      <li>
+        <div>
+          <a class="proj-name" href="#" target="_blank" rel="noopener">Fintech (WIP)</a>
+          <p class="proj-desc">Offline-first P2P transfers using Android Nearby API, SMS fallback, and ecash tokens.</p>
+        </div>
+        <span class="proj-url">private</span>
+      </li>
+    </ul>
+
+    <footer>© MMXXVI · <span>mahmud</span> · Lagos, Nigeria</footer>
+
+  </div>
+</body>
+</html>
