@@ -6,11 +6,11 @@
   <title>mahmud — furyengi</title>
   <meta name="description" content="mahmud (@furyengi) — Backend & DevOps Engineer based in Lagos, Nigeria." />
   <meta property="og:title" content="mahmud — furyengi" />
-  <meta property="og:description" content="Backend & DevOps Engineer. Builder of Orvel, VaultGate, BroilerTrack." />
+  <meta property="og:description" content="Backend & DevOps Engineer. Founder of Orvel — AI code review from the terminal." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="mahmud — furyengi" />
-  <meta name="twitter:description" content="Backend & DevOps Engineer. Builder of Orvel, VaultGate, BroilerTrack." />
+  <meta name="twitter:description" content="Backend & DevOps Engineer. Founder of Orvel — AI code review from the terminal." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
@@ -170,52 +170,83 @@
       margin-bottom: 1rem;
     }
 
-    /* Projects */
-    .projects {
-      list-style: none;
+    /* Project */
+    .project-detail {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 0;
       margin-bottom: 3.5rem;
     }
 
-    .projects li {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 0.75rem;
-      align-items: start;
-      border-top: 1px solid var(--border);
-      padding: 0.85rem 0;
+    .proj-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.7rem;
+      margin-bottom: 0.65rem;
+      flex-wrap: wrap;
     }
 
-    .projects li:last-child {
-      border-bottom: 1px solid var(--border);
+    .proj-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: -0.01em;
     }
 
-    .proj-name {
-      font-size: 13.5px;
-      font-weight: 400;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .proj-name:hover {
-      color: var(--amber);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .proj-desc {
+    .proj-tag {
+      font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
-      color: var(--text-secondary);
-      margin-top: 3px;
-      line-height: 1.6;
+      font-weight: 300;
+      color: var(--amber);
+      letter-spacing: 0.02em;
     }
 
-    .proj-url {
-      font-size: 11px;
-      color: var(--text-tertiary);
-      text-align: right;
-      padding-top: 3px;
-      white-space: nowrap;
+    .proj-tagline {
+      font-size: 13.5px;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .proj-body {
+      font-size: 13.5px;
+      line-height: 1.8;
+      max-width: 54ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .proj-features {
+      list-style: none;
+      margin-bottom: 1.75rem;
+    }
+
+    .proj-features li {
+      position: relative;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      padding-left: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .proj-features li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+    }
+
+    .proj-cta {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--amber-hover);
+      padding-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .proj-cta:hover {
+      color: var(--amber-hover);
     }
 
     /* Footer */
@@ -247,13 +278,8 @@
         margin-bottom: 3rem;
       }
 
-      .projects li {
-        grid-template-columns: 1fr;
-      }
-
-      .proj-url {
-        text-align: left;
-        padding-top: 0;
+      .proj-title {
+        font-size: 1.6rem;
       }
     }
   </style>
@@ -264,7 +290,7 @@
     <nav>
       <a href="/">mahmud</a>
       <span class="sep">/</span>
-      <a href="#projects">projects</a>
+      <a href="#project">project</a>
     </nav>
 
     <div class="name-block">
@@ -275,9 +301,7 @@
     <p class="role">Backend &amp; DevOps Engineer</p>
 
     <p class="creator">
-      Builder of <a href="https://orvel.dev" target="_blank" rel="noopener">Orvel</a>,
-      <a href="#" target="_blank" rel="noopener">VaultGate</a>, and
-      <a href="#" target="_blank" rel="noopener">BroilerTrack</a>.
+      Founder of <a href="https://orvel.dev" target="_blank" rel="noopener">Orvel</a>.
     </p>
 
     <div class="socials">
@@ -287,45 +311,27 @@
       <a href="mailto:furyengi@gmail.com">Email</a>
     </div>
 
-    <h2 id="projects">Projects</h2>
+    <h2 id="project">Project</h2>
 
-    <ul class="projects">
-      <li>
-        <div>
-          <a class="proj-name" href="https://orvel.dev" target="_blank" rel="noopener">Orvel</a>
-          <p class="proj-desc">Push. Test. Deploy. Self-hosted CI/CD with AI-powered failure diagnosis.</p>
-        </div>
-        <span class="proj-url">orvel.dev</span>
-      </li>
-      <li>
-        <div>
-          <a class="proj-name" href="#" target="_blank" rel="noopener">VaultGate</a>
-          <p class="proj-desc">WireGuard &amp; OpenVPN management with real-time stats and QR config generation.</p>
-        </div>
-        <span class="proj-url">github.com</span>
-      </li>
-      <li>
-        <div>
-          <a class="proj-name" href="#" target="_blank" rel="noopener">BroilerTrack</a>
-          <p class="proj-desc">Offline-first PWA for broiler farm daily reporting, mortality tracking, and PDF export.</p>
-        </div>
-        <span class="proj-url">github.com</span>
-      </li>
-      <li>
-        <div>
-          <a class="proj-name" href="#" target="_blank" rel="noopener">Envar</a>
-          <p class="proj-desc">Self-hosted secrets manager. Your own Doppler, on your own infra.</p>
-        </div>
-        <span class="proj-url">envar.dev</span>
-      </li>
-      <li>
-        <div>
-          <a class="proj-name" href="#" target="_blank" rel="noopener">Fintech (WIP)</a>
-          <p class="proj-desc">Offline-first P2P transfers using Android Nearby API, SMS fallback, and ecash tokens.</p>
-        </div>
-        <span class="proj-url">private</span>
-      </li>
-    </ul>
+    <div class="project-detail">
+      <div class="proj-header">
+        <h3 class="proj-title">Orvel</h3>
+        <span class="proj-tag">orvel.dev</span>
+      </div>
+      <p class="proj-tagline">AI code review, right in your terminal.</p>
+      <p class="proj-body">
+        Orvel reviews your code the way a sharp senior engineer would —
+        catching bugs, security issues, and style problems before you even
+        open a pull request. Fast, contextual feedback, straight from the
+        command line.
+      </p>
+      <ul class="proj-features">
+        <li>Runs from your terminal — no CI setup required</li>
+        <li>Flags bugs, security issues, and style problems before you commit</li>
+        <li>Fast, plain-language feedback you can act on right away</li>
+      </ul>
+      <a class="proj-cta" href="https://orvel.dev" target="_blank" rel="noopener">Visit orvel.dev →</a>
+    </div>
 
     <footer>© MMXXVI · <span>mahmud</span> · ilorin, Nigeria</footer>
 
