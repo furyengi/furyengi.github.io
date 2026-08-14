@@ -4,47 +4,103 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.svg?v=avatar-2" type="image/svg+xml">
-  <title>mahmud — furyengi</title>
+  <title>mahmud - furyengi</title>
   <meta name="description" content="Mahmud (@furyengi) is a backend developer focused on APIs, auth, databases, webhooks, payments, automation, and deployment fixes.">
-  <meta property="og:title" content="mahmud — furyengi">
+  <meta property="og:title" content="mahmud - furyengi">
   <meta property="og:description" content="Backend developer focused on APIs, auth, databases, webhooks, payments, automation, and deployment fixes.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="mahmud — furyengi">
+  <meta name="twitter:title" content="mahmud - furyengi">
   <meta name="twitter:description" content="Backend developer focused on APIs, auth, databases, webhooks, payments, automation, and deployment fixes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box} :root{--text:#0a0a0a;--muted:#686868;--soft:#aaa;--line:#e4e4e4;--bg:#fff;--accent:#BA7517} @media (prefers-color-scheme:dark){:root{--text:#f0f0f0;--muted:#909090;--soft:#555;--line:#2a2a2a;--bg:#0d0d0d;--accent:#EF9F27}} body{margin:0;font-family:'JetBrains Mono','Courier New',monospace;font-size:13.5px;font-weight:300;line-height:1.75;color:var(--text);background:var(--bg)} .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem} nav{display:flex;gap:.4rem;margin-bottom:4rem;font-size:12px;color:var(--muted)} a{color:inherit;text-underline-offset:3px} nav a{text-decoration:none;color:var(--muted)} nav a:hover,.project a:hover{color:var(--accent)} .sep{opacity:.35}.name{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.5rem} h1{font-family:'Newsreader',Georgia,serif;font-size:2.75rem;font-weight:300;line-height:1.05;margin:0}.handle{color:var(--accent);font-size:13px}.role,.availability{color:var(--muted)}.role{margin:.4rem 0 .35rem}.availability{max-width:600px;margin:0 0 1.75rem;font-size:12.5px}.availability strong{color:var(--text);font-weight:400}.links{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:4rem}.links a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)} h2{font-size:10.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:0 0 1rem}.projects{list-style:none;margin:0 0 3.5rem;padding:0}.project{display:grid;grid-template-columns:1fr auto;gap:.75rem;align-items:start;border-top:1px solid var(--line);padding:.9rem 0}.project:last-child{border-bottom:1px solid var(--line)}.project h3{margin:0;font-size:13.5px;font-weight:400}.project p{margin:3px 0 0;color:var(--muted);font-size:12px;line-height:1.6}.actions{display:flex;gap:.45rem;white-space:nowrap}.actions a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:.08rem .48rem;font-size:11px}.services{border-top:1px solid var(--line);padding-top:.9rem;margin-bottom:3.5rem}.services p{margin:0;color:var(--muted);font-size:12.5px} footer{font-size:11px;color:var(--soft)} footer span{color:var(--accent)} @media (max-width:480px){.wrap{padding:2rem 1.25rem 4rem}h1{font-size:2.2rem}.project{grid-template-columns:1fr}.actions{padding-top:.2rem}}
+    *{box-sizing:border-box}
+    :root{--text:#0a0a0a;--muted:#686868;--soft:#aaa;--line:#e4e4e4;--bg:#fff;--accent:#BA7517}
+    @media (prefers-color-scheme:dark){:root{--text:#f0f0f0;--muted:#909090;--soft:#555;--line:#2a2a2a;--bg:#0d0d0d;--accent:#EF9F27}}
+    body{margin:0;font-family:'JetBrains Mono','Courier New',monospace;font-size:13.5px;font-weight:300;line-height:1.75;color:var(--text);background:var(--bg)}
+    .symbols{display:none}
+    .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+    nav{display:flex;gap:.4rem;margin-bottom:4rem;font-size:12px;color:var(--muted)}
+    a{color:inherit;text-underline-offset:3px}
+    nav a{text-decoration:none;color:var(--muted)}
+    nav a:hover,.project a:hover,.icon:hover{color:var(--accent);border-color:var(--accent)}
+    .sep{opacity:.35}
+    .name{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.5rem}
+    h1{font-family:'Newsreader',Georgia,serif;font-size:2.75rem;font-weight:300;line-height:1.05;margin:0}
+    .handle{color:var(--accent);font-size:13px}
+    .role,.availability{color:var(--muted)}
+    .role{margin:.4rem 0 .35rem}
+    .availability{max-width:600px;margin:0 0 1.75rem;font-size:12.5px}
+    .availability strong{color:var(--text);font-weight:400}
+    .links{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:4rem}
+    .icon{width:31px;height:31px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:color .15s ease,border-color .15s ease}
+    .icon svg{width:15px;height:15px;display:block;fill:currentColor}
+    .icon.stroke svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    h2{font-size:10.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:0 0 1rem}
+    .projects{list-style:none;margin:0 0 3.5rem;padding:0}
+    .project{display:grid;grid-template-columns:1fr auto;gap:.75rem;align-items:start;border-top:1px solid var(--line);padding:.9rem 0}
+    .project:last-child{border-bottom:1px solid var(--line)}
+    .project h3{margin:0;font-size:13.5px;font-weight:400}
+    .project p{margin:3px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
+    .actions{display:flex;gap:.45rem;white-space:nowrap}
+    .actions .icon{width:28px;height:28px}
+    .actions .icon svg{width:14px;height:14px}
+    .services{border-top:1px solid var(--line);padding-top:.9rem;margin-bottom:3.5rem}
+    .services p{margin:0;color:var(--muted);font-size:12.5px}
+    footer{font-size:11px;color:var(--soft)}
+    footer span{color:var(--accent)}
+    @media (max-width:480px){.wrap{padding:2rem 1.25rem 4rem}h1{font-size:2.2rem}.project{grid-template-columns:1fr}.actions{padding-top:.2rem}}
   </style>
 </head>
 <body>
+  <svg class="symbols" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.7 2.6 3.4 1.9.1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18.9 2.3h3.3l-7.2 8.3 8.5 11.1h-6.7l-5.2-6.8-6 6.8H2.3l7.7-8.8L1.9 2.3h6.8l4.7 6.2 5.5-6.2Zm-1.2 17.5h1.8L7.7 4.1H5.8l11.9 15.7Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm16.4 2H4.6l7.4 5.4L19.4 7ZM5 17h14V9.1l-7 5.1-7-5.1V17Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3Z"/></symbol>
+  </svg>
   <main class="wrap">
     <nav><a href="/">mahmud</a><span class="sep">/</span><a href="#projects">projects</a><span class="sep">/</span><a href="mailto:furyengi@gmail.com">contact</a></nav>
 
     <div class="name"><h1>mahmud</h1><span class="handle">@furyengi</span></div>
-    <p class="role">Backend Developer · APIs, auth, databases, webhooks, payments, automation</p>
+    <p class="role">Backend Developer - APIs, auth, databases, webhooks, payments, automation</p>
     <p class="availability"><strong>Available this week</strong> for backend/API tasks: bug fixes, auth/login issues, database CRUD, Stripe/Paystack webhooks, deployment errors, automation scripts, and WordPress/Shopify backend integrations.</p>
 
     <div class="links">
-      <a href="https://github.com/furyengi" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://x.com/furyengi" target="_blank" rel="noopener">X</a>
-      <a href="mailto:furyengi@gmail.com">Email</a>
+      <a class="icon" href="https://github.com/furyengi" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg><use href="#i-github"></use></svg></a>
+      <a class="icon" href="https://x.com/furyengi" target="_blank" rel="noopener" aria-label="X" title="X"><svg><use href="#i-x"></use></svg></a>
+      <a class="icon" href="mailto:furyengi@gmail.com" aria-label="Email" title="Email"><svg><use href="#i-mail"></use></svg></a>
     </div>
 
     <h2 id="projects">Backend Proof</h2>
     <ul class="projects">
-      <li class="project"><div><h3>Scalable API Platform</h3><p>FastAPI backend with JWT auth, PostgreSQL, Redis caching, Celery background jobs, Alembic migrations, Docker, and tests.</p></div><div class="actions"><a href="https://github.com/furyengi/scalable-api" target="_blank" rel="noopener">Code</a></div></li>
-      <li class="project"><div><h3>Webhook Billing Notifications</h3><p>Node.js backend that verifies Stripe-style webhook signatures, processes billing events idempotently, queues notifications, and exposes admin endpoints.</p></div><div class="actions"><a href="https://github.com/furyengi/webhook-billing-notifications" target="_blank" rel="noopener">Code</a></div></li>
-      <li class="project"><div><h3>RunXR</h3><p>A free, self-hosted CI/CD application for running deployment workflows on your own infrastructure.</p></div><div class="actions"><a href="https://runxr-furyengi.pxxlspace.cv" target="_blank" rel="noopener">Live</a><a href="https://github.com/furyengi/runxr" target="_blank" rel="noopener">Code</a></div></li>
-      <li class="project"><div><h3>Evnar</h3><p>A developer tool for securely managing environment variables and project configuration.</p></div><div class="actions"><a href="https://evnar.vercel.app" target="_blank" rel="noopener">Live</a><a href="https://github.com/furyengi/evnar" target="_blank" rel="noopener">Code</a></div></li>
-      <li class="project"><div><h3>Stackprint</h3><p>A privacy-first stack trace formatter that redacts common secrets before you share an error.</p></div><div class="actions"><a href="https://furyengi.is-a.dev/stackprint/" target="_blank" rel="noopener">Live</a><a href="https://github.com/furyengi/stackprint" target="_blank" rel="noopener">Code</a></div></li>
+      <li class="project">
+        <div><h3>Scalable API Platform</h3><p>FastAPI backend with JWT auth, PostgreSQL, Redis caching, Celery background jobs, Alembic migrations, Docker, and tests.</p></div>
+        <div class="actions"><a class="icon" href="https://github.com/furyengi/scalable-api" target="_blank" rel="noopener" aria-label="View Scalable API Platform code" title="Code"><svg><use href="#i-github"></use></svg></a></div>
+      </li>
+      <li class="project">
+        <div><h3>Webhook Billing Notifications</h3><p>Node.js backend that verifies Stripe-style webhook signatures, processes billing events idempotently, queues notifications, and exposes admin endpoints.</p></div>
+        <div class="actions"><a class="icon" href="https://github.com/furyengi/webhook-billing-notifications" target="_blank" rel="noopener" aria-label="View Webhook Billing Notifications code" title="Code"><svg><use href="#i-github"></use></svg></a></div>
+      </li>
+      <li class="project">
+        <div><h3>RunXR</h3><p>A free, self-hosted CI/CD application for running deployment workflows on your own infrastructure.</p></div>
+        <div class="actions"><a class="icon stroke" href="https://runxr-furyengi.pxxlspace.cv" target="_blank" rel="noopener" aria-label="View RunXR live site" title="Live"><svg><use href="#i-globe"></use></svg></a><a class="icon" href="https://github.com/furyengi/runxr" target="_blank" rel="noopener" aria-label="View RunXR code" title="Code"><svg><use href="#i-github"></use></svg></a></div>
+      </li>
+      <li class="project">
+        <div><h3>Evnar</h3><p>A developer tool for securely managing environment variables and project configuration.</p></div>
+        <div class="actions"><a class="icon stroke" href="https://evnar.vercel.app" target="_blank" rel="noopener" aria-label="View Evnar live site" title="Live"><svg><use href="#i-globe"></use></svg></a><a class="icon" href="https://github.com/furyengi/evnar" target="_blank" rel="noopener" aria-label="View Evnar code" title="Code"><svg><use href="#i-github"></use></svg></a></div>
+      </li>
+      <li class="project">
+        <div><h3>Stackprint</h3><p>A privacy-first stack trace formatter that redacts common secrets before you share an error.</p></div>
+        <div class="actions"><a class="icon stroke" href="https://furyengi.is-a.dev/stackprint/" target="_blank" rel="noopener" aria-label="View Stackprint live site" title="Live"><svg><use href="#i-globe"></use></svg></a><a class="icon" href="https://github.com/furyengi/stackprint" target="_blank" rel="noopener" aria-label="View Stackprint code" title="Code"><svg><use href="#i-github"></use></svg></a></div>
+      </li>
     </ul>
 
-    <section class="services"><h2>Quick Tasks</h2><p>API fixes · Auth/login issues · Database CRUD · Webhooks · Payment integrations · Deployment errors · Automation scripts · WordPress/Shopify backend integrations</p></section>
+    <section class="services"><h2>Quick Tasks</h2><p>API fixes - Auth/login issues - Database CRUD - Webhooks - Payment integrations - Deployment errors - Automation scripts - WordPress/Shopify backend integrations</p></section>
 
-    <footer>© MMXXVI · <span>mahmud</span> · ilorin, Nigeria</footer>
+    <footer>&copy; MMXXVI - <span>mahmud</span> - ilorin, Nigeria</footer>
   </main>
 </body>
 </html>
