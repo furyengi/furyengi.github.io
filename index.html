@@ -1,358 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/favicon.svg?v=avatar-2" type="image/svg+xml" />
-  <title>mahmud — furyengi</title>
-  <meta name="description" content="mahmud (@furyengi) — Software Engineer based in Lagos, Nigeria." />
-  <meta property="og:title" content="mahmud — furyengi" />
-  <meta property="og:description" content="Software Engineer based in Lagos, Nigeria." />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="mahmud — furyengi" />
-  <meta name="twitter:description" content="Software Engineer based in Lagos, Nigeria." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.svg?v=avatar-2" type="image/svg+xml">
+  <title>mahmud - furyengi</title>
+  <meta name="description" content="Mahmud (@furyengi) - Software Engineer based in Ilorin, Nigeria.">
+  <meta property="og:title" content="mahmud - furyengi">
+  <meta property="og:description" content="Software Engineer building backend systems, apps, tools, and practical products.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://furyengi.is-a.dev/">
+  <meta property="og:image" content="https://furyengi.is-a.dev/favicon.svg?v=avatar-2">
+  <meta property="og:image:alt" content="Mahmud Abdulmalik profile image">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="mahmud - furyengi">
+  <meta name="twitter:description" content="Software Engineer building backend systems, apps, tools, and practical products.">
+  <meta name="twitter:image" content="https://furyengi.is-a.dev/favicon.svg?v=avatar-2">
+  <meta name="twitter:image:alt" content="Mahmud Abdulmalik profile image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --text-primary: #0a0a0a;
-      --text-secondary: #6b6b6b;
-      --text-tertiary: #aaaaaa;
-      --border: #e4e4e4;
-      --bg: #ffffff;
-      --amber: #BA7517;
-      --amber-hover: #EF9F27;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text-primary: #f0f0f0;
-        --text-secondary: #888888;
-        --text-tertiary: #555555;
-        --border: #2a2a2a;
-        --bg: #0d0d0d;
-        --amber: #EF9F27;
-        --amber-hover: #FAC775;
-      }
-    }
-
-    html {
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: 'JetBrains Mono', 'Courier New', monospace;
-      font-size: 13.5px;
-      font-weight: 300;
-      line-height: 1.75;
-      color: var(--text-primary);
-      background: var(--bg);
-    }
-
-    .wrap {
-      max-width: 660px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
-    }
-
-    /* Nav */
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 4rem;
-      font-size: 12px;
-      color: var(--text-secondary);
-    }
-
-    nav a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    nav a:hover {
-      color: var(--text-primary);
-    }
-
-    nav .sep {
-      opacity: 0.3;
-    }
-
-    /* Header */
-    .name-block {
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: baseline;
-      gap: 0.7rem;
-      flex-wrap: wrap;
-    }
-
-    h1 {
-      font-family: 'Newsreader', Georgia, serif;
-      font-size: 2.75rem;
-      font-weight: 300;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-    }
-
-    .handle {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--amber);
-      letter-spacing: 0.02em;
-    }
-
-    .role {
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-top: 0.4rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .creator {
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-bottom: 1.75rem;
-    }
-
-    .creator a {
-      color: var(--text-primary);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1px;
-      transition: color 0.15s;
-    }
-
-    .creator a:hover {
-      color: var(--amber);
-    }
-
-    /* Socials */
-    .socials {
-      display: flex;
-      gap: 1.5rem;
-      margin-bottom: 4rem;
-      flex-wrap: wrap;
-    }
-
-    .socials a {
-      font-size: 13px;
-      color: var(--text-secondary);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-
-    .socials a:hover {
-      color: var(--amber);
-      border-color: var(--amber-hover);
-    }
-
-
-    .socials {
-      gap: 0.7rem;
-    }
-
-    .socials a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 29px;
-      height: 29px;
-      padding: 0;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-    }
-
-    .socials a:hover {
-      border-color: var(--amber);
-    }
-
-    .socials svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    .cv-button {
-      width: auto !important;
-      min-width: 96px;
-      padding: 0 0.8rem !important;
-      border-radius: 999px !important;
-      font-size: 10.5px !important;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    /* Section label */
-    h2 {
-      font-size: 10.5px;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-tertiary);
-      margin-bottom: 1rem;
-    }
-
-    /* Projects */
-    .projects {
-      list-style: none;
-      margin-bottom: 3.5rem;
-    }
-
-    .projects li {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 0.75rem;
-      align-items: start;
-      border-top: 1px solid var(--border);
-      padding: 0.85rem 0;
-    }
-
-    .projects li:last-child {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .proj-name {
-      font-size: 13.5px;
-      font-weight: 400;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .proj-name:hover {
-      color: var(--amber);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .proj-desc {
-      font-size: 12px;
-      color: var(--text-secondary);
-      margin-top: 3px;
-      line-height: 1.6;
-    }
-
-    .proj-url {
-      font-size: 11px;
-      color: var(--text-tertiary);
-      text-align: right;
-      padding-top: 3px;
-      white-space: nowrap;
-    }
-
-
-
-    .view-all {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      margin-top: -2.25rem;
-      margin-bottom: 3.5rem;
-      color: var(--text-primary);
-      font-size: 12px;
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 2px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-
-    .view-all:hover {
-      color: var(--amber);
-      border-color: var(--amber);
-    }
-
-    .project-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding-top: 1px;
-    }
-
-    .project-action {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      color: var(--text-secondary);
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      transition: color 0.15s, border-color 0.15s, background 0.15s;
-    }
-
-    .project-action:hover {
-      color: var(--amber);
-      border-color: var(--amber);
-      background: color-mix(in srgb, var(--amber) 8%, transparent);
-    }
-
-    .project-action svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    /* Footer */
-    footer {
-      font-size: 11px;
-      color: var(--text-tertiary);
-    }
-
-    footer span {
-      color: var(--amber);
-    }
-
-    /* Mobile */
-    @media (max-width: 480px) {
-      .wrap {
-        padding: 2rem 1.25rem 4rem;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      nav {
-        margin-bottom: 3rem;
-      }
-
-      .socials {
-        gap: 1.1rem;
-        margin-bottom: 3rem;
-      }
-
-      .projects li {
-        grid-template-columns: 1fr;
-      }
-
-      .proj-url {
-        text-align: left;
-        padding-top: 0;
-      }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--text:#0a0a0a;--muted:#6b6b6b;--soft:#aaa;--line:#e4e4e4;--bg:#fff;--accent:#BA7517}
+    @media (prefers-color-scheme:dark){:root{--text:#f0f0f0;--muted:#888;--soft:#555;--line:#2a2a2a;--bg:#0d0d0d;--accent:#EF9F27}}
+    body{font-family:'JetBrains Mono','Courier New',monospace;font-size:13.5px;font-weight:300;line-height:1.75;color:var(--text);background:var(--bg)}
+    .wrap{max-width:660px;margin:0 auto;padding:3rem 1.5rem 5rem}
+    nav{display:flex;align-items:center;gap:.4rem;margin-bottom:4rem;font-size:12px;color:var(--muted)}
+    a{color:inherit;text-underline-offset:3px}
+    nav a{color:var(--muted);text-decoration:none;transition:color .15s}
+    nav a:hover,.project-link:hover,.icon:hover,.cv-button:hover{color:var(--accent);border-color:var(--accent)}
+    .sep{opacity:.3}
+    .name-block{margin-bottom:.5rem;display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+    h1{font-family:'Newsreader',Georgia,serif;font-size:2.75rem;font-weight:300;line-height:1.05;letter-spacing:-.02em}
+    .handle{font-size:13px;color:var(--accent);letter-spacing:.02em}
+    .role{font-size:13px;color:var(--muted);margin:.4rem 0 .35rem}
+    .socials{display:flex;gap:.7rem;margin-bottom:4rem;flex-wrap:wrap;align-items:center}
+    .icon,.cv-button{display:inline-flex;align-items:center;justify-content:center;height:29px;color:var(--muted);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:color .15s,border-color .15s}
+    .icon{width:29px}
+    .icon svg{width:14px;height:14px}
+    .cv-button{width:auto;padding:0 .8rem;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase}
+    h2{font-size:10.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:1rem}
+    .projects{list-style:none;margin-bottom:3.5rem}
+    .projects li{display:grid;grid-template-columns:1fr auto;gap:.75rem;align-items:start;border-top:1px solid var(--line);padding:.85rem 0}
+    .projects li:last-child{border-bottom:1px solid var(--line)}
+    .project-name{font-size:13.5px;font-weight:400;color:var(--text)}
+    .project-desc{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.6}
+    .project-actions{display:flex;gap:.45rem;padding-top:1px}
+    .project-link{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);border:1px solid var(--line);border-radius:50%;text-decoration:none;transition:color .15s,border-color .15s}
+    .project-link svg{width:14px;height:14px}
+    .view-all{display:inline-flex;align-items:center;gap:.55rem;margin-top:-2.25rem;margin-bottom:3.5rem;color:var(--text);font-size:12px;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .15s,border-color .15s}
+    .view-all:hover{color:var(--accent);border-color:var(--accent)}
+    footer{font-size:11px;color:var(--soft)}
+    footer span{color:var(--accent)}
+    @media (max-width:480px){.wrap{padding:2rem 1.25rem 4rem}h1{font-size:2.2rem}nav{margin-bottom:3rem}.socials{margin-bottom:3rem}.projects li{grid-template-columns:1fr}.project-actions{padding-top:.2rem}}
   </style>
 </head>
 <body>
   <div class="wrap">
-
-    <nav>
-      <a href="/">mahmud</a>
-      <span class="sep">/</span>
-      <a href="#projects">projects</a>
-    </nav>
+    <nav><a href="/">mahmud</a><span class="sep">/</span><a href="#projects">projects</a></nav>
 
     <div class="name-block">
       <h1>mahmud</h1>
@@ -362,71 +68,24 @@
     <p class="role">Software Engineer</p>
 
     <div class="socials">
-      <a href="https://github.com/furyengi" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a>
-      <a href="https://x.com/furyengi" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.38L6.49 22H3.38l7.24-8.28L2.98 2h6.4l4.42 5.84L18.9 2Zm-1.09 18h1.72L8.44 3.9H6.59L17.81 20Z"/></svg></a>
-      <a href="https://tiktok.com/@furyengi" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.28 1.78 1.28 3.35 2.78 4.31v3.14a8.25 8.25 0 0 1-2.78-.48v5.97a6.1 6.1 0 1 1-5.28-6.04v3.17a3.03 3.03 0 1 0 2.12 2.89V3h3.16Z"/></svg></a>
-      <a href="mailto:furyengi@gmail.com" aria-label="Email furyengi@gmail.com" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3.5 5.5h17v13h-17v-13Zm0 .5 8.5 6.5L20.5 6"/></svg></a>
-    
-      <a class="cv-button" href="/Mahmud_CV.pdf" download>Download CV</a></div>
+      <a class="icon" href="https://github.com/furyengi" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a>
+      <a class="icon" href="https://x.com/furyengi" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.38L6.49 22H3.38l7.24-8.28L2.98 2h6.4l4.42 5.84L18.9 2Zm-1.09 18h1.72L8.44 3.9H6.59L17.81 20Z"/></svg></a>
+      <a class="icon" href="https://tiktok.com/@furyengi" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.28 1.78 1.28 3.35 2.78 4.31v3.14a8.25 8.25 0 0 1-2.78-.48v5.97a6.1 6.1 0 1 1-5.28-6.04v3.17a3.03 3.03 0 1 0 2.12 2.89V3h3.16Z"/></svg></a>
+      <a class="icon" href="mailto:furyengi@gmail.com" aria-label="Email furyengi@gmail.com" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3.5 5.5h17v13h-17v-13Zm0 .5 8.5 6.5L20.5 6"/></svg></a>
+      <a class="cv-button" href="/Mahmud_CV.pdf" download>Download CV</a>
+    </div>
 
     <h2 id="projects">Projects</h2>
-
     <ul class="projects">
-      <li>
-        <div>
-          <span class="proj-name">RunXR</span>
-          <p class="proj-desc">A free, self-hosted CI/CD application for your own infrastructure.</p>
-        </div>
-        <div class="project-actions">
-          <a class="project-action" href="https://runxr-furyengi.pxxlspace.cv" target="_blank" rel="noopener" aria-label="View RunXR live site" title="View live site"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-8.5-9h17M12 3c2.2 2.46 3.3 5.46 3.3 9S14.2 18.54 12 21c-2.2-2.46-3.3-5.46-3.3-9S9.8 5.46 12 3Z"/></svg></a>
-          <a class="project-action" href="https://github.com/furyengi/runxr" target="_blank" rel="noopener" aria-label="View RunXR on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <span class="proj-name">Maze Mates</span>
-          <p class="proj-desc">A browser-based genetic algorithm that learns to solve a maze.</p>
-        </div>
-        <div class="project-actions">
-          <a class="project-action" href="https://furyengi.is-a.dev/maze-genetic-algorithm/" target="_blank" rel="noopener" aria-label="View Maze Mates live site" title="View live site"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-8.5-9h17M12 3c2.2 2.46 3.3 5.46 3.3 9S14.2 18.54 12 21c-2.2-2.46-3.3-5.46-3.3-9S9.8 5.46 12 3Z"/></svg></a>
-          <a class="project-action" href="https://github.com/furyengi/maze-genetic-algorithm" target="_blank" rel="noopener" aria-label="View Maze Mates on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <span class="proj-name">Evnar</span>
-          <p class="proj-desc">A web app for securely managing environment variables across projects.</p>
-        </div>
-        <div class="project-actions">
-          <a class="project-action" href="https://evnar.vercel.app" target="_blank" rel="noopener" aria-label="View Evnar live site" title="View live site"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-8.5-9h17M12 3c2.2 2.46 3.3 5.46 3.3 9S14.2 18.54 12 21c-2.2-2.46-3.3-5.46-3.3-9S9.8 5.46 12 3Z"/></svg></a>
-          <a class="project-action" href="https://github.com/furyengi/evnar" target="_blank" rel="noopener" aria-label="View Evnar on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <span class="proj-name">Excuse Factory</span>
-          <p class="proj-desc">A playful excuse generator for life’s everyday disasters, with copy, escalation, and saved-favorite features.</p>
-        </div>
-        <div class="project-actions">
-          <a class="project-action" href="https://furyengi.is-a.dev/excuse-factory/" target="_blank" rel="noopener" aria-label="View Excuse Factory live site" title="View live site"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-8.5-9h17M12 3c2.2 2.46 3.3 5.46 3.3 9S14.2 18.54 12 21c-2.2-2.46-3.3-5.46-3.3-9S9.8 5.46 12 3Z"/></svg></a>
-          <a class="project-action" href="https://github.com/furyengi/excuse-factory" target="_blank" rel="noopener" aria-label="View Excuse Factory on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a>
-        </div>
-      </li>
-      <li>
-        <div>
-          <span class="proj-name">Stackprint</span>
-          <p class="proj-desc">A privacy-first stack trace formatter that redacts common secrets before you share an error.</p>
-        </div>
-        <div class="project-actions">
-          <a class="project-action" href="https://furyengi.is-a.dev/stackprint/" target="_blank" rel="noopener" aria-label="View Stackprint live site" title="View live site"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-8.5-9h17M12 3c2.2 2.46 3.3 5.46 3.3 9S14.2 18.54 12 21c-2.2-2.46-3.3-5.46-3.3-9S9.8 5.46 12 3Z"/></svg></a>
-          <a class="project-action" href="https://github.com/furyengi/stackprint" target="_blank" rel="noopener" aria-label="View Stackprint on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a>
-        </div>
-      </li>
+      <li><div><span class="project-name">RunXR</span><p class="project-desc">A free, self-hosted CI/CD application for your own infrastructure.</p></div><div class="project-actions"><a class="project-link" href="https://runxr-furyengi.pxxlspace.cv" target="_blank" rel="noopener" aria-label="View RunXR live site" title="View live site"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-8.5-9h17M12 3c2.2 2.46 3.3 5.46 3.3 9S14.2 18.54 12 21c-2.2-2.46-3.3-5.46-3.3-9S9.8 5.46 12 3Z"/></svg></a><a class="project-link" href="https://github.com/furyengi/runxr" target="_blank" rel="noopener" aria-label="View RunXR on GitHub" title="View on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05A9.33 9.33 0 0 1 12 7.2c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.78-4.58 5.04.36.32.68.93.68 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg></a></div></li>
+      <li><div><span class="project-name">Maze Mates</span><p class="project-desc">A browser-based genetic algorithm that learns to solve a maze.</p></div><div class="project-actions"><a class="project-link" href="https://furyengi.is-a.dev/maze-genetic-algorithm/" target="_blank" rel="noopener" aria-label="View Maze Mates live site" title="View live site">live</a><a class="project-link" href="https://github.com/furyengi/maze-genetic-algorithm" target="_blank" rel="noopener" aria-label="View Maze Mates on GitHub" title="View on GitHub">git</a></div></li>
+      <li><div><span class="project-name">Evnar</span><p class="project-desc">A web app for securely managing environment variables across projects.</p></div><div class="project-actions"><a class="project-link" href="https://evnar.vercel.app" target="_blank" rel="noopener" aria-label="View Evnar live site" title="View live site">live</a><a class="project-link" href="https://github.com/furyengi/evnar" target="_blank" rel="noopener" aria-label="View Evnar on GitHub" title="View on GitHub">git</a></div></li>
+      <li><div><span class="project-name">Excuse Factory</span><p class="project-desc">A playful excuse generator for life's everyday disasters, with copy, escalation, and saved-favorite features.</p></div><div class="project-actions"><a class="project-link" href="https://furyengi.is-a.dev/excuse-factory/" target="_blank" rel="noopener" aria-label="View Excuse Factory live site" title="View live site">live</a><a class="project-link" href="https://github.com/furyengi/excuse-factory" target="_blank" rel="noopener" aria-label="View Excuse Factory on GitHub" title="View on GitHub">git</a></div></li>
+      <li><div><span class="project-name">Stackprint</span><p class="project-desc">A privacy-first stack trace formatter that redacts common secrets before you share an error.</p></div><div class="project-actions"><a class="project-link" href="https://furyengi.is-a.dev/stackprint/" target="_blank" rel="noopener" aria-label="View Stackprint live site" title="View live site">live</a><a class="project-link" href="https://github.com/furyengi/stackprint" target="_blank" rel="noopener" aria-label="View Stackprint on GitHub" title="View on GitHub">git</a></div></li>
     </ul>
     <a class="view-all" href="https://github.com/furyengi?tab=repositories" target="_blank" rel="noopener">View all projects <span aria-hidden="true">→</span></a>
 
-    <footer>© MMXXVI · <span>mahmud</span> · ilorin, Nigeria</footer>
-
+    <footer>&copy; MMXXVI - <span>mahmud</span> - ilorin, Nigeria</footer>
   </div>
 </body>
 </html>
