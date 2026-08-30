@@ -20,8 +20,11 @@
   <meta property="og:description" content="Backend and Cloud Engineer building secure APIs, developer infrastructure, and cloud-ready systems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://furyengi.is-a.dev/">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/176532918?v=4">
-  <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/176532918?v=4">
+  <meta property="og:image" content="https://furyengi.is-a.dev/furyengi-profile.jpeg">
+  <meta property="og:image:secure_url" content="https://furyengi.is-a.dev/furyengi-profile.jpeg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1080">
+  <meta property="og:image:height" content="1080">
   <meta property="og:image:alt" content="Furyengi — Mahmud Abdulmalik, Backend and Cloud Engineer">
   <meta property="profile:first_name" content="Mahmud">
   <meta property="profile:last_name" content="Abdulmalik">
@@ -31,7 +34,7 @@
   <meta name="twitter:creator" content="@furyengi">
   <meta name="twitter:title" content="Furyengi (Mahmud Abdulmalik) — Backend & Cloud Engineer">
   <meta name="twitter:description" content="Official portfolio of Furyengi, also known as Mahmud Abdulmalik: backend engineering, cloud infrastructure, APIs, CI/CD, and software projects.">
-  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/176532918?v=4">
+  <meta name="twitter:image" content="https://furyengi.is-a.dev/furyengi-profile.jpeg">
   <meta name="twitter:image:alt" content="Furyengi — Mahmud Abdulmalik, Backend and Cloud Engineer">
   <script type="application/ld+json">
   {
@@ -43,7 +46,13 @@
         "name": "Mahmud Abdulmalik",
         "alternateName": ["Furyengi", "@furyengi", "Mahmud"],
         "url": "https://furyengi.is-a.dev/",
-        "image": "https://avatars.githubusercontent.com/u/176532918?v=4",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://furyengi.is-a.dev/furyengi-profile.jpeg",
+          "width": 1080,
+          "height": 1080,
+          "caption": "Furyengi, the online identity of Mahmud Abdulmalik"
+        },
         "jobTitle": "Backend and Cloud Engineer",
         "description": "Backend and Cloud Engineer building secure APIs, developer infrastructure, cloud-ready systems, and practical software products.",
         "email": "mailto:furyengi@gmail.com",
@@ -62,10 +71,18 @@
           "FastAPI", "Django", "Node.js", "TypeScript", "PostgreSQL",
           "Docker", "GitHub Actions", "CI/CD", "Google Cloud"
         ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Galen Africa"
-        }
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Galen Africa",
+            "url": "https://galen.africa/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Afrigenomed",
+            "url": "https://afrigenomed.com/"
+          }
+        ]
       },
       {
         "@type": "ProfilePage",
@@ -106,6 +123,7 @@
     nav a:hover,.project-link:hover,.icon:hover,.cv-button:hover,.view-all:hover{color:var(--accent);border-color:var(--accent)}
     .sep{opacity:.3}
     .hero{margin-bottom:4rem}
+    .profile-image{width:88px;height:88px;object-fit:cover;border:1px solid var(--line);border-radius:22px;margin-bottom:1.25rem}
     .name-block{margin-bottom:.5rem;display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
     h1{font-family:'Newsreader',Georgia,serif;font-size:2.75rem;font-weight:300;line-height:1.05;letter-spacing:-.02em}
     .handle{font-size:13px;color:var(--accent);letter-spacing:.02em}
@@ -124,6 +142,8 @@
     .timeline-date{font-size:11px;color:var(--soft)}
     .timeline-title{font-size:13px;font-weight:400}
     .timeline-org{font-size:11.5px;color:var(--accent);margin:.1rem 0 .3rem}
+    .timeline-org a{color:inherit;text-decoration:none}
+    .timeline-org a:hover{text-decoration:underline}
     .timeline-desc{font-size:12px;color:var(--muted);line-height:1.65}
     .projects{list-style:none}
     .projects li{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;border-top:1px solid var(--line);padding:1.05rem 0}
@@ -166,6 +186,7 @@
     </nav>
 
     <header class="hero">
+      <img class="profile-image" src="/furyengi-profile.jpeg" width="1080" height="1080" alt="Furyengi, the online identity of Mahmud Abdulmalik" fetchpriority="high">
       <div class="name-block">
         <h1>Mahmud Abdulmalik</h1>
         <span class="handle">@furyengi</span>
@@ -195,7 +216,7 @@
             <span class="timeline-date">2025 - present</span>
             <div>
               <p class="timeline-title">App Developer / Team Lead</p>
-              <p class="timeline-org">Galen Africa</p>
+              <p class="timeline-org"><a href="https://galen.africa/" target="_blank" rel="noopener">Galen Africa</a></p>
               <p class="timeline-desc">Lead development of GalenDesk, working across application architecture, database workflows, backend integrations, product direction, and reliability.</p>
             </div>
           </li>
@@ -203,7 +224,7 @@
             <span class="timeline-date">2024 - 2026</span>
             <div>
               <p class="timeline-title">Backend Developer</p>
-              <p class="timeline-org">Afrigenomed</p>
+              <p class="timeline-org"><a href="https://afrigenomed.com/" target="_blank" rel="noopener">Afrigenomed</a></p>
               <p class="timeline-desc">Built Node.js backend logic for users, content, and learning workflows in a learning management system.</p>
             </div>
           </li>
