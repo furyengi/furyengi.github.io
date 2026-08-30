@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://furyengi.is-a.dev/sitemap.xml
