@@ -64,14 +64,13 @@ main {
   margin: auto;
 }
 .top-grid {
-  height: 132px;
+  height: 150px;
   border-bottom: 1px dashed var(--line);
-}
-.top-grid div {
-  height: 100%;
-  margin: 0 12px;
-  background-image: radial-gradient(var(--line) 0.8px, transparent 0.8px);
-  background-size: 7px 7px;
+  background-color: #fff;
+  background-image: url("https://pbs.twimg.com/profile_banners/1819287389346439168/1790025311/1500x500");
+  background-position: center 47%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .block {
   padding: 16px 12px;
@@ -647,7 +646,8 @@ footer a {
     width: 100%;
   }
   .top-grid {
-    height: 80px;
+    height: 110px;
+    background-position: center 47%;
   }
   .identity {
     grid-template-columns: 78px 1fr;
