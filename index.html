@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.svg?v=avatar-2" type="image/svg+xml">
-  <title>furyengi</title>
+  <title>Furyengi — Mahmud Abdulmalik | Full-Stack Engineer</title>
   <meta name="description" content="furyengi is Mahmud Abdulmalik, a Full-Stack Engineer in Ilorin, Nigeria. Explore his APIs, cloud infrastructure, CI/CD work, projects, experience, and profiles.">
   <meta name="author" content="Mahmud Abdulmalik (furyengi)">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -15,8 +15,10 @@
   <link rel="me" href="https://x.com/furyengi">
   <link rel="me" href="https://www.tiktok.com/@furyengi">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Machine-readable portfolio index">
+  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete technical profile">
   <meta property="og:site_name" content="furyengi">
-  <meta property="og:title" content="furyengi">
+  <meta property="og:title" content="Furyengi — Mahmud Abdulmalik | Full-Stack Engineer">
   <meta property="og:description" content="Full-Stack Engineer building secure APIs, developer infrastructure, and cloud-ready systems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://furyengi.is-a.dev/">
@@ -29,10 +31,10 @@
   <meta property="profile:first_name" content="Mahmud">
   <meta property="profile:last_name" content="Abdulmalik">
   <meta property="profile:username" content="furyengi">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@furyengi">
   <meta name="twitter:creator" content="@furyengi">
-  <meta name="twitter:title" content="furyengi">
+  <meta name="twitter:title" content="Furyengi — Mahmud Abdulmalik | Full-Stack Engineer">
   <meta name="twitter:description" content="Official portfolio of furyengi, also known as Mahmud Abdulmalik: backend engineering, cloud infrastructure, APIs, CI/CD, and software projects.">
   <meta name="twitter:image" content="https://furyengi.is-a.dev/furyengi-profile.jpeg">
   <meta name="twitter:image:alt" content="furyengi — Mahmud Abdulmalik, Full-Stack Engineer">
@@ -112,46 +114,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--text:#0a0a0a;--muted:#6b6b6b;--soft:#aaa;--line:#e4e4e4;--bg:#fff;--accent:#BA7517;--tag:#f6f3ee}
-    @media (prefers-color-scheme:dark){:root{--text:#f0f0f0;--muted:#989898;--soft:#666;--line:#2a2a2a;--bg:#0d0d0d;--accent:#EF9F27;--tag:#1c1915}}
+    :root{--text:#101010;--muted:#626262;--soft:#8b8b8b;--line:#ddd8cf;--bg:#f7f5f0;--panel:#fff;--accent:#a85f0d;--accent-2:#e9d5b7;--tag:#f2eee7;--shadow:0 22px 60px rgba(56,42,20,.08)}
+    @media (prefers-color-scheme:dark){:root{--text:#f3f1ec;--muted:#aaa59d;--soft:#77726b;--line:#302d28;--bg:#11100e;--panel:#181613;--accent:#f0a34a;--accent-2:#4d3822;--tag:#24211d;--shadow:0 24px 70px rgba(0,0,0,.28)}}
     html{scroll-behavior:smooth}
-    body{font-family:'JetBrains Mono','Courier New',monospace;font-size:13.5px;font-weight:300;line-height:1.75;color:var(--text);background:var(--bg)}
-    .wrap{max-width:720px;margin:0 auto;padding:3rem 1.5rem 5rem}
-    nav{display:flex;align-items:center;gap:.4rem;margin-bottom:4rem;font-size:12px;color:var(--muted);flex-wrap:wrap}
+    body{font-family:'JetBrains Mono','Courier New',monospace;font-size:16px;font-weight:300;line-height:1.7;color:var(--text);background:radial-gradient(circle at 85% 0%,var(--accent-2),transparent 28rem),var(--bg)}
+    .wrap{max-width:1000px;margin:0 auto;padding:2rem 1.5rem 5rem}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:3rem;font-size:14px;color:var(--muted);flex-wrap:wrap}
+    .nav-links{display:flex;gap:1.25rem;align-items:center}
     a{color:inherit;text-underline-offset:3px}
     nav a{color:var(--muted);text-decoration:none;transition:color .15s}
     nav a:hover,.project-link:hover,.icon:hover,.cv-button:hover,.view-all:hover{color:var(--accent);border-color:var(--accent)}
     .sep{opacity:.3}
-    .hero{margin-bottom:4rem}
-    .profile-image{width:88px;height:88px;object-fit:cover;border:1px solid var(--line);border-radius:22px;margin-bottom:1.25rem}
+    .hero{position:relative;margin-bottom:5rem;padding:clamp(1.5rem,5vw,3.5rem);border:1px solid var(--line);border-radius:28px;background:color-mix(in srgb,var(--panel) 92%,transparent);box-shadow:var(--shadow);overflow:hidden}
+    .hero::after{content:'F';position:absolute;right:-.5rem;bottom:-6.5rem;font-family:'Newsreader',serif;font-size:22rem;line-height:1;color:var(--accent);opacity:.055;pointer-events:none}
+    .profile-image{width:112px;height:112px;object-fit:cover;border:1px solid var(--line);border-radius:30px;margin-bottom:1.75rem;box-shadow:0 12px 30px rgba(0,0,0,.08)}
     .name-block{margin-bottom:.5rem;display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
-    h1{font-family:'Newsreader',Georgia,serif;font-size:2.75rem;font-weight:300;line-height:1.05;letter-spacing:-.02em}
-    .handle{font-size:13px;color:var(--accent);letter-spacing:.02em}
-    .role{font-size:14px;color:var(--text);margin:.45rem 0 .35rem;font-weight:400}
-    .intro{max-width:610px;font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:1.2rem}
+    h1{font-family:'Newsreader',Georgia,serif;font-size:clamp(3rem,8vw,5.5rem);font-weight:300;line-height:.95;letter-spacing:-.045em}
+    .handle{font-size:14px;color:var(--accent);letter-spacing:.02em}
+    .role{font-size:17px;color:var(--text);margin:1rem 0 .65rem;font-weight:400}
+    .intro{max-width:720px;font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
+    .status{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:12px;color:var(--muted)}
+    .status::before{content:'';width:7px;height:7px;border-radius:50%;background:#24a148;box-shadow:0 0 0 4px color-mix(in srgb,#24a148 15%,transparent)}
     .socials{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
-    .icon,.cv-button{display:inline-flex;align-items:center;justify-content:center;height:29px;color:var(--muted);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:color .15s,border-color .15s}
-    .icon{width:29px}
+    .icon,.cv-button{display:inline-flex;align-items:center;justify-content:center;height:38px;color:var(--muted);border:1px solid var(--line);border-radius:999px;text-decoration:none;transition:transform .15s,color .15s,border-color .15s,background .15s;background:var(--panel)}
+    .icon:hover,.cv-button:hover{transform:translateY(-2px)}
+    .icon{width:38px}
     .icon svg{width:14px;height:14px}
-    .cv-button{width:auto;padding:0 .8rem;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase}
+    .cv-button{width:auto;padding:0 1rem;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
     section{margin-bottom:3.75rem;scroll-margin-top:2rem}
-    h2{font-size:10.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:1rem}
-    .about{font-size:12.5px;color:var(--muted);line-height:1.75;max-width:650px}
+    h2{font-size:13px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-bottom:1.25rem}
+    .about{font-family:'Newsreader',Georgia,serif;font-size:clamp(1.5rem,3vw,2.15rem);color:var(--text);line-height:1.35;max-width:850px}
     .timeline{list-style:none;border-top:1px solid var(--line)}
     .timeline li{display:grid;grid-template-columns:155px 1fr;gap:1rem;border-bottom:1px solid var(--line);padding:1rem 0}
     .timeline-date{font-size:11px;color:var(--soft)}
-    .timeline-title{font-size:13px;font-weight:400}
-    .timeline-org{font-size:11.5px;color:var(--accent);margin:.1rem 0 .3rem}
+    .timeline-title{font-size:15px;font-weight:400}
+    .timeline-org{font-size:13px;color:var(--accent);margin:.1rem 0 .3rem}
     .timeline-org a{color:inherit;text-decoration:none}
     .timeline-org a:hover{text-decoration:underline}
-    .timeline-desc{font-size:12px;color:var(--muted);line-height:1.65}
-    .projects{list-style:none}
-    .projects li{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;border-top:1px solid var(--line);padding:1.05rem 0}
-    .projects li:last-child{border-bottom:1px solid var(--line)}
-    .project-name{font-size:13.5px;font-weight:400;color:var(--text)}
-    .project-desc{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.65}
+    .timeline-desc{font-size:14px;color:var(--muted);line-height:1.7}
+    .projects{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+    .projects li{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;border:1px solid var(--line);border-radius:18px;padding:1.35rem;background:var(--panel);transition:transform .18s,border-color .18s,box-shadow .18s}
+    .projects li:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:var(--shadow)}
+    .project-name{font-size:15px;font-weight:400;color:var(--text)}
+    .project-desc{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.65}
     .tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.55rem}
-    .tag{font-size:9.5px;color:var(--muted);background:var(--tag);border-radius:999px;padding:.15rem .45rem;line-height:1.6}
+    .tag{font-size:11px;color:var(--muted);background:var(--tag);border-radius:999px;padding:.2rem .5rem;line-height:1.6}
     .project-actions{display:flex;gap:.45rem;padding-top:1px}
     .project-link{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);border:1px solid var(--line);border-radius:50%;text-decoration:none;transition:color .15s,border-color .15s}
     .project-link svg{width:14px;height:14px}
@@ -160,18 +167,18 @@
     .skill-group{padding:1rem 1rem 1rem 0;border-bottom:1px solid var(--line)}
     .skill-group:nth-child(odd){border-right:1px solid var(--line)}
     .skill-group:nth-child(even){padding-left:1rem}
-    .skill-title{font-size:11.5px;font-weight:400;color:var(--text);margin-bottom:.3rem}
-    .skill-list{font-size:11.5px;color:var(--muted);line-height:1.7}
-    footer{font-size:11px;color:var(--soft)}
+    .skill-title{font-size:14px;font-weight:400;color:var(--text);margin-bottom:.3rem}
+    .skill-list{font-size:13px;color:var(--muted);line-height:1.7}
+    footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--line);font-size:12px;color:var(--soft)}
     footer span{color:var(--accent)}
     @media (max-width:560px){
-      .wrap{padding:2rem 1.25rem 4rem}
-      h1{font-size:2.2rem}
+      .wrap{padding:1.25rem 1rem 3rem}
       nav{margin-bottom:3rem}
       .hero{margin-bottom:3rem}
       section{margin-bottom:3rem}
       .timeline li{grid-template-columns:1fr;gap:.25rem}
-      .projects li{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}
+      .projects li{grid-template-columns:1fr auto}
       .project-actions{padding-top:.2rem}
       .skill-grid{grid-template-columns:1fr}
       .skill-group,.skill-group:nth-child(even){padding:1rem 0}
@@ -182,10 +189,12 @@
 <body>
   <div class="wrap">
     <nav aria-label="Primary navigation">
-      <a href="/" aria-label="Portfolio home">portfolio/</a>
+      <a href="/" aria-label="Portfolio home"><strong>furyengi</strong>/</a>
+      <div class="nav-links"><a href="#projects">work</a><a href="/about.html">about</a><a href="mailto:furyengi@gmail.com">contact</a></div>
     </nav>
 
     <header class="hero">
+      <span class="status">Open to engineering opportunities</span>
       <img class="profile-image" src="/furyengi-profile.jpeg" width="1080" height="1080" alt="furyengi, the online identity of Mahmud Abdulmalik" fetchpriority="high">
       <div class="name-block">
         <h1>Mahmud Abdulmalik</h1>
@@ -298,7 +307,7 @@
             </div>
           </li>
         </ul>
-        <a class="view-all" href="https://github.com/furyengi?tab=repositories" target="_blank" rel="noopener">View all projects <span aria-hidden="true">→</span></a>
+        <a class="view-all" href="/projects.html">Explore project case studies</a>
       </section>
 
       <section id="skills">
@@ -325,7 +334,7 @@
 
     </main>
 
-    <footer>&copy; MMXXVI - <span>mahmud</span> - ilorin, Nigeria</footer>
+    <footer><span>&copy; 2026 Mahmud Abdulmalik</span><span>Ilorin, Nigeria · @furyengi</span></footer>
   </div>
 </body>
 </html>

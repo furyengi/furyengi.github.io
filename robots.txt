@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://furyengi.is-a.dev/sitemap.xml
+
+# Machine-readable portfolio context
+# https://furyengi.is-a.dev/llms.txt
+# https://furyengi.is-a.dev/llms-full.txt

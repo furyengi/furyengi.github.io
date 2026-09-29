@@ -1,0 +1,31 @@
+# Furyengi — Mahmud Abdulmalik
+
+> Official portfolio of Mahmud Abdulmalik, known online as Furyengi, a full-stack engineer in Ilorin, Nigeria focused on backend systems, cloud infrastructure, developer tools, and practical software products.
+
+## Primary pages
+- [Portfolio](https://furyengi.is-a.dev/)
+- [About](https://furyengi.is-a.dev/about.html)
+- [Projects](https://furyengi.is-a.dev/projects.html)
+- [Résumé](https://furyengi.is-a.dev/Mahmud_CV.pdf)
+
+## Verified profiles
+- [GitHub](https://github.com/furyengi)
+- [X](https://x.com/furyengi)
+- [TikTok](https://www.tiktok.com/@furyengi)
+
+## Professional identity
+- Name: Mahmud Abdulmalik
+- Username: furyengi
+- Role: Full-Stack Engineer
+- Location: Ilorin, Nigeria
+- Current organization: Galen Africa
+- Previous organization: Afrigenomed
+- Focus: Backend engineering, APIs, cloud infrastructure, CI/CD, security tooling, and offline-first applications
+
+## Selected work
+- Prismor open-source AI security contribution
+- Scalable API Platform
+- RunXR self-hosted CI/CD
+- Evnar secrets manager
+- GalenDesk pharmacy operations application
+- Webhook Billing and Notifications

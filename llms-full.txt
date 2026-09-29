@@ -1,0 +1,36 @@
+# Mahmud Abdulmalik (Furyengi) — Technical Profile
+
+Mahmud Abdulmalik, known online as Furyengi, is a full-stack engineer based in Ilorin, Nigeria. His work centers on secure backend services, cloud-ready infrastructure, developer tooling, CI/CD systems, and practical products with clear operational behavior.
+
+## Experience
+
+### Galen Africa — App Developer / Team Lead (2025–present)
+Leads development of GalenDesk across application architecture, database workflows, backend integrations, product direction, and reliability.
+
+### Afrigenomed — Backend Developer (2024–2026)
+Built Node.js backend logic for users, content, and learning workflows in a learning-management system.
+
+## Core technologies
+Python, FastAPI, Django, Node.js, Express, TypeScript, PostgreSQL, MySQL, SQLite, Redis, SQLAlchemy, Celery, Supabase, Docker, GitHub Actions, Google Cloud, Cloudflare Tunnel, Linux, React, Next.js, React Native, Expo, and Electron.
+
+## Projects
+
+### Prismor contribution
+Improved an AI-security proxy so callers can distinguish upstream provider authentication failures from policy refusals across buffered and streaming responses. Added automated tests and local OpenAI-compatible backend guidance.
+
+### Scalable API Platform
+Production-oriented task API with JWT authentication, asynchronous data access, caching, background jobs, migrations, containerized environments, and CI.
+
+### RunXR
+Self-hosted CI/CD platform with GitHub OAuth, signed webhooks, persistent build jobs, live logs, and an isolated Docker-first runner.
+
+### Evnar
+Self-hosted secrets manager based on encrypted storage, multiple environments, and a CLI-first workflow.
+
+### GalenDesk
+Offline-first pharmacy inventory and point-of-sale application with transactional FEFO stock deduction, batch tracking, and expiry alerts.
+
+### Webhook Billing and Notifications
+Webhook-driven backend with HMAC signature verification, idempotent event processing, subscription-state synchronization, and queued notifications.
+
+Canonical identity and links are maintained at https://furyengi.is-a.dev/.
