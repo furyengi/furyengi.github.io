@@ -128,7 +128,7 @@ h3 {
 }
 .identity-copy .handle {
   margin: 1px 0 4px;
-  color: #2563eb;
+  color: #1687a7;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.25;
@@ -156,7 +156,7 @@ h3 {
     transform 0.15s ease;
 }
 .profile-socials a:hover {
-  color: #2563eb;
+  color: #1687a7;
   transform: translateY(-1px);
 }
 .profile-socials .hgi-stroke {
@@ -266,8 +266,8 @@ h3 {
   border-radius: 50%;
 }
 .activity-heading a:hover {
-  color: #2563eb;
-  border-color: #60a5fa;
+  color: #1687a7;
+  border-color: #63c7dc;
 }
 .contribution-scroll {
   overflow-x: auto;
@@ -316,10 +316,10 @@ h3 {
 .squares,
 .legend {
   --blue-0: #ffffff;
-  --blue-1: #bfdbfe;
-  --blue-2: #60a5fa;
-  --blue-3: #2563eb;
-  --blue-4: #1d4ed8;
+  --blue-1: #dff7fb;
+  --blue-2: #a8e3ee;
+  --blue-3: #63c7dc;
+  --blue-4: #269dbb;
 }
 .squares {
   display: grid;
@@ -352,7 +352,7 @@ h3 {
   background: var(--blue-4);
 }
 .squares i:hover {
-  outline: 1px solid #1d4ed8;
+  outline: 1px solid #1687a7;
   outline-offset: 1px;
 }
 .activity-footer {
@@ -373,10 +373,10 @@ h3 {
 [data-theme="dark"] .squares,
 [data-theme="dark"] .legend {
   --blue-0: #ffffff;
-  --blue-1: #1e3a8a;
-  --blue-2: #1d4ed8;
-  --blue-3: #3b82f6;
-  --blue-4: #93c5fd;
+  --blue-1: #164e63;
+  --blue-2: #1687a7;
+  --blue-3: #63c7dc;
+  --blue-4: #b8eef5;
 }
 .cards,
 .project-list {
