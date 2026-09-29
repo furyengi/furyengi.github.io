@@ -17,7 +17,7 @@
       content="https://furyengi.is-a.dev/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css" />
+    <link rel="stylesheet" href="/site.css?v=profile-2" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -42,8 +42,10 @@
       <div class="top-grid"><div></div></div>
       <section class="block profile">
         <div class="identity">
-          <img src="/furyengi-profile.jpeg" alt="Furyengi profile avatar" />
-          <div class="online"></div>
+          <div class="avatar-wrap">
+            <img src="/furyengi-profile.jpeg" alt="Furyengi profile avatar" />
+            <span class="online" aria-label="Available for work"></span>
+          </div>
           <div class="identity-copy">
             <h1>Mahmud Abdulmalik</h1>
             <p class="handle">@furyengi</p>
@@ -74,9 +76,9 @@
               <i class="hgi-stroke hgi-volume-off"></i></button
             ><button id="theme-toggle" title="Toggle theme">
               <i class="hgi-stroke hgi-moon-02"></i></button
-            ><span
-              ><i class="hgi-stroke hgi-view"></i> <b id="views">—</b></span
-            >
+            ><span title="Profile" aria-label="Profile"
+              ><i class="hgi-stroke hgi-view"></i
+            ></span>
           </div>
         </div>
       </section>
@@ -382,6 +384,6 @@
     >
       <i class="hgi-stroke hgi-arrow-up-02"></i>
     </button>
-    <script src="/site.js"></script>
+    <script src="/site.js?v=profile-2"></script>
   </body>
 </html>

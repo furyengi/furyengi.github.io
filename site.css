@@ -108,11 +108,16 @@ h3 {
 }
 .identity {
   display: grid;
-  grid-template-columns: 96px 12px 1fr auto;
+  grid-template-columns: 96px minmax(0, 1fr) auto;
   align-items: center;
-  gap: 10px;
+  gap: 18px;
 }
-.identity > img {
+.avatar-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+.avatar-wrap > img {
   width: 96px;
   height: 96px;
   object-fit: cover;
@@ -121,10 +126,17 @@ h3 {
   padding: 3px;
 }
 .online {
-  width: 9px;
-  height: 9px;
-  background: #979797;
+  position: absolute;
+  right: -4px;
+  bottom: 11px;
+  width: 12px;
+  height: 12px;
+  background: #22c55e;
+  border: 3px solid var(--bg);
   border-radius: 50%;
+}
+.identity-copy {
+  min-width: 0;
 }
 .identity p,
 .meta {
@@ -132,10 +144,9 @@ h3 {
   margin: 0;
 }
 .identity-copy .handle {
-  margin-bottom: 2px;
-  color: var(--text);
-  font-size: 12px;
-  font-weight: 600;
+  margin: 1px 0 4px;
+  font-size: 13px;
+  font-weight: 500;
 }
 .identity-copy .role {
   font-size: 14px;
@@ -143,30 +154,28 @@ h3 {
 .profile-socials {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 8px;
+  gap: 13px;
+  margin-top: 10px;
 }
 .profile-socials a {
-  display: grid;
-  place-items: center;
-  width: 27px;
-  height: 27px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
   color: var(--muted);
   text-decoration: none;
   transition:
     color 0.15s ease,
-    border-color 0.15s ease,
     transform 0.15s ease;
 }
 .profile-socials a:hover {
   color: #2563eb;
-  border-color: #60a5fa;
   transform: translateY(-1px);
 }
 .profile-socials .hgi-stroke {
-  font-size: 15px;
+  display: block;
+  font-size: 18px;
 }
 .controls {
   display: flex;
@@ -182,7 +191,9 @@ h3 {
   cursor: pointer;
 }
 .controls span {
-  font-size: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
 }
 .intro {
   padding-top: 18px;
@@ -660,14 +671,17 @@ footer a {
     height: 80px;
   }
   .identity {
-    grid-template-columns: 78px 10px 1fr;
+    grid-template-columns: 78px 1fr auto;
+    gap: 12px;
   }
-  .identity > img {
+  .avatar-wrap,
+  .avatar-wrap > img {
     width: 78px;
     height: 78px;
   }
   .controls {
-    grid-column: 3;
+    grid-column: 2 / -1;
+    justify-content: flex-end;
   }
   .carousel {
     margin-left: 0;
