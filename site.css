@@ -297,7 +297,7 @@ h3 {
 }
 .squares,
 .legend {
-  --blue-0: #e8eef8;
+  --blue-0: #ffffff;
   --blue-1: #bfdbfe;
   --blue-2: #60a5fa;
   --blue-3: #2563eb;
@@ -354,7 +354,7 @@ h3 {
 }
 [data-theme="dark"] .squares,
 [data-theme="dark"] .legend {
-  --blue-0: #172033;
+  --blue-0: #ffffff;
   --blue-1: #1e3a8a;
   --blue-2: #1d4ed8;
   --blue-3: #3b82f6;
