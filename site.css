@@ -40,9 +40,17 @@ body {
   align-items: center;
   gap: 6px;
 }
-.controls .hgi-stroke { font-size: 16px; }
-.controls span { display: inline-flex; align-items: center; gap: 4px; }
-.to-top .hgi-stroke { font-size: 19px; }
+.controls .hgi-stroke {
+  font-size: 16px;
+}
+.controls span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.to-top .hgi-stroke {
+  font-size: 19px;
+}
 body:before,
 body:after {
   content: "";
@@ -205,32 +213,152 @@ h3 {
 .activity {
   margin-top: 18px;
   border: 1px solid var(--line);
-  padding: 12px;
-  border-radius: 4px;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--panel);
+}
+.activity-heading,
+.activity-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.activity-heading > div {
+  display: grid;
+  gap: 2px;
+}
+.activity-heading strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.activity-heading span,
+.activity-heading a,
+.activity small,
+.legend {
+  font-size: 10px;
+  color: var(--muted);
+}
+.activity-heading a {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+.activity-heading a:hover {
+  color: #2563eb;
+  border-color: #60a5fa;
+}
+.contribution-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  padding: 13px 0 9px;
+}
+.contribution-chart {
+  position: relative;
+  width: 616px;
+  padding: 17px 0 0 29px;
 }
 .months {
-  word-spacing: 19px;
+  position: absolute;
+  inset: 0 0 auto 29px;
+  height: 13px;
+}
+.months span {
+  position: absolute;
   font-size: 9px;
   color: var(--muted);
   white-space: nowrap;
-  overflow: hidden;
+  transform: translateX(2px);
+}
+.weekdays {
+  position: absolute;
+  left: 0;
+  top: 17px;
+  display: grid;
+  grid-template-rows: repeat(7, 9px);
+  gap: 2px;
+  font-size: 8px;
+  color: var(--muted);
+}
+.weekdays span:nth-child(1) {
+  grid-row: 2;
+}
+.weekdays span:nth-child(2) {
+  grid-row: 4;
+}
+.weekdays span:nth-child(3) {
+  grid-row: 6;
+}
+.weekdays span {
+  line-height: 9px;
+}
+.squares,
+.legend {
+  --blue-0: #e8eef8;
+  --blue-1: #bfdbfe;
+  --blue-2: #60a5fa;
+  --blue-3: #2563eb;
+  --blue-4: #1d4ed8;
 }
 .squares {
   display: grid;
-  grid-template-columns: repeat(42, 1fr);
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 9px);
+  grid-auto-columns: 9px;
   gap: 2px;
-  margin: 8px 0;
 }
 .squares i {
-  aspect-ratio: 1;
-  background: #eee;
-  border-radius: 1px;
+  width: 9px;
+  height: 9px;
+  background: var(--blue-0);
+  border: 1px solid rgba(37, 99, 235, 0.06);
+  border-radius: 2px;
 }
-.squares i.on {
-  background: #4c9a69;
+.squares i[data-level="1"],
+.legend i[data-level="1"] {
+  background: var(--blue-1);
 }
-.activity small {
-  color: var(--muted);
+.squares i[data-level="2"],
+.legend i[data-level="2"] {
+  background: var(--blue-2);
+}
+.squares i[data-level="3"],
+.legend i[data-level="3"] {
+  background: var(--blue-3);
+}
+.squares i[data-level="4"],
+.legend i[data-level="4"] {
+  background: var(--blue-4);
+}
+.squares i:hover {
+  outline: 1px solid #1d4ed8;
+  outline-offset: 1px;
+}
+.activity-footer {
+  align-items: flex-end;
+}
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+.legend i {
+  width: 9px;
+  height: 9px;
+  background: var(--blue-0);
+  border-radius: 2px;
+}
+[data-theme="dark"] .squares,
+[data-theme="dark"] .legend {
+  --blue-0: #172033;
+  --blue-1: #1e3a8a;
+  --blue-2: #1d4ed8;
+  --blue-3: #3b82f6;
+  --blue-4: #93c5fd;
 }
 .cards,
 .project-list {
@@ -290,10 +418,18 @@ h3 {
   font: 700 20px/1 monospace;
   letter-spacing: 0.08em;
 }
-.project-mark.runxr { background: #303745; }
-.project-mark.evnar { background: #5a402d; }
-.project-mark.api { background: #326178; }
-.project-mark.galen { background: #3e6b4a; }
+.project-mark.runxr {
+  background: #303745;
+}
+.project-mark.evnar {
+  background: #5a402d;
+}
+.project-mark.api {
+  background: #326178;
+}
+.project-mark.galen {
+  background: #3e6b4a;
+}
 .chips img,
 .chips svg,
 .buttons img,

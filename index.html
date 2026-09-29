@@ -49,9 +49,13 @@
             <p>Full-Stack Engineer</p>
           </div>
           <div class="controls">
-            <button id="sound" title="Interface sounds"><i class="hgi-stroke hgi-volume-off"></i></button
-            ><button id="theme-toggle" title="Toggle theme"><i class="hgi-stroke hgi-moon-02"></i></button
-            ><span><i class="hgi-stroke hgi-view"></i> <b id="views">—</b></span>
+            <button id="sound" title="Interface sounds">
+              <i class="hgi-stroke hgi-volume-off"></i></button
+            ><button id="theme-toggle" title="Toggle theme">
+              <i class="hgi-stroke hgi-moon-02"></i></button
+            ><span
+              ><i class="hgi-stroke hgi-view"></i> <b id="views">—</b></span
+            >
           </div>
         </div>
       </section>
@@ -63,8 +67,11 @@
           matter.
         </p>
         <div class="buttons">
-          <a class="primary" href="mailto:furyengi@gmail.com"><i class="hgi-stroke hgi-mail-01"></i> Send an email</a
-          ><a href="/Mahmud_CV.pdf"><i class="hgi-stroke hgi-file-download"></i> Download CV</a>
+          <a class="primary" href="mailto:furyengi@gmail.com"
+            ><i class="hgi-stroke hgi-mail-01"></i> Send an email</a
+          ><a href="/Mahmud_CV.pdf"
+            ><i class="hgi-stroke hgi-file-download"></i> Download CV</a
+          >
         </div>
       </section>
 
@@ -95,18 +102,53 @@
       <section class="block socials">
         <h2>Here are my socials</h2>
         <div class="chips">
-          <a href="https://github.com/furyengi"><i class="hgi-stroke hgi-github-01"></i> GitHub</a
-          ><a href="https://x.com/furyengi"><i class="hgi-stroke hgi-new-twitter"></i> X</a
-          ><a href="https://www.tiktok.com/@furyengi"><i class="hgi-stroke hgi-tiktok"></i> TikTok</a
-          ><a href="mailto:furyengi@gmail.com"><i class="hgi-stroke hgi-mail-01"></i> Email</a
-          ><a href="/about.html"><i class="hgi-stroke hgi-more-horizontal"></i> More</a>
+          <a href="https://github.com/furyengi"
+            ><i class="hgi-stroke hgi-github-01"></i> GitHub</a
+          ><a href="https://x.com/furyengi"
+            ><i class="hgi-stroke hgi-new-twitter"></i> X</a
+          ><a href="https://www.tiktok.com/@furyengi"
+            ><i class="hgi-stroke hgi-tiktok"></i> TikTok</a
+          ><a href="mailto:furyengi@gmail.com"
+            ><i class="hgi-stroke hgi-mail-01"></i> Email</a
+          ><a href="/about.html"
+            ><i class="hgi-stroke hgi-more-horizontal"></i> More</a
+          >
         </div>
         <div class="activity">
-          <div class="months">
-            Sep Oct Nov Dec Jan Feb Mar Apr May Jun Jul Aug
+          <div class="activity-heading">
+            <div>
+              <strong>Contribution activity</strong>
+              <span id="contribution-total">Loading GitHub activity…</span>
+            </div>
+            <a
+              href="https://github.com/furyengi"
+              aria-label="View furyengi on GitHub"
+            >
+              <i class="hgi-stroke hgi-github-01"></i>
+            </a>
           </div>
-          <div class="squares" id="activity"></div>
-          <small>Building, shipping, learning — throughout the year</small>
+          <div class="contribution-scroll">
+            <div class="contribution-chart">
+              <div class="months" id="activity-months" aria-hidden="true"></div>
+              <div class="weekdays" aria-hidden="true">
+                <span>Mon</span><span>Wed</span><span>Fri</span>
+              </div>
+              <div
+                class="squares"
+                id="activity"
+                role="img"
+                aria-label="GitHub contribution activity over the last year"
+              ></div>
+            </div>
+          </div>
+          <div class="activity-footer">
+            <small>Building, shipping, learning — throughout the year</small>
+            <div class="legend" aria-label="Contribution intensity">
+              <span>Less</span><i data-level="0"></i><i data-level="1"></i
+              ><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i
+              ><span>More</span>
+            </div>
+          </div>
         </div>
       </section>
 
