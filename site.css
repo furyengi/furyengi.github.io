@@ -421,8 +421,17 @@ h3 {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 10px;
+  color: var(--text);
   text-decoration: none;
   background: var(--panel);
+  transition: border-color 0.15s ease;
+}
+.project-list > a:hover {
+  border-color: #63c7dc;
+}
+.project-list > a:hover h3,
+.project-list > a:hover b {
+  color: #1687a7;
 }
 .project-mark {
   width: 210px;
