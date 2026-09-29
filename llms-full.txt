@@ -7,6 +7,9 @@ Mahmud Abdulmalik, known online as Furyengi, is a full-stack engineer based in I
 ### Galen Africa — App Developer / Team Lead (2025–present)
 Leads development of GalenDesk across application architecture, database workflows, backend integrations, product direction, and reliability.
 
+### Prismor — AI Security Infrastructure Engineer (2026–present)
+Hardens authentication failure handling across buffered and streaming AI responses, builds automated coverage for proxy error paths, and improves local-backend integration guidance.
+
 ### Afrigenomed — Backend Developer (2024–2026)
 Built Node.js backend logic for users, content, and learning workflows in a learning-management system.
 
@@ -15,7 +18,7 @@ Python, FastAPI, Django, Node.js, Express, TypeScript, PostgreSQL, MySQL, SQLite
 
 ## Projects
 
-### Prismor contribution
+### Prismor
 Improved an AI-security proxy so callers can distinguish upstream provider authentication failures from policy refusals across buffered and streaming responses. Added automated tests and local OpenAI-compatible backend guidance.
 
 ### Scalable API Platform

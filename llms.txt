@@ -11,19 +11,18 @@
 ## Verified profiles
 - [GitHub](https://github.com/furyengi)
 - [X](https://x.com/furyengi)
-- [TikTok](https://www.tiktok.com/@furyengi)
 
 ## Professional identity
 - Name: Mahmud Abdulmalik
 - Username: furyengi
-- Role: Full-Stack Engineer
+- Role: Full-Stack Engineer — Backend, Cloud & AI
 - Location: Ilorin, Nigeria
-- Current organization: Galen Africa
+- Current organizations: Galen Africa and Prismor
 - Previous organization: Afrigenomed
 - Focus: Backend engineering, APIs, cloud infrastructure, CI/CD, security tooling, and offline-first applications
 
 ## Selected work
-- Prismor open-source AI security contribution
+- Prismor AI security infrastructure
 - Scalable API Platform
 - RunXR self-hosted CI/CD
 - Evnar secrets manager

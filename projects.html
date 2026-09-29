@@ -1,26 +1,249 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Projects by Furyengi — Backend, Cloud and Developer Tools</title>
-  <meta name="description" content="Selected software engineering projects by Furyengi (Mahmud Abdulmalik), including APIs, CI/CD, secrets management, healthcare software, and open-source security work.">
-  <link rel="canonical" href="https://furyengi.is-a.dev/projects.html"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    *{box-sizing:border-box}body{margin:0;background:#f7f5f0;color:#111;font:15px/1.7 'JetBrains Mono',monospace}a{color:inherit;text-underline-offset:4px}.wrap{max-width:1000px;margin:auto;padding:2rem 1.5rem 5rem}nav{display:flex;justify-content:space-between;gap:1rem;margin-bottom:5rem}.links{display:flex;gap:1.2rem}nav a{text-decoration:none;color:#666}h1{font:300 clamp(3.5rem,10vw,7rem)/.9 'Newsreader',serif;letter-spacing:-.05em;margin:0}.intro{max-width:700px;color:#666;margin:1.5rem 0 4rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card{display:flex;flex-direction:column;min-height:320px;padding:1.5rem;border:1px solid #ddd8cf;border-radius:22px;background:#fff;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#a85f0d;box-shadow:0 22px 55px rgba(56,42,20,.08)}.num{font-size:12px;color:#a85f0d}.card h2{font:300 2rem/1.05 'Newsreader',serif;margin:2rem 0 1rem}.card p{font-size:13px;color:#666}.tags{margin-top:auto;padding-top:2rem;font-size:11px;color:#888}.actions{display:flex;gap:1rem;margin-top:1rem}.actions a{font-size:12px;color:#a85f0d}@media(prefers-color-scheme:dark){body{background:#11100e;color:#f3f1ec}.card{background:#181613;border-color:#302d28}.card p,.intro,nav a{color:#aaa59d}}@media(max-width:700px){.grid{grid-template-columns:1fr}nav{margin-bottom:3rem}.card{min-height:0}}
-  </style>
-</head>
-<body><div class="wrap">
-  <nav><a href="/"><strong>furyengi</strong>/</a><div class="links"><a href="/about.html">about</a><a href="mailto:furyengi@gmail.com">contact</a></div></nav>
-  <main><h1>Selected work.</h1><p class="intro">Production-minded systems spanning application security, APIs, delivery infrastructure, encrypted tooling, and healthcare operations.</p>
-    <div class="grid">
-      <article class="card"><span class="num">01 · Open source</span><h2>Prismor</h2><p>Improved an AI-security proxy so clients can distinguish provider authentication failures from policy refusals across buffered and streaming responses. Added automated coverage and local-backend guidance.</p><div class="tags">Python · AI security · HTTP proxy · Tests</div><div class="actions"><a href="https://github.com/PrismorSec/prismor/pull/417">Merged contribution</a><a href="https://github.com/PrismorSec/prismor">Repository</a></div></article>
-      <article class="card"><span class="num">02 · Platform</span><h2>Scalable API</h2><p>A production-oriented task API with JWT authentication, async data access, caching, background jobs, migrations, containerized development, and continuous integration.</p><div class="tags">FastAPI · PostgreSQL · Redis · Celery · Docker</div><div class="actions"><a href="https://github.com/furyengi/scalable-api">Repository</a></div></article>
-      <article class="card"><span class="num">03 · Developer infrastructure</span><h2>RunXR</h2><p>A self-hosted CI/CD platform with GitHub OAuth, signed webhooks, persistent build jobs, live logs, and an isolated Docker-first runner.</p><div class="tags">Node.js · Express · Python · Docker · SQLite</div><div class="actions"><a href="https://runxr-furyengi.pxxlspace.cv">Live product</a><a href="https://github.com/furyengi/runxr">Repository</a></div></article>
-      <article class="card"><span class="num">04 · Security tooling</span><h2>Evnar</h2><p>A self-hosted secrets manager designed around encrypted storage, multiple environments, and a CLI-first workflow.</p><div class="tags">TypeScript · AES-256-GCM · CLI · Security</div><div class="actions"><a href="https://evnar.vercel.app">Live product</a><a href="https://github.com/furyengi/evnar">Repository</a></div></article>
-      <article class="card"><span class="num">05 · Healthcare operations</span><h2>GalenDesk</h2><p>An offline-first pharmacy inventory and point-of-sale application with transactional FEFO stock deduction, batch tracking, and expiry alerts.</p><div class="tags">React Native · Expo · SQLite · Transactions</div><div class="actions"><a href="https://github.com/furyengi/galendesk">Repository</a></div></article>
-      <article class="card"><span class="num">06 · Backend systems</span><h2>Webhook Billing</h2><p>A webhook-driven billing backend with HMAC verification, idempotent event processing, subscription-state synchronization, and queued notifications.</p><div class="tags">Node.js · Webhooks · HMAC · Queues · Tests</div><div class="actions"><a href="https://github.com/furyengi/webhook-billing-notifications">Repository</a></div></article>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projects by Furyengi — Backend, Cloud and Developer Tools</title>
+    <meta
+      name="description"
+      content="Selected software engineering projects by Furyengi (Mahmud Abdulmalik), including APIs, CI/CD, secrets management, healthcare software, and open-source security work."
+    />
+    <link rel="canonical" href="https://furyengi.is-a.dev/projects.html" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400&family=JetBrains+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f7f5f0;
+        color: #111;
+        font:
+          15px/1.7 "JetBrains Mono",
+          monospace;
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+      .wrap {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem 1.5rem 5rem;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 5rem;
+      }
+      .links {
+        display: flex;
+        gap: 1.2rem;
+      }
+      nav a {
+        text-decoration: none;
+        color: #666;
+      }
+      h1 {
+        font:
+          300 clamp(3.5rem, 10vw, 7rem) / 0.9 "Newsreader",
+          serif;
+        letter-spacing: -0.05em;
+        margin: 0;
+      }
+      .intro {
+        max-width: 700px;
+        color: #666;
+        margin: 1.5rem 0 4rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        min-height: 320px;
+        padding: 1.5rem;
+        border: 1px solid #ddd8cf;
+        border-radius: 22px;
+        background: #fff;
+        transition: 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: #a85f0d;
+        box-shadow: 0 22px 55px rgba(56, 42, 20, 0.08);
+      }
+      .num {
+        font-size: 12px;
+        color: #a85f0d;
+      }
+      .card h2 {
+        font:
+          300 2rem/1.05 "Newsreader",
+          serif;
+        margin: 2rem 0 1rem;
+      }
+      .card p {
+        font-size: 13px;
+        color: #666;
+      }
+      .tags {
+        margin-top: auto;
+        padding-top: 2rem;
+        font-size: 11px;
+        color: #888;
+      }
+      .actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .actions a {
+        font-size: 12px;
+        color: #a85f0d;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #11100e;
+          color: #f3f1ec;
+        }
+        .card {
+          background: #181613;
+          border-color: #302d28;
+        }
+        .card p,
+        .intro,
+        nav a {
+          color: #aaa59d;
+        }
+      }
+      @media (max-width: 700px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        nav {
+          margin-bottom: 3rem;
+        }
+        .card {
+          min-height: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a href="/"><strong>furyengi</strong>/</a>
+        <div class="links">
+          <a href="/about.html">about</a
+          ><a href="mailto:furyengi@gmail.com">contact</a>
+        </div>
+      </nav>
+      <main>
+        <h1>Selected work.</h1>
+        <p class="intro">
+          Production-minded systems spanning application security, APIs,
+          delivery infrastructure, encrypted tooling, and healthcare operations.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <span class="num">01 · AI security infrastructure</span>
+            <h2>Prismor</h2>
+            <p>
+              Hardened authentication failure handling across buffered and
+              streaming AI responses, built automated coverage for proxy error
+              paths, and improved local-backend integration guidance.
+            </p>
+            <div class="tags">
+              Python · AI gateway security · HTTP proxy · Automated testing
+            </div>
+            <div class="actions">
+              <a href="https://github.com/PrismorSec/prismor">View Prismor</a>
+            </div>
+          </article>
+          <article class="card">
+            <span class="num">02 · Platform</span>
+            <h2>Scalable API</h2>
+            <p>
+              A production-oriented task API with JWT authentication, async data
+              access, caching, background jobs, migrations, containerized
+              development, and continuous integration.
+            </p>
+            <div class="tags">
+              FastAPI · PostgreSQL · Redis · Celery · Docker
+            </div>
+            <div class="actions">
+              <a href="https://github.com/furyengi/scalable-api">Repository</a>
+            </div>
+          </article>
+          <article class="card">
+            <span class="num">03 · Developer infrastructure</span>
+            <h2>RunXR</h2>
+            <p>
+              A self-hosted CI/CD platform with GitHub OAuth, signed webhooks,
+              persistent build jobs, live logs, and an isolated Docker-first
+              runner.
+            </p>
+            <div class="tags">Node.js · Express · Python · Docker · SQLite</div>
+            <div class="actions">
+              <a href="https://runxr-furyengi.pxxlspace.cv">Live product</a
+              ><a href="https://github.com/furyengi/runxr">Repository</a>
+            </div>
+          </article>
+          <article class="card">
+            <span class="num">04 · Security tooling</span>
+            <h2>Evnar</h2>
+            <p>
+              A self-hosted secrets manager designed around encrypted storage,
+              multiple environments, and a CLI-first workflow.
+            </p>
+            <div class="tags">TypeScript · AES-256-GCM · CLI · Security</div>
+            <div class="actions">
+              <a href="https://evnar.vercel.app">Live product</a
+              ><a href="https://github.com/furyengi/evnar">Repository</a>
+            </div>
+          </article>
+          <article class="card">
+            <span class="num">05 · Healthcare operations</span>
+            <h2>GalenDesk</h2>
+            <p>
+              An offline-first pharmacy inventory and point-of-sale application
+              with transactional FEFO stock deduction, batch tracking, and
+              expiry alerts.
+            </p>
+            <div class="tags">React Native · Expo · SQLite · Transactions</div>
+            <div class="actions">
+              <a href="https://github.com/furyengi/galendesk">Repository</a>
+            </div>
+          </article>
+          <article class="card">
+            <span class="num">06 · Backend systems</span>
+            <h2>Webhook Billing</h2>
+            <p>
+              A webhook-driven billing backend with HMAC verification,
+              idempotent event processing, subscription-state synchronization,
+              and queued notifications.
+            </p>
+            <div class="tags">Node.js · Webhooks · HMAC · Queues · Tests</div>
+            <div class="actions">
+              <a
+                href="https://github.com/furyengi/webhook-billing-notifications"
+                >Repository</a
+              >
+            </div>
+          </article>
+        </div>
+      </main>
     </div>
-  </main>
-</div></body></html>
+  </body>
+</html>
