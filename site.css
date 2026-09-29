@@ -653,16 +653,26 @@ footer a {
     background-position: center 47%;
   }
   .identity {
-    grid-template-columns: 88px 1fr;
-    gap: 12px;
+    display: block;
   }
   .avatar-wrap,
   .avatar-wrap > img {
-    width: 88px;
-    height: 88px;
+    width: 96px;
+    height: 96px;
   }
   .avatar-wrap {
-    margin-top: -51px;
+    margin-top: -64px;
+    margin-bottom: 10px;
+  }
+  .identity-copy {
+    width: 100%;
+    padding-top: 0;
+  }
+  .identity-copy h1 {
+    font-size: 23px;
+  }
+  .profile-socials {
+    margin-top: 10px;
   }
   .carousel {
     margin-left: 0;
