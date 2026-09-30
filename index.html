@@ -17,7 +17,7 @@
       content="https://furyengi.is-a.dev/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css?v=project-previews" />
+    <link rel="stylesheet" href="/site.css?v=project-previews-2" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -268,7 +268,15 @@
             </div></a
           >
           <a href="https://github.com/furyengi/scalable-api"
-            ><div class="project-mark api">API</div>
+            ><div class="project-mark api-code" aria-hidden="true">
+              <div class="code-bar"><i></i><i></i><i></i><span>main.py</span></div>
+              <code><b>@app.get</b>(<em>"/health"</em>)<br />
+                <b>async def</b> health_check():<br />
+                &nbsp;&nbsp;<b>return</b> {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span>"status"</span>: <em>"healthy"</em>,<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span>"redis"</span>: <em>"connected"</em><br />
+                &nbsp;&nbsp;}</code>
+            </div>
             <div>
               <small>Backend Platform</small>
               <h3>Scalable API <span>Open Source</span></h3>
@@ -280,7 +288,9 @@
             </div></a
           >
           <a href="https://github.com/furyengi/galendesk"
-            ><div class="project-mark galen">GD</div>
+            ><div class="project-mark project-preview galendesk-preview">
+              <img src="/galendesk-home.png" alt="GalenDesk dashboard preview" />
+            </div>
             <div>
               <small>Healthcare Operations</small>
               <h3>GalenDesk <span>Product</span></h3>

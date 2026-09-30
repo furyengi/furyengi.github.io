@@ -651,6 +651,58 @@ h3 {
 .project-mark.galen {
   background: #3e6b4a;
 }
+.project-mark.api-code {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  background: #111827;
+  color: #d8e5ef;
+  font: 500 9px/1.55 Consolas, Monaco, monospace;
+  letter-spacing: 0;
+  text-align: left;
+}
+.code-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 23px;
+  padding: 0 8px;
+  border-bottom: 1px solid #263247;
+  background: #172033;
+}
+.code-bar i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff6b6b;
+}
+.code-bar i:nth-child(2) {
+  background: #f6c453;
+}
+.code-bar i:nth-child(3) {
+  background: #52d273;
+}
+.code-bar span {
+  margin-left: 4px;
+  color: #7f8da3;
+  font-size: 8px;
+}
+.api-code code {
+  display: block;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+.api-code b {
+  color: #75d5ff;
+  font-weight: 600;
+}
+.api-code em {
+  color: #a7e59a;
+  font-style: normal;
+}
+.api-code code span {
+  color: #ffd580;
+}
 .project-mark.project-preview {
   position: relative;
   overflow: hidden;
@@ -663,6 +715,9 @@ h3 {
   object-fit: cover;
   object-position: left top;
   transition: transform 0.25s ease;
+}
+.project-mark.galendesk-preview img {
+  object-position: center top;
 }
 .project-list > a:hover .project-preview img {
   transform: scale(1.025);
