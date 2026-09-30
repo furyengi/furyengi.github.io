@@ -226,34 +226,72 @@ h3 {
   margin-left: calc(342px - 50vw);
   padding: 13px 0;
   border-bottom: 1px dashed var(--line);
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 .track {
   display: flex;
   gap: 13px;
   width: max-content;
-  animation: slide 38s linear infinite;
-}
-.carousel:hover .track,
-.carousel:focus-within .track {
-  animation-play-state: paused;
+  padding: 0 18px;
 }
 .track a {
   display: block;
   flex: 0 0 auto;
+  scroll-snap-align: start;
 }
-.track img {
+.track img,
+.showcase-tile {
   display: block;
   width: 335px;
   height: 190px;
-  object-fit: cover;
   border: 1px solid var(--line);
   border-radius: 3px;
 }
-@keyframes slide {
-  to {
-    transform: translateX(-50%);
-  }
+.track img {
+  object-fit: cover;
+}
+.showcase-tile {
+  padding: 20px;
+  color: #f8fbff;
+  text-decoration: none;
+  background: #27313e;
+  overflow: hidden;
+}
+.showcase-tile span {
+  display: block;
+  margin-bottom: 28px;
+  color: #d7ebff;
+  font-size: 18px;
+  font-weight: 800;
+}
+.showcase-tile code {
+  display: block;
+  color: #f8fbff;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.showcase-tile b {
+  color: #9fd2ff;
+}
+.api-showcase {
+  background:
+    linear-gradient(135deg, rgba(106, 180, 226, 0.26), transparent 55%),
+    #213444;
+}
+.billing-showcase {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent 50%),
+    #553c2d;
 }
 .socials h2 {
   font-weight: 400;

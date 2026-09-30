@@ -205,6 +205,26 @@
     projectToggle.textContent = expanded ? "View All" : "Show Less";
   });
 
+  const carousel = document.querySelector(".carousel");
+  carousel?.addEventListener(
+    "wheel",
+    (event) => {
+      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+      if (!delta) return;
+
+      const atStart = carousel.scrollLeft <= 0;
+      const atEnd =
+        Math.ceil(carousel.scrollLeft + carousel.clientWidth) >=
+        carousel.scrollWidth;
+
+      if ((delta < 0 && atStart) || (delta > 0 && atEnd)) return;
+
+      event.preventDefault();
+      carousel.scrollLeft += delta;
+    },
+    { passive: false },
+  );
+
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
     if (
