@@ -385,6 +385,9 @@ h3 {
   display: grid;
   gap: 12px;
 }
+#experience .cards {
+  gap: 0;
+}
 .oss,
 .sponsor-empty {
   display: grid;
@@ -398,26 +401,28 @@ h3 {
 .experience {
   width: 100%;
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr) 34px;
+  grid-template-columns: 52px minmax(0, 1fr) 140px 20px;
   align-items: center;
-  gap: 14px;
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--panel);
+  gap: 13px;
+  padding: 14px 4px;
+  border: 0;
+  border-top: 1px dashed var(--line);
+  border-radius: 0;
+  background: transparent;
   color: var(--text);
   font: inherit;
   text-align: left;
   cursor: pointer;
   transition:
-    transform 0.18s ease,
-    border-color 0.18s ease,
-    box-shadow 0.18s ease;
+    background-color 0.18s ease,
+    padding 0.18s ease;
+}
+.experience:last-child {
+  border-bottom: 1px dashed var(--line);
 }
 .experience:hover {
-  transform: translateY(-2px);
-  border-color: #63c7dc;
-  box-shadow: 0 10px 30px rgba(22, 135, 167, 0.08);
+  padding-inline: 9px;
+  background: var(--panel);
 }
 .experience-copy {
   min-width: 0;
@@ -441,25 +446,35 @@ h3 {
   font-style: normal;
   font-weight: 700;
 }
-.experience-summary {
+.experience-meta {
+  display: grid;
+  gap: 2px;
+  text-align: right;
+}
+.experience-meta b {
+  font-size: 11px;
+  font-weight: 600;
+}
+.experience-meta small {
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.45;
+  font-size: 10px;
 }
 .experience-arrow {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
   color: var(--muted);
   transition: all 0.18s ease;
 }
 .experience:hover .experience-arrow {
   color: #1687a7;
-  border-color: #63c7dc;
-  transform: translateX(2px);
+  transform: translateY(2px);
+}
+.experience .logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
 }
 .logo {
   width: 70px;
@@ -874,20 +889,24 @@ footer a {
     grid-column: 2;
   }
   .experience {
-    grid-template-columns: 56px minmax(0, 1fr) 28px;
-    gap: 11px;
-    padding: 12px;
+    grid-template-columns: 48px minmax(0, 1fr) 20px;
+    gap: 10px;
+    padding: 12px 2px;
   }
   .experience .logo {
-    width: 54px;
-    height: 54px;
+    width: 48px;
+    height: 48px;
+    grid-row: 1 / span 2;
   }
-  .experience-summary {
-    display: none;
+  .experience-meta {
+    grid-column: 2;
+    text-align: left;
   }
   .experience-arrow {
-    width: 28px;
-    height: 28px;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    width: 20px;
+    height: 20px;
   }
   .experience-dialog {
     width: 100%;
