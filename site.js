@@ -194,6 +194,17 @@
     if (outside) dialog.close();
   });
 
+  const projectToggle = document.querySelector("#toggle-projects");
+  const extraProjects = document.querySelectorAll(".project-extra");
+  projectToggle?.addEventListener("click", () => {
+    const expanded = projectToggle.getAttribute("aria-expanded") === "true";
+    extraProjects.forEach((project) => {
+      project.hidden = expanded;
+    });
+    projectToggle.setAttribute("aria-expanded", String(!expanded));
+    projectToggle.textContent = expanded ? "View All" : "Show Less";
+  });
+
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
     if (

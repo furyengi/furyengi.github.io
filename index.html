@@ -17,7 +17,7 @@
       content="https://furyengi.is-a.dev/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css?v=project-previews-2" />
+    <link rel="stylesheet" href="/site.css?v=project-grid" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -239,36 +239,39 @@
       <section class="block" id="projects">
         <h2>Projects</h2>
         <div class="project-list">
-          <a href="https://runxr-furyengi.pxxlspace.cv"
-            ><div class="project-mark project-preview">
+          <article class="project-card">
+            <a class="project-visual" href="https://runxr-furyengi.pxxlspace.cv">
+              <span class="visual-label">CI/CD Platform</span>
+              <span class="visual-open" aria-hidden="true"><i class="hgi-stroke hgi-arrow-up-right-01"></i></span>
+              <div class="project-mark project-preview">
               <img src="/runxr-home.png" alt="RunXR homepage preview" />
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-title"><h3>RunXR</h3><span>Active</span></div>
+              <p>Self-hosted CI/CD with signed webhooks, persistent jobs, live logs, and isolated Docker runners.</p>
+              <a href="https://runxr-furyengi.pxxlspace.cv">View Project <i class="hgi-stroke hgi-arrow-right-01"></i></a>
             </div>
-            <div>
-              <small>Developer Infrastructure</small>
-              <h3>RunXR <span>Active</span></h3>
-              <p>
-                Self-hosted CI/CD with signed webhooks, persistent jobs, live
-                logs, and isolated Docker runners.
-              </p>
-              <b>View Project ↗</b>
-            </div></a
-          >
-          <a href="https://evnar.vercel.app"
-            ><div class="project-mark project-preview">
+          </article>
+          <article class="project-card">
+            <a class="project-visual" href="https://evnar.vercel.app">
+              <span class="visual-label">Secrets Manager</span>
+              <span class="visual-open" aria-hidden="true"><i class="hgi-stroke hgi-arrow-up-right-01"></i></span>
+              <div class="project-mark project-preview">
               <img src="/evnar-home.png" alt="Evnar homepage preview" />
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-title"><h3>Evnar</h3><span>Active Dev</span></div>
+              <p>CLI-first secrets manager with encrypted storage and environment-scoped workflows.</p>
+              <a href="https://evnar.vercel.app">View Project <i class="hgi-stroke hgi-arrow-up-right-01"></i></a>
             </div>
-            <div>
-              <small>Security Tooling</small>
-              <h3>Evnar <span>Active Dev</span></h3>
-              <p>
-                CLI-first secrets manager with encrypted storage and
-                environment-scoped workflows.
-              </p>
-              <b>View Project ↗</b>
-            </div></a
-          >
-          <a href="https://github.com/furyengi/scalable-api"
-            ><div class="project-mark api-code" aria-hidden="true">
+          </article>
+          <article class="project-card">
+            <a class="project-visual" href="https://github.com/furyengi/scalable-api">
+              <span class="visual-label">Backend Platform</span>
+              <span class="visual-open" aria-hidden="true"><i class="hgi-stroke hgi-arrow-up-right-01"></i></span>
+              <div class="project-mark api-code" aria-hidden="true">
               <div class="code-bar"><i></i><i></i><i></i><span>main.py</span></div>
               <code><b>@app.get</b>(<em>"/health"</em>)<br />
                 <b>async def</b> health_check():<br />
@@ -276,33 +279,60 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;<span>"status"</span>: <em>"healthy"</em>,<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;<span>"redis"</span>: <em>"connected"</em><br />
                 &nbsp;&nbsp;}</code>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-title"><h3>Scalable API</h3><span>Open Source</span></div>
+              <p>Production-oriented API with authentication, caching, queues, migrations, Docker, and CI.</p>
+              <a href="https://github.com/furyengi/scalable-api">View Project <i class="hgi-stroke hgi-arrow-up-right-01"></i></a>
             </div>
-            <div>
-              <small>Backend Platform</small>
-              <h3>Scalable API <span>Open Source</span></h3>
-              <p>
-                Production-oriented API with authentication, caching, queues,
-                migrations, Docker, and CI.
-              </p>
-              <b>View Project ↗</b>
-            </div></a
-          >
-          <a href="https://github.com/furyengi/galendesk"
-            ><div class="project-mark project-preview galendesk-preview">
+          </article>
+          <article class="project-card">
+            <a class="project-visual" href="https://github.com/furyengi/galendesk">
+              <span class="visual-label">Pharmacy Operations</span>
+              <span class="visual-open" aria-hidden="true"><i class="hgi-stroke hgi-arrow-up-right-01"></i></span>
+              <div class="project-mark project-preview galendesk-preview">
               <img src="/galendesk-home.png" alt="GalenDesk dashboard preview" />
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-title"><h3>GalenDesk</h3><span>Product</span></div>
+              <p>Offline-first pharmacy inventory and POS with FEFO stock deduction and batch tracking.</p>
+              <a href="https://github.com/furyengi/galendesk">View Project <i class="hgi-stroke hgi-arrow-up-right-01"></i></a>
             </div>
-            <div>
-              <small>Healthcare Operations</small>
-              <h3>GalenDesk <span>Product</span></h3>
-              <p>
-                Offline-first pharmacy inventory and POS with FEFO stock
-                deduction and batch tracking.
-              </p>
-              <b>View Project ↗</b>
-            </div></a
-          >
+          </article>
+          <article class="project-card project-extra" hidden>
+            <a class="project-visual prismor-visual" href="https://prismor.dev">
+              <span class="visual-label">AI Security</span>
+              <span class="visual-open" aria-hidden="true"><i class="hgi-stroke hgi-arrow-up-right-01"></i></span>
+              <img src="/prismor-logo.png" alt="Prismor" />
+            </a>
+            <div class="project-info">
+              <div class="project-title"><h3>Prismor</h3><span>Active</span></div>
+              <p>Security infrastructure for AI traffic with resilient provider authentication and proxy error handling.</p>
+              <a href="https://prismor.dev">View Project <i class="hgi-stroke hgi-arrow-up-right-01"></i></a>
+            </div>
+          </article>
+          <article class="project-card project-extra" hidden>
+            <a class="project-visual" href="https://github.com/furyengi/webhook-billing-notifications">
+              <span class="visual-label">Billing Backend</span>
+              <span class="visual-open" aria-hidden="true"><i class="hgi-stroke hgi-arrow-up-right-01"></i></span>
+              <div class="project-mark api-code billing-code" aria-hidden="true">
+                <div class="code-bar"><i></i><i></i><i></i><span>webhook.ts</span></div>
+                <code><b>const</b> signature = hmac(payload)<br />
+                  <b>if</b> (!safeEqual(signature, header))<br />
+                  &nbsp;&nbsp;<b>throw new</b> Error(<em>"invalid signature"</em>)<br /><br />
+                  <span>await</span> processEvent(payload)</code>
+              </div>
+            </a>
+            <div class="project-info">
+              <div class="project-title"><h3>Webhook Billing</h3><span>Backend</span></div>
+              <p>Idempotent webhook processing, subscription-state synchronization, HMAC verification, and queued notifications.</p>
+              <a href="https://github.com/furyengi/webhook-billing-notifications">View Project <i class="hgi-stroke hgi-arrow-up-right-01"></i></a>
+            </div>
+          </article>
         </div>
-        <a class="view-all" href="/projects.html">View All ↗</a>
+        <button class="view-all" id="toggle-projects" type="button" aria-expanded="false">View All</button>
       </section>
 
       <section class="block">
@@ -405,6 +435,6 @@
     >
       <i class="hgi-stroke hgi-arrow-up-02"></i>
     </button>
-    <script src="/site.js?v=software-engineer"></script>
+    <script src="/site.js?v=project-grid"></script>
   </body>
 </html>
