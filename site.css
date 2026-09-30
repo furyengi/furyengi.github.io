@@ -244,6 +244,17 @@ h3 {
   gap: 13px;
   width: max-content;
   padding: 0 18px;
+  animation: showcase-slide 46s linear infinite;
+  will-change: transform;
+}
+.carousel:hover .track,
+.carousel:focus-within .track {
+  animation-play-state: paused;
+}
+@keyframes showcase-slide {
+  to {
+    transform: translateX(-50%);
+  }
 }
 .track a {
   display: block;
@@ -985,9 +996,30 @@ h3 {
 }
 .skills b {
   min-width: 18px;
-  color: #71717b;
+  color: inherit;
   font: 800 9px/1 Arial, sans-serif;
   text-align: center;
+}
+.skills .skill-wordmark b {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.paystack-mark b {
+  background: #00c3f7;
+}
+.bachs-mark b {
+  background: #111827;
+}
+.pxxl-mark b {
+  background: linear-gradient(135deg, #7c3cff, #18c8ff);
 }
 .section-heading {
   display: flex;

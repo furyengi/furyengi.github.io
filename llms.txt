@@ -6,7 +6,7 @@
 - [Portfolio](https://furyengi.is-a.dev/)
 - [About](https://furyengi.is-a.dev/about.html)
 - [Projects](https://furyengi.is-a.dev/projects.html)
-- [Blog](https://furyengi.is-a.dev/blogs.html)
+- [Blog](https://furyengi.is-a.dev/blog/)
 - [Résumé](https://furyengi.is-a.dev/Mahmud_CV.pdf)
 
 ## Verified profiles
