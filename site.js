@@ -92,11 +92,11 @@
     },
     prismor: {
       company: "Prismor",
-      role: "AI Security Infrastructure Engineer",
+      role: "Software Engineer",
       period: "2026 — Present · Remote",
       logo: "/prismor-logo.png",
       description:
-        "Prismor is security infrastructure for AI traffic. My work focuses on making upstream failures explicit, testable, and safer for applications using buffered or streaming model responses.",
+        "Prismor builds security infrastructure for AI traffic. I contribute across the software, with current work improving how applications understand and recover from upstream provider failures.",
       work: [
         "Hardened provider authentication failure handling across buffered and streaming AI responses.",
         "Built automated coverage for proxy error paths and upstream provider failures.",
@@ -108,7 +108,7 @@
         "HTTP Proxy",
         "Automated Testing",
       ],
-      url: "https://github.com/PrismorSec/prismor",
+      url: "https://prismor.dev",
       linkLabel: "Prismor",
     },
     galen: {
