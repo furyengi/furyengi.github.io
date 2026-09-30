@@ -468,6 +468,7 @@ h3 {
   display: grid;
   gap: 12px;
 }
+#startup .cards,
 #experience .cards {
   gap: 0;
 }
