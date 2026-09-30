@@ -220,7 +220,16 @@ h3 {
   width: max-content;
   animation: slide 38s linear infinite;
 }
+.carousel:hover .track,
+.carousel:focus-within .track {
+  animation-play-state: paused;
+}
+.track a {
+  display: block;
+  flex: 0 0 auto;
+}
 .track img {
+  display: block;
   width: 335px;
   height: 190px;
   object-fit: cover;
