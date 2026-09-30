@@ -272,6 +272,10 @@ h3 {
 .track img {
   object-fit: cover;
 }
+.track img.code-showcase {
+  object-fit: contain;
+  background: #101827;
+}
 .showcase-tile {
   padding: 20px;
   color: #f8fbff;
