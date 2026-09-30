@@ -92,7 +92,7 @@
     },
     prismor: {
       company: "Prismor",
-      role: "Software Engineer",
+      role: "Contributing Engineer",
       period: "2026 — Present · Remote",
       logo: "/prismor-logo.png",
       description:
