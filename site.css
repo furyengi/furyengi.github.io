@@ -205,7 +205,8 @@ h3 {
 .buttons a,
 .chips a,
 .view-all,
-.newsletter button {
+.newsletter button,
+.newsletter-form button {
   padding: 8px 11px;
   background: #f0f0f0;
   color: #444;
@@ -216,7 +217,8 @@ h3 {
 }
 .buttons .primary,
 .view-all,
-.newsletter button {
+.newsletter button,
+.newsletter-form button {
   background: #4d4d58;
   color: #fff;
   border-color: #4d4d58;
@@ -971,6 +973,16 @@ h3 {
   font-size: 12px;
   font-weight: 600;
 }
+.skills img,
+.skills .hgi-stroke {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  object-fit: contain;
+  color: #71717b;
+  font-size: 17px;
+  line-height: 1;
+}
 .skills b {
   min-width: 18px;
   color: #71717b;
@@ -987,8 +999,7 @@ h3 {
 .section-heading h2 {
   margin: 0;
 }
-.section-heading > a,
-.blog-teasers b {
+.section-heading > a {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -997,41 +1008,59 @@ h3 {
   font-weight: 700;
   text-decoration: none;
 }
-.blog-teasers {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px dashed var(--line);
-  border-left: 1px dashed var(--line);
+.blog-preview {
+  border-bottom: 1px dashed var(--line);
 }
-.blog-teasers > a {
-  min-width: 0;
-  padding: 18px;
-  border-right: 1px dashed var(--line);
+.blog-row {
+  position: relative;
+  display: block;
+  padding: 18px 36px 18px 0;
+  border-top: 1px dashed var(--line);
   border-bottom: 1px dashed var(--line);
   color: var(--text);
   text-decoration: none;
   transition: background 0.16s ease;
 }
-.blog-teasers > a:hover {
+.blog-row:hover {
   background: var(--panel);
 }
-.blog-teasers span {
-  color: #1687a7;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.blog-teasers h3 {
-  margin: 8px 0;
-  font-size: 16px;
+.blog-row h3 {
+  max-width: 610px;
+  margin: 0 0 16px;
+  font-size: 19px;
   line-height: 1.25;
+  letter-spacing: -0.015em;
 }
-.blog-teasers p {
-  min-height: 78px;
-  margin-bottom: 14px;
+.blog-row-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
   color: var(--muted);
   font-size: 12px;
+}
+.blog-row-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.blog-row-meta span:not(:first-child, .claps) {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--bg);
+  color: var(--text);
+}
+.blog-row-meta .claps {
+  color: #12b96f;
+  font-weight: 800;
+}
+.blog-row-open {
+  position: absolute;
+  top: 22px;
+  right: 8px;
+  color: #9b9ba5;
+  font-size: 18px;
 }
 .polaroids {
   height: 240px;
@@ -1094,17 +1123,18 @@ h3 {
   font-weight: bold;
   font-size: 11px;
 }
-.newsletter form {
+.newsletter-form {
   display: flex;
   gap: 14px;
-  padding: 25px;
+  margin-top: 18px;
+  padding: 18px;
   background: repeating-linear-gradient(
     135deg,
     transparent 0 6px,
     var(--line) 7px 8px
   );
 }
-.newsletter input {
+.newsletter-form input {
   flex: 1;
   padding: 10px;
   border: 1px solid var(--line);
@@ -1131,12 +1161,9 @@ h3 {
 }
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   color: var(--muted);
   font-size: 11px;
-}
-footer a {
-  color: inherit;
 }
 .blog-page {
   padding-top: 24px;
@@ -1291,11 +1318,11 @@ footer a {
     padding: 6px 10px;
     font-size: 11px;
   }
-  .blog-teasers {
-    grid-template-columns: 1fr;
+  .blog-row h3 {
+    font-size: 17px;
   }
-  .blog-teasers p {
-    min-height: 0;
+  .blog-row-meta {
+    gap: 7px;
   }
   .oss,
   .sponsor-empty {
@@ -1342,7 +1369,8 @@ footer a {
     justify-content: flex-start;
     overflow-x: auto;
   }
-  .newsletter form {
+  .newsletter-form {
+    flex-direction: column;
     padding: 14px;
   }
   .quote blockquote {

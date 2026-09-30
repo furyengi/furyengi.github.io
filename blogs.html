@@ -3,62 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Writing — Furyengi</title>
-    <meta name="description" content="Engineering notes by Mahmud Abdulmalik on backend systems, cloud infrastructure, AI security, and product engineering." />
+    <title>Blog - Furyengi</title>
+    <meta
+      name="description"
+      content="Engineering notes by Mahmud Abdulmalik on Orvel, backend systems, cloud infrastructure, and applied AI."
+    />
     <link rel="canonical" href="https://furyengi.is-a.dev/blogs.html" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
-    <link rel="stylesheet" href="/site.css?v=skills-blogs" />
+    <link rel="stylesheet" href="/site.css?v=blog-orvel" />
   </head>
   <body>
     <main class="blog-page">
       <header class="blog-header block">
         <a class="back-link" href="/"><span aria-hidden="true">←</span> Back to portfolio</a>
-        <p>FURYENGI / WRITING</p>
-        <h1>Notes from building real systems.</h1>
-        <span>Backend engineering, cloud infrastructure, AI security, and the product decisions between them.</span>
+        <p>FURYENGI / BLOG</p>
+        <h1>Writing from the things I am building.</h1>
+        <span>Notes on Orvel, backend systems, AI infrastructure, and the product decisions that make software easier to trust.</span>
       </header>
 
       <section class="blog-index block" aria-label="All articles">
-        <article id="ai-gateway-failures">
-          <div class="article-meta"><span>01</span><span>AI infrastructure</span><span>6 min read</span></div>
-          <h2>What reliable AI gateways get wrong about provider failures</h2>
-          <p>AI gateways often flatten every upstream problem into a generic server error. That makes applications less reliable exactly when they need the most context. Authentication failures, quota exhaustion, malformed requests, and interrupted streams are different failure modes and should remain different all the way back to the caller.</p>
-          <p>The useful approach is to preserve the provider signal, normalize it into a stable internal error shape, and test both buffered and streaming paths. A gateway should not merely forward traffic; it should help the application decide whether to retry, reconfigure, fall back, or stop.</p>
-        </article>
-
-        <article id="offline-first-pharmacy">
-          <div class="article-meta"><span>02</span><span>Systems design</span><span>7 min read</span></div>
-          <h2>Offline-first pharmacy software is really a data-integrity problem</h2>
-          <p>“Works offline” sounds like a synchronization feature. In pharmacy operations, it is a promise that stock quantities, batches, expiries, and sales remain trustworthy even when connectivity disappears midway through a transaction.</p>
-          <p>That means FEFO deduction, local transactions, conflict handling, and eventual synchronization have to be designed together. The interface can recover from a network failure; incorrect stock history is much harder to repair.</p>
-        </article>
-
-        <article id="building-a-ci-runner">
-          <div class="article-meta"><span>03</span><span>Developer infrastructure</span><span>8 min read</span></div>
-          <h2>Building a CI/CD runner from scratch changes how you see pipelines</h2>
-          <p>A pipeline is not just a YAML file. Behind it are signed webhooks, durable jobs, isolated execution, streamed logs, cancellation, timeouts, and state transitions that must survive restarts.</p>
-          <p>Building RunXR made those boundaries visible. The runner should remain simple, the queue should own work state, and the dashboard should report reality rather than inventing it from incomplete events.</p>
-        </article>
-
-        <article id="encrypted-developer-workflows">
-          <div class="article-meta"><span>04</span><span>Security tooling</span><span>5 min read</span></div>
-          <h2>Secret management should fit the developer workflow</h2>
-          <p>Security tools lose value when the safe path is slower than copying a key into a local file. Encrypted storage matters, but so do environment boundaries, a predictable CLI, and a clear model for how secrets reach a process.</p>
-          <p>Evnar is built around that balance: strong defaults without hiding the workflow behind a black box.</p>
-        </article>
-
-        <article id="local-first-agents">
-          <div class="article-meta"><span>05</span><span>Applied AI</span><span>7 min read</span></div>
-          <h2>Local-first AI agents need more than a chat box</h2>
-          <p>An agent becomes useful when its runtime, knowledge, memory, skills, corrections, and evaluations are understandable as separate parts. A chat interface alone cannot show why behavior changed or whether a correction actually improved anything.</p>
-          <p>Orvel treats those parts as explicit product surfaces so an agent can be taught, tested, and run across local or hosted models without losing its identity to one provider.</p>
+        <article id="building-orvel">
+          <div class="article-meta">
+            <span>01</span><span>AI Agents</span><span>6 min read</span>
+          </div>
+          <h2>Building Orvel: what does training your own AI actually mean?</h2>
+          <p>When people hear "train your own AI," they usually imagine a giant model being built from zero. That is one version of training, but it is not the version most products need. For a practical agent, training often means shaping how it remembers, what it can use, what corrections it keeps, and how it improves without losing the person it is meant to serve.</p>
+          <p>That is the idea behind Orvel. The goal is not to make another chat box with a different skin. The goal is to make an AI that can learn your working style, connect to the tools you actually use, run on local or hosted models, and keep its knowledge organized enough that you can inspect it, fix it, and trust it.</p>
+          <p>In that world, "training" becomes a product surface. You teach the agent by giving it memories, documents, examples, rules, tasks, failures, and feedback. You evaluate it by checking whether those lessons change future behavior in useful ways. The hard part is not only model quality; it is building the system around the model so learning feels understandable instead of magical.</p>
+          <p>That is what I care about with Orvel: an assistant that can be corrected, extended, and carried across models without starting over every time the backend changes.</p>
         </article>
       </section>
 
       <footer class="block blog-footer">
         <a class="back-link" href="/"><span aria-hidden="true">←</span> Back to portfolio</a>
-        <span>© 2026 Mahmud Abdulmalik</span>
+        <span>© MMXXVI</span>
       </footer>
     </main>
   </body>

@@ -39,4 +39,9 @@ Offline-first pharmacy inventory and point-of-sale application with transactiona
 ### Webhook Billing and Notifications
 Webhook-driven backend with HMAC signature verification, idempotent event processing, subscription-state synchronization, and queued notifications.
 
+## Blog
+
+### Building Orvel: what does training your own AI actually mean?
+Explains training as a practical product surface for Orvel: shaping memory, tools, corrections, documents, feedback, evaluation, and model portability instead of only training a foundation model from scratch.
+
 Canonical identity and links are maintained at https://furyengi.is-a.dev/.

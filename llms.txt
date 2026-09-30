@@ -6,7 +6,7 @@
 - [Portfolio](https://furyengi.is-a.dev/)
 - [About](https://furyengi.is-a.dev/about.html)
 - [Projects](https://furyengi.is-a.dev/projects.html)
-- [Writing](https://furyengi.is-a.dev/blogs.html)
+- [Blog](https://furyengi.is-a.dev/blogs.html)
 - [Résumé](https://furyengi.is-a.dev/Mahmud_CV.pdf)
 
 ## Verified profiles
@@ -30,3 +30,6 @@
 - Evnar secrets manager
 - GalenDesk pharmacy operations application
 - Webhook Billing and Notifications
+
+## Blog
+- Building Orvel: what does training your own AI actually mean?
