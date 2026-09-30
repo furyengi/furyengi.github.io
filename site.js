@@ -92,11 +92,11 @@
     },
     prismor: {
       company: "Prismor",
-      role: "Contributing Engineer",
+      role: "Software Engineer",
       period: "2026 — Present · Remote",
       logo: "/prismor-logo.png",
       description:
-        "Prismor builds security infrastructure for AI traffic. I contribute across the software, with current work improving how applications understand and recover from upstream provider failures.",
+        "Prismor builds security infrastructure for AI traffic. I contributed a focused improvement to how applications understand and recover from upstream provider failures.",
       work: [
         "Hardened provider authentication failure handling across buffered and streaming AI responses.",
         "Built automated coverage for proxy error paths and upstream provider failures.",
