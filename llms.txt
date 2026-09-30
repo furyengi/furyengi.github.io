@@ -32,4 +32,4 @@
 - Webhook Billing and Notifications
 
 ## Blog
-- Building Orvel: what does training your own AI actually mean?
+- Building Orvel: What "Training Your Own AI" Actually Means

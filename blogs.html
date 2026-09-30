@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Blog - Furyengi</title>
+    <title>Building Orvel - Furyengi</title>
     <meta
       name="description"
-      content="Engineering notes by Mahmud Abdulmalik on Orvel, backend systems, cloud infrastructure, and applied AI."
+      content="Mahmud Abdulmalik writes about what training your own AI actually means while building Orvel."
     />
+    <meta property="og:title" content="Building Orvel: What Training Your Own AI Actually Means" />
+    <meta
+      property="og:description"
+      content="A practical reflection on Orvel, local AI, persistent corrections, memory, and what it means to build an agent that becomes yours over time."
+    />
+    <meta property="og:image" content="https://furyengi.is-a.dev/orvel-training-ai-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://furyengi.is-a.dev/blogs.html" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
@@ -24,14 +31,96 @@
 
       <section class="blog-index block" aria-label="All articles">
         <article id="building-orvel">
+          <img
+            class="article-cover"
+            src="/orvel-training-ai-cover.png"
+            alt="Building Orvel article cover"
+          />
           <div class="article-meta">
-            <span>01</span><span>AI Agents</span><span>6 min read</span>
+            <span>01</span><span>AI Agents</span><span>7 min read</span>
           </div>
-          <h2>Building Orvel: what does training your own AI actually mean?</h2>
-          <p>When people hear "train your own AI," they usually imagine a giant model being built from zero. That is one version of training, but it is not the version most products need. For a practical agent, training often means shaping how it remembers, what it can use, what corrections it keeps, and how it improves without losing the person it is meant to serve.</p>
-          <p>That is the idea behind Orvel. The goal is not to make another chat box with a different skin. The goal is to make an AI that can learn your working style, connect to the tools you actually use, run on local or hosted models, and keep its knowledge organized enough that you can inspect it, fix it, and trust it.</p>
-          <p>In that world, "training" becomes a product surface. You teach the agent by giving it memories, documents, examples, rules, tasks, failures, and feedback. You evaluate it by checking whether those lessons change future behavior in useful ways. The hard part is not only model quality; it is building the system around the model so learning feels understandable instead of magical.</p>
-          <p>That is what I care about with Orvel: an assistant that can be corrected, extended, and carried across models without starting over every time the backend changes.</p>
+          <h2>Building Orvel: What &ldquo;Training Your Own AI&rdquo; Actually Means</h2>
+          <p>When I first started thinking about Orvel, the idea in my head was pretty simple.</p>
+          <p>I wanted people to be able to train their own AI.</p>
+          <p>That sentence sounded straightforward until I actually started building it.</p>
+          <p>What does training your own AI even mean?</p>
+          <p>At first, I thought about it the way I think a lot of people do. You give an AI information, correct it when it gets something wrong, teach it how you want it to respond, and eventually you have an AI that feels like yours.</p>
+          <p>Technically, though, things get complicated very quickly.</p>
+
+          <h3>I wasn't trying to build another ChatGPT wrapper</h3>
+          <p>One thing I knew pretty early was that I didn't want Orvel to just be a nice interface where someone enters an API key and talks to an existing model.</p>
+          <p>There are already enough products that do that.</p>
+          <p>What interested me was the layer between a base model and the person using it.</p>
+          <p>Imagine I create an agent and tell it about a project I'm working on. I give it documents and information it should know. Then I ask it a question and its answer is wrong.</p>
+          <p>I correct it.</p>
+          <p>The next time I ask the same thing in a completely different way, I don't want it to act like that correction never happened.</p>
+          <p>That sounds obvious from a user's perspective.</p>
+          <p>From a development perspective, it isn't.</p>
+          <p>Saving a correction is easy.</p>
+          <p>Understanding when that correction is relevant again is the interesting part.</p>
+          <p>That was one of the things that made me realise Orvel wasn't really about a giant TRAIN button that magically creates a new model.</p>
+          <p>It was about building a system that could gradually become more useful to one particular person.</p>
+
+          <h3>Then I had to define what training meant</h3>
+          <p>The word "training" carries a lot of weight in AI.</p>
+          <p>If I tell someone that Orvel lets them train an AI, they could reasonably assume I'm talking about taking a neural network and changing its weights using a dataset.</p>
+          <p>That's actual model training.</p>
+          <p>But that isn't the only way to make an AI learn something about you.</p>
+          <p>There is also knowledge retrieval, persistent instructions, examples, corrections, memory and eventually techniques such as fine tuning.</p>
+          <p>They can all change how an AI behaves without necessarily training a completely new foundation model.</p>
+          <p>That distinction became important for Orvel.</p>
+          <p>I don't think somebody should need to understand embeddings, inference, context windows or model weights just because they want an AI that understands their work.</p>
+          <p>They should be able to create one, teach it something and see the result.</p>
+          <p>The complicated part should happen underneath.</p>
+
+          <h3>Local AI changed how I thought about the product</h3>
+          <p>Another question I kept coming back to was where the actual intelligence should come from.</p>
+          <p>The easiest answer is the cloud.</p>
+          <p>Send requests to a model provider and return the response.</p>
+          <p>It works, but now every message potentially costs somebody money. You're also dependent on another service being available.</p>
+          <p>Local models made the idea much more interesting to me.</p>
+          <p>If Orvel can use a model running on your own computer, suddenly the economics change.</p>
+          <p>You can experiment without thinking about the cost of every request. Your setup can keep working without depending entirely on a hosted model provider, and more of the experience can stay on your machine.</p>
+          <p>There is obviously a tradeoff.</p>
+          <p>Not everybody has a computer capable of comfortably running large models, and a small local model isn't suddenly going to outperform the strongest cloud models.</p>
+          <p>So I stopped thinking about local and cloud as competitors.</p>
+          <p>They are options.</p>
+          <p>Someone might want everything local.</p>
+          <p>Someone else might bring their own API key.</p>
+          <p>Another person might eventually prefer a hosted Orvel experience where they don't have to configure anything.</p>
+          <p>The important thing is that the agent itself shouldn't lose its identity just because the model underneath it changes.</p>
+
+          <h3>The model isn't the agent</h3>
+          <p>This is probably the biggest thing I've learned while building Orvel so far.</p>
+          <p>The model and the agent are not the same thing.</p>
+          <p>A model provides intelligence.</p>
+          <p>The agent is everything around that intelligence.</p>
+          <p>Its knowledge.</p>
+          <p>Its instructions.</p>
+          <p>What you have taught it.</p>
+          <p>The corrections you have made.</p>
+          <p>How it behaves.</p>
+          <p>What it can access.</p>
+          <p>What it remembers.</p>
+          <p>Once I started thinking about Orvel this way, a lot of product decisions became clearer.</p>
+          <p>Instead of asking, "How do I train a model?"</p>
+          <p>I started asking, "How do I let someone build an AI that becomes theirs over time?"</p>
+          <p>I think that's a much more interesting problem.</p>
+
+          <h3>I'm still figuring it out</h3>
+          <p>Orvel is still early.</p>
+          <p>There are parts of the idea I'm building now and parts that will probably change completely after people actually start using it.</p>
+          <p>I've already changed my mind about features more than once.</p>
+          <p>I expect that to keep happening.</p>
+          <p>But that's also why I'm building it in public and keeping it open source.</p>
+          <p>I don't want to pretend I already know exactly what Orvel becomes.</p>
+          <p>Right now, I'm trying to get one thing right.</p>
+          <p>You create an AI.</p>
+          <p>You teach it.</p>
+          <p>You correct it.</p>
+          <p>You give it knowledge.</p>
+          <p>And over time, it should feel less like you're repeatedly prompting somebody else's model and more like you're building something of your own.</p>
+          <p>That's what "training your own AI" means to me right now.</p>
         </article>
       </section>
 

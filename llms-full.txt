@@ -41,7 +41,7 @@ Webhook-driven backend with HMAC signature verification, idempotent event proces
 
 ## Blog
 
-### Building Orvel: what does training your own AI actually mean?
+### Building Orvel: What "Training Your Own AI" Actually Means
 Explains training as a practical product surface for Orvel: shaping memory, tools, corrections, documents, feedback, evaluation, and model portability instead of only training a foundation model from scratch.
 
 Canonical identity and links are maintained at https://furyengi.is-a.dev/.
