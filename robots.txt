@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://furyengi.is-a.dev/sitemap.xml
+Sitemap: https://furyengi.cv/sitemap.xml
 
 # Machine-readable portfolio context
-# https://furyengi.is-a.dev/llms.txt
-# https://furyengi.is-a.dev/llms-full.txt
+# https://furyengi.cv/llms.txt
+# https://furyengi.cv/llms-full.txt

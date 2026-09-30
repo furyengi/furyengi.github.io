@@ -3,11 +3,11 @@
 > Official portfolio of Mahmud Abdulmalik, known online as Furyengi, a full-stack engineer in Ilorin, Nigeria focused on backend systems, cloud infrastructure, developer tools, and practical software products.
 
 ## Primary pages
-- [Portfolio](https://furyengi.is-a.dev/)
-- [About](https://furyengi.is-a.dev/about.html)
-- [Projects](https://furyengi.is-a.dev/projects.html)
-- [Blog](https://furyengi.is-a.dev/blog/)
-- [Résumé](https://furyengi.is-a.dev/Mahmud_CV.pdf)
+- [Portfolio](https://furyengi.cv/)
+- [About](https://furyengi.cv/about.html)
+- [Projects](https://furyengi.cv/projects.html)
+- [Blog](https://furyengi.cv/blog/)
+- [Résumé](https://furyengi.cv/Mahmud_CV.pdf)
 
 ## Verified profiles
 - [GitHub](https://github.com/furyengi)
