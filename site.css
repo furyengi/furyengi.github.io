@@ -1012,15 +1012,6 @@ h3 {
   line-height: 1;
   letter-spacing: -0.04em;
 }
-.paystack-mark b {
-  background: #00c3f7;
-}
-.bachs-mark b {
-  background: #111827;
-}
-.pxxl-mark b {
-  background: linear-gradient(135deg, #7c3cff, #18c8ff);
-}
 .section-heading {
   display: flex;
   align-items: center;
