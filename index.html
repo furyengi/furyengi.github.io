@@ -17,7 +17,7 @@
       content="https://furyengi.is-a.dev/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css?v=skills-color" />
+    <link rel="stylesheet" href="/site.css?v=newsletter-ajax" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -371,8 +371,7 @@
         </a>
         <form
           class="newsletter-form"
-          action="https://formsubmit.co/furyengi@gmail.com"
-          method="POST"
+          action="https://formsubmit.co/furyengi@gmail.com" method="POST" enctype="multipart/form-data" data-newsletter-form
         >
           <input type="hidden" name="_subject" value="New Furyengi blog subscriber" />
           <input type="hidden" name="_captcha" value="false" />
@@ -384,7 +383,7 @@
             placeholder="Email for new posts"
             aria-label="Email address"
             required
-          /><button>Subscribe</button>
+          /><button>Subscribe</button><p class="newsletter-status" aria-live="polite"></p>
         </form>
       </section>
       <footer class="block">
@@ -398,6 +397,6 @@
     >
       <i class="hgi-stroke hgi-arrow-up-02"></i>
     </button>
-    <script src="/site.js?v=skills-color"></script>
+    <script src="/site.js?v=newsletter-ajax"></script>
   </body>
 </html>

@@ -225,6 +225,48 @@
     { passive: false },
   );
 
+  document.querySelectorAll("[data-newsletter-form]").forEach((form) => {
+    const status = form.querySelector(".newsletter-status");
+    const button = form.querySelector("button");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const email = data.get("email");
+      if (button) button.disabled = true;
+      if (status) {
+        status.textContent = "Subscribing…";
+        status.dataset.state = "loading";
+      }
+
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/furyengi@gmail.com", {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: data,
+        });
+
+        if (!response.ok) throw new Error("Newsletter service unavailable");
+
+        form.reset();
+        if (status) {
+          status.textContent =
+            "You’re in. Check your email once to confirm the subscription.";
+          status.dataset.state = "success";
+        }
+      } catch {
+        if (status) {
+          status.innerHTML = `Couldn’t subscribe here right now. Send me your email at <a href="mailto:furyengi@gmail.com?subject=Newsletter%20subscription&body=Please%20add%20${encodeURIComponent(email || "me")}%20to%20the%20newsletter.">furyengi@gmail.com</a>.`;
+          status.dataset.state = "error";
+        }
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  });
+
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
     if (

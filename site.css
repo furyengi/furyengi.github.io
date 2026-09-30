@@ -1167,6 +1167,7 @@ h3 {
 }
 .newsletter-form {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
   margin-top: 18px;
   padding: 18px;
@@ -1178,11 +1179,32 @@ h3 {
 }
 .newsletter-form input {
   flex: 1;
+  min-width: 220px;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--bg);
   color: var(--text);
+}
+.newsletter-form button:disabled {
+  opacity: 0.68;
+  cursor: progress;
+}
+.newsletter-status {
+  flex-basis: 100%;
+  margin: -4px 10px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.newsletter-status[data-state="success"] {
+  color: #1687a7;
+}
+.newsletter-status[data-state="error"] {
+  color: #9f3a38;
+}
+.newsletter-status a {
+  color: inherit;
+  font-weight: 700;
 }
 .quote {
   text-align: center;
