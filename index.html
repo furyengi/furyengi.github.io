@@ -17,7 +17,7 @@
       content="https://furyengi.is-a.dev/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css?v=carousel-pause" />
+    <link rel="stylesheet" href="/site.css?v=skills-blogs" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -62,7 +62,7 @@
                 aria-label="Discord — furyengi"
                 title="Discord — furyengi"
                 ><i class="hgi-stroke hgi-discord"></i
-              ></a>
+              ></a><a class="blog-link" href="/blogs.html" data-same-tab aria-label="Blog" title="Blog"><b aria-hidden="true">✎</b><span>Blog</span></a>
             </div>
           </div>
         </div>
@@ -325,46 +325,34 @@
       <section class="block">
         <h2>Skills &amp; Technologies</h2>
         <div class="skills">
-          <span>PY<br /><b>Python</b></span
-          ><span>TS<br /><b>TypeScript</b></span
-          ><span>ND<br /><b>Node</b></span
-          ><span>FA<br /><b>FastAPI</b></span
-          ><span>DJ<br /><b>Django</b></span
-          ><span>PG<br /><b>PostgreSQL</b></span
-          ><span>RD<br /><b>Redis</b></span
-          ><span>DK<br /><b>Docker</b></span
-          ><span>GH<br /><b>GitHub</b></span
-          ><span>GC<br /><b>G Cloud</b></span
-          ><span>RE<br /><b>React</b></span
-          ><span>NX<br /><b>Next</b></span
-          ><span>RN<br /><b>React Native</b></span
-          ><span>EX<br /><b>Expo</b></span
-          ><span>LI<br /><b>Linux</b></span
-          ><span>CI<br /><b>CI/CD</b></span>
+          <span><b>⚛</b> React</span><span><b>RN</b> React Native</span><span><b>FL</b> Flutter</span><span><b>FB</b> Firebase</span><span><b>SB</b> Supabase</span><span><b>N</b> Next.js</span>
+          <span><b>DJ</b> Django</span><span><b>EX</b> Express</span><span><b>ND</b> Node.js</span><span><b>FA</b> FastAPI</span><span><b>PG</b> PostgreSQL</span><span><b>MG</b> MongoDB</span><span><b>RD</b> Redis</span><span><b>SQ</b> SQLite</span>
+          <span><b>PM</b> Postman</span><span><b>TW</b> Tailwind CSS</span><span><b>UI</b> shadcn/ui</span><span><b>FM</b> Motion</span><span><b>GS</b> GSAP</span><span><b>JS</b> JavaScript</span><span><b>JV</b> Java</span><span><b>DT</b> Dart</span><span><b>TS</b> TypeScript</span><span><b>PY</b> Python</span><span><b>SQL</b> SQL</span>
+          <span><b>API</b> REST APIs</span><span><b>WH</b> Webhooks</span><span><b>CE</b> Celery</span><span><b>SA</b> SQLAlchemy</span><span><b>AL</b> Alembic</span><span><b>JWT</b> JWT Auth</span><span><b>OA</b> OAuth</span><span><b>AE</b> AES-GCM</span><span><b>NG</b> Nginx</span><span><b>GT</b> Git</span><span><b>GH</b> GitHub</span><span><b>FG</b> Figma</span>
+          <span><b>ST</b> Stripe</span><span><b>PS</b> Paystack</span><span><b>FW</b> Flutterwave</span><span><b>VS</b> VS Code</span><span><b>AS</b> Android Studio</span>
+          <span><b>CX</b> Codex</span><span><b>CL</b> Claude Code</span><span><b>CP</b> GitHub Copilot</span><span><b>OL</b> Ollama</span><span><b>GQ</b> Groq</span><span><b>AI</b> OpenAI API</span><span><b>AG</b> Antigravity</span><span><b>LI</b> Linux</span><span><b>WN</b> Windows</span><span><b>AWS</b> AWS</span><span><b>GC</b> Google Cloud</span><span><b>DK</b> Docker</span>
+          <span><b>RE</b> Render</span><span><b>PX</b> Pxxl</span><span><b>▲</b> Vercel</span><span><b>HS</b> Hostinger</span><span><b>CI</b> CI/CD &amp; Production Deployment</span><span><b>EX</b> Expo</span>
         </div>
       </section>
 
-      <section class="block">
-        <h2>Off screen</h2>
-        <div class="polaroids">
-          <figure>
-            <img src="/furyengi-profile.jpeg" alt="Furyengi" />
-            <figcaption>Me</figcaption>
-          </figure>
-          <figure class="code-shot">
-            <div>
-              &gt; ship_<br />&nbsp;&nbsp;reliable<br />&nbsp;&nbsp;systems()
-            </div>
-            <figcaption>Daily work</figcaption>
-          </figure>
-          <figure class="code-shot orange">
-            <div>ILORIN<br />NIGERIA<br />UTC+1</div>
-            <figcaption>Home base</figcaption>
-          </figure>
-          <figure class="code-shot dark">
-            <div>BUILD<br />LEARN<br />REPEAT</div>
-            <figcaption>Current mood</figcaption>
-          </figure>
+      <section class="block blog-preview">
+        <div class="section-heading">
+          <h2>From the blog</h2>
+          <a href="/blogs.html" data-same-tab>All writing <i class="hgi-stroke hgi-arrow-right-01"></i></a>
+        </div>
+        <div class="blog-teasers">
+          <a href="/blogs.html#ai-gateway-failures" data-same-tab>
+            <span>AI infrastructure · 6 min</span>
+            <h3>What reliable AI gateways get wrong about provider failures</h3>
+            <p>A practical look at authentication errors, streaming responses, and making upstream failures useful to applications.</p>
+            <b>Read article <i class="hgi-stroke hgi-arrow-right-01"></i></b>
+          </a>
+          <a href="/blogs.html#offline-first-pharmacy" data-same-tab>
+            <span>Systems design · 7 min</span>
+            <h3>Offline-first pharmacy software is really a data-integrity problem</h3>
+            <p>Why stock batches, FEFO deduction, expiry alerts, and unreliable connectivity have to be designed as one system.</p>
+            <b>Read article <i class="hgi-stroke hgi-arrow-right-01"></i></b>
+          </a>
         </div>
       </section>
 
@@ -422,6 +410,6 @@
     >
       <i class="hgi-stroke hgi-arrow-up-02"></i>
     </button>
-    <script src="/site.js?v=ai-security-engineer"></script>
+    <script src="/site.js?v=skills-blogs"></script>
   </body>
 </html>

@@ -211,7 +211,8 @@
       !href ||
       href.startsWith("#") ||
       href.startsWith("mailto:") ||
-      href.startsWith("tel:")
+      href.startsWith("tel:") ||
+      link.hasAttribute("data-same-tab")
     )
       return;
     link.target = "_blank";

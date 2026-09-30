@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Writing — Furyengi</title>
+    <meta name="description" content="Engineering notes by Mahmud Abdulmalik on backend systems, cloud infrastructure, AI security, and product engineering." />
+    <link rel="canonical" href="https://furyengi.is-a.dev/blogs.html" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
+    <link rel="stylesheet" href="/site.css?v=skills-blogs" />
+  </head>
+  <body>
+    <main class="blog-page">
+      <header class="blog-header block">
+        <a class="back-link" href="/"><span aria-hidden="true">←</span> Back to portfolio</a>
+        <p>FURYENGI / WRITING</p>
+        <h1>Notes from building real systems.</h1>
+        <span>Backend engineering, cloud infrastructure, AI security, and the product decisions between them.</span>
+      </header>
+
+      <section class="blog-index block" aria-label="All articles">
+        <article id="ai-gateway-failures">
+          <div class="article-meta"><span>01</span><span>AI infrastructure</span><span>6 min read</span></div>
+          <h2>What reliable AI gateways get wrong about provider failures</h2>
+          <p>AI gateways often flatten every upstream problem into a generic server error. That makes applications less reliable exactly when they need the most context. Authentication failures, quota exhaustion, malformed requests, and interrupted streams are different failure modes and should remain different all the way back to the caller.</p>
+          <p>The useful approach is to preserve the provider signal, normalize it into a stable internal error shape, and test both buffered and streaming paths. A gateway should not merely forward traffic; it should help the application decide whether to retry, reconfigure, fall back, or stop.</p>
+        </article>
+
+        <article id="offline-first-pharmacy">
+          <div class="article-meta"><span>02</span><span>Systems design</span><span>7 min read</span></div>
+          <h2>Offline-first pharmacy software is really a data-integrity problem</h2>
+          <p>“Works offline” sounds like a synchronization feature. In pharmacy operations, it is a promise that stock quantities, batches, expiries, and sales remain trustworthy even when connectivity disappears midway through a transaction.</p>
+          <p>That means FEFO deduction, local transactions, conflict handling, and eventual synchronization have to be designed together. The interface can recover from a network failure; incorrect stock history is much harder to repair.</p>
+        </article>
+
+        <article id="building-a-ci-runner">
+          <div class="article-meta"><span>03</span><span>Developer infrastructure</span><span>8 min read</span></div>
+          <h2>Building a CI/CD runner from scratch changes how you see pipelines</h2>
+          <p>A pipeline is not just a YAML file. Behind it are signed webhooks, durable jobs, isolated execution, streamed logs, cancellation, timeouts, and state transitions that must survive restarts.</p>
+          <p>Building RunXR made those boundaries visible. The runner should remain simple, the queue should own work state, and the dashboard should report reality rather than inventing it from incomplete events.</p>
+        </article>
+
+        <article id="encrypted-developer-workflows">
+          <div class="article-meta"><span>04</span><span>Security tooling</span><span>5 min read</span></div>
+          <h2>Secret management should fit the developer workflow</h2>
+          <p>Security tools lose value when the safe path is slower than copying a key into a local file. Encrypted storage matters, but so do environment boundaries, a predictable CLI, and a clear model for how secrets reach a process.</p>
+          <p>Evnar is built around that balance: strong defaults without hiding the workflow behind a black box.</p>
+        </article>
+
+        <article id="local-first-agents">
+          <div class="article-meta"><span>05</span><span>Applied AI</span><span>7 min read</span></div>
+          <h2>Local-first AI agents need more than a chat box</h2>
+          <p>An agent becomes useful when its runtime, knowledge, memory, skills, corrections, and evaluations are understandable as separate parts. A chat interface alone cannot show why behavior changed or whether a correction actually improved anything.</p>
+          <p>Orvel treats those parts as explicit product surfaces so an agent can be taught, tested, and run across local or hosted models without losing its identity to one provider.</p>
+        </article>
+      </section>
+
+      <footer class="block blog-footer">
+        <a class="back-link" href="/"><span aria-hidden="true">←</span> Back to portfolio</a>
+        <span>© 2026 Mahmud Abdulmalik</span>
+      </footer>
+    </main>
+  </body>
+</html>
