@@ -1236,10 +1236,7 @@ footer {
   margin-top: 22px;
 }
 .blog-hero-actions a,
-.blog-hero-actions button,
-.article-rail a,
-.article-rail button,
-.comment-form button {
+.blog-hero-actions button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1259,10 +1256,6 @@ footer {
   min-height: 38px;
   padding: 8px 13px;
 }
-.article-like.is-liked,
-.article-like.is-liked span {
-  color: #12b96f;
-}
 .blog-index {
   padding-top: 0;
 }
@@ -1278,31 +1271,6 @@ footer {
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #07080d;
-}
-.article-shell {
-  display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 20px;
-}
-.article-rail {
-  position: sticky;
-  top: 20px;
-  align-self: start;
-  display: grid;
-  gap: 9px;
-  justify-items: center;
-}
-.article-rail a,
-.article-rail button {
-  width: 44px;
-  min-height: 44px;
-  flex-direction: column;
-  gap: 2px;
-  border-radius: 16px;
-  color: var(--muted);
-}
-.article-rail span {
-  font-size: 10px;
 }
 .article-meta {
   display: flex;
@@ -1378,102 +1346,21 @@ footer {
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
-.article-discussion,
 .blog-subscribe {
   max-width: 760px;
   margin: 0 auto;
   padding: 28px 0;
   border-bottom: 1px dashed var(--line);
 }
-.discussion-heading {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 18px;
-}
-.discussion-heading h2,
 .blog-subscribe h2 {
   margin-bottom: 6px;
   font-size: 22px;
 }
-.discussion-heading p,
 .blog-subscribe p {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.55;
-}
-.discussion-heading > span {
-  flex: 0 0 auto;
-  color: var(--muted);
-  font-size: 12px;
-}
-.comment-form {
-  display: grid;
-  gap: 10px;
-  padding: 14px;
-  border: 1px dashed var(--line);
-  border-radius: 16px;
-  background: var(--panel);
-}
-.comment-form > div {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-.comment-form input,
-.comment-form textarea {
-  width: 100%;
-  padding: 11px 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--bg);
-  color: var(--text);
-  font: inherit;
-  font-size: 13px;
-}
-.comment-form textarea {
-  resize: vertical;
-}
-.comment-form button {
-  justify-self: end;
-  min-height: 38px;
-  padding: 8px 16px;
-  background: #4d4d58;
-  color: #fff;
-  border-color: #4d4d58;
-}
-.comment-list {
-  display: grid;
-  gap: 10px;
-  margin-top: 14px;
-}
-.comment-card,
-.empty-comments {
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--bg);
-}
-.comment-card header {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-.comment-card b {
-  font-size: 13px;
-}
-.comment-card small,
-.empty-comments {
-  color: var(--muted);
-  font-size: 12px;
-}
-.comment-card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
 }
 .blog-subscribe {
   display: grid;
@@ -1576,35 +1463,6 @@ footer {
   }
   .blog-header h1 {
     font-size: 31px;
-  }
-  .article-shell {
-    display: block;
-  }
-  .article-rail {
-    position: static;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 18px;
-  }
-  .article-rail a,
-  .article-rail button {
-    width: auto;
-    min-width: 56px;
-    min-height: 40px;
-    flex-direction: row;
-    padding: 8px 11px;
-    border-radius: 999px;
-  }
-  .discussion-heading,
-  .comment-form > div {
-    grid-template-columns: 1fr;
-    display: grid;
-  }
-  .discussion-heading {
-    gap: 8px;
-  }
-  .comment-form button {
-    justify-self: stretch;
   }
   .oss,
   .sponsor-empty {

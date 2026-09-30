@@ -17,7 +17,7 @@
       content="https://furyengi.is-a.dev/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css?v=blog-social" />
+    <link rel="stylesheet" href="/site.css?v=blog-subscribe" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -366,10 +366,13 @@
         </a>
         <form
           class="newsletter-form"
-          action="mailto:furyengi@gmail.com"
-          method="post"
-          enctype="text/plain"
+          action="https://formsubmit.co/furyengi@gmail.com"
+          method="POST"
         >
+          <input type="hidden" name="_subject" value="New Furyengi blog subscriber" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://furyengi.is-a.dev/?subscribed=true#blog" />
           <input
             type="email"
             name="email"
@@ -390,6 +393,6 @@
     >
       <i class="hgi-stroke hgi-arrow-up-02"></i>
     </button>
-    <script src="/site.js?v=blog-social"></script>
+    <script src="/site.js?v=blog-subscribe"></script>
   </body>
 </html>

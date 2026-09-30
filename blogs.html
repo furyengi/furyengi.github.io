@@ -18,7 +18,7 @@
     <link rel="canonical" href="https://furyengi.is-a.dev/blogs.html" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
-    <link rel="stylesheet" href="/site.css?v=blog-social" />
+    <link rel="stylesheet" href="/site.css?v=blog-subscribe" />
   </head>
   <body>
     <div class="reading-progress" aria-hidden="true"><i></i></div>
@@ -29,11 +29,6 @@
         <h1>Building Orvel: What &ldquo;Training Your Own AI&rdquo; Actually Means</h1>
         <span>A build note on Orvel, local AI, persistent corrections, memory, and why the model is not the whole agent.</span>
         <div class="blog-hero-actions" aria-label="Article actions">
-          <button class="article-like" type="button" data-like-button>
-            <i class="hgi-stroke hgi-hands-clapping"></i>
-            <span data-like-count>1</span>
-          </button>
-          <a href="#comments"><i class="hgi-stroke hgi-message-02"></i> Comments</a>
           <button type="button" data-copy-link>
             <i class="hgi-stroke hgi-link-04"></i>
             Copy link
@@ -51,21 +46,7 @@
           <div class="article-meta">
             <span>Sep 30, 2026</span><span>AI Agents</span><span>7 min read</span>
           </div>
-          <div class="article-shell">
-            <aside class="article-rail" aria-label="Article engagement">
-              <button class="article-like" type="button" data-like-button title="Clap for this post">
-                <i class="hgi-stroke hgi-hands-clapping"></i>
-                <span data-like-count>1</span>
-              </button>
-              <a href="#comments" title="Jump to comments">
-                <i class="hgi-stroke hgi-message-02"></i>
-                <span data-comment-count>0</span>
-              </a>
-              <button type="button" data-copy-link title="Copy article link">
-                <i class="hgi-stroke hgi-link-04"></i>
-              </button>
-            </aside>
-            <div class="article-content">
+          <div class="article-content">
           <h2>Building Orvel: What &ldquo;Training Your Own AI&rdquo; Actually Means</h2>
           <p>When I first started thinking about Orvel, the idea in my head was pretty simple.</p>
           <p>I wanted people to be able to train their own AI.</p>
@@ -148,35 +129,19 @@
           <p>You give it knowledge.</p>
           <p>And over time, it should feel less like you're repeatedly prompting somebody else's model and more like you're building something of your own.</p>
           <p>That's what "training your own AI" means to me right now.</p>
-            </div>
           </div>
         </article>
-
-        <section class="article-discussion" id="comments" aria-label="Comments">
-          <div class="discussion-heading">
-            <div>
-              <h2>Responses</h2>
-              <p>Leave a note, question, or reaction. This version saves comments in your browser.</p>
-            </div>
-            <span><b data-comment-count>0</b> comments</span>
-          </div>
-          <form class="comment-form" data-comment-form>
-            <div>
-              <input name="name" type="text" placeholder="Name" aria-label="Name" required />
-              <input name="handle" type="text" placeholder="@handle optional" aria-label="Handle optional" />
-            </div>
-            <textarea name="comment" rows="4" placeholder="What did this make you think about?" aria-label="Comment" required></textarea>
-            <button type="submit">Post comment</button>
-          </form>
-          <div class="comment-list" data-comment-list></div>
-        </section>
 
         <section class="blog-subscribe">
           <div>
             <h2>Get the next note</h2>
             <p>Short build notes on Orvel, backend systems, AI tooling, and the small decisions behind reliable software.</p>
           </div>
-          <form class="newsletter-form" action="mailto:furyengi@gmail.com" method="post" enctype="text/plain">
+          <form class="newsletter-form" action="https://formsubmit.co/furyengi@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Furyengi blog subscriber" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://furyengi.is-a.dev/blogs.html?subscribed=true" />
             <input type="email" name="email" placeholder="Email for new posts" aria-label="Email address" required /><button>Subscribe</button>
           </form>
         </section>
@@ -187,6 +152,6 @@
         <span>© MMXXVI</span>
       </footer>
     </main>
-    <script src="/site.js?v=blog-social"></script>
+    <script src="/site.js?v=blog-subscribe"></script>
   </body>
 </html>
