@@ -17,11 +17,12 @@
 - Username: furyengi
 - Role: Full-Stack Engineer — Backend, Cloud & AI
 - Location: Ilorin, Nigeria
-- Current organizations: Galen Africa and Prismor
+- Current work: Orvel, Prismor, and Galen Africa
 - Previous organization: Afrigenomed
 - Focus: Backend engineering, APIs, cloud infrastructure, CI/CD, security tooling, and offline-first applications
 
 ## Selected work
+- Orvel local-first AI agent platform
 - Prismor AI security infrastructure
 - Scalable API Platform
 - RunXR self-hosted CI/CD

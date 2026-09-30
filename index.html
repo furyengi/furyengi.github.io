@@ -17,7 +17,7 @@
       content="https://furyengi.is-a.dev/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css?v=experience-logos" />
+    <link rel="stylesheet" href="/site.css?v=experience-modal" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -149,94 +149,114 @@
       <section class="block" id="experience">
         <h2>Experiences</h2>
         <div class="cards">
-          <article class="experience">
-            <a
-              class="logo"
-              href="https://galen.africa"
-              aria-label="Visit Galen Africa"
-              ><img src="/galen-africa-logo.png" alt="Galen Africa logo"
-            /></a>
-            <div>
-              <h3>Galen Africa</h3>
-              <p class="meta">
-                App Developer / Team Lead · 2025 — Present · Nigeria
-              </p>
-              <ul>
-                <li>
-                  Lead development of GalenDesk across application architecture
-                  and product direction
-                </li>
-                <li>
-                  Design database workflows, backend integrations, and
-                  offline-first operations
-                </li>
-                <li>
-                  Own reliability decisions from implementation through delivery
-                </li>
-              </ul>
-              <div class="tags">
-                React Native · Expo · SQLite · Node.js · Product
-              </div>
-            </div>
-          </article>
-          <article class="experience">
-            <a
-              class="logo"
-              href="https://github.com/PrismorSec/prismor"
-              aria-label="Visit Prismor"
-              ><img src="/prismor-logo.png" alt="Prismor logo"
-            /></a>
-            <div>
-              <h3>Prismor</h3>
-              <p class="meta">
-                AI Security Infrastructure Engineer · 2026 — Present · Remote
-              </p>
-              <ul>
-                <li>
-                  Harden authentication failure handling across buffered and
-                  streaming AI responses
-                </li>
-                <li>
-                  Build automated coverage for proxy error paths and upstream
-                  provider failures
-                </li>
-                <li>
-                  Improve local-backend integration guidance for safer provider
-                  configuration
-                </li>
-              </ul>
-              <div class="tags">
-                Python · AI Gateway Security · HTTP Proxy · Automated Testing
-              </div>
-            </div>
-          </article>
-          <article class="experience">
-            <a
-              class="logo"
-              href="https://afrigenomed.com"
-              aria-label="Visit Afrigenomed"
-              ><img src="/afrigenomed-logo.jpg" alt="Afrigenomed logo"
-            /></a>
-            <div>
-              <h3>Afrigenomed</h3>
-              <p class="meta">Backend Developer · 2024 — 2026 · Remote</p>
-              <ul>
-                <li>
-                  Built Node.js backend logic for users, content, and learning
-                  workflows
-                </li>
-                <li>
-                  Developed reliable APIs and application data flows for an LMS
-                </li>
-                <li>
-                  Collaborated across product and engineering requirements
-                </li>
-              </ul>
-              <div class="tags">Node.js · Express · REST APIs · Databases</div>
-            </div>
-          </article>
+          <button class="experience" type="button" data-experience="orvel">
+            <span class="logo"><img src="/orvel-logo.png" alt="" /></span>
+            <span class="experience-copy">
+              <span class="experience-title"><b>Orvel</b><em>Current</em></span>
+              <span class="meta"
+                >Creator &amp; Lead Engineer · 2026 — Present</span
+              >
+              <span class="experience-summary"
+                >A local-first platform for creating, teaching, evaluating, and
+                running AI agents.</span
+              >
+              <span class="tags"
+                >Agent Runtime · Next.js · TypeScript · AI</span
+              >
+            </span>
+            <span class="experience-arrow" aria-hidden="true"
+              ><i class="hgi-stroke hgi-arrow-right-01"></i
+            ></span>
+          </button>
+          <button class="experience" type="button" data-experience="prismor">
+            <span class="logo"><img src="/prismor-logo.png" alt="" /></span>
+            <span class="experience-copy">
+              <span class="experience-title"
+                ><b>Prismor</b><em>Current</em></span
+              >
+              <span class="meta"
+                >AI Security Infrastructure Engineer · 2026 — Present</span
+              >
+              <span class="experience-summary"
+                >Strengthening authentication and failure handling across AI
+                gateway infrastructure.</span
+              >
+              <span class="tags"
+                >Python · AI Security · HTTP Proxy · Tests</span
+              >
+            </span>
+            <span class="experience-arrow" aria-hidden="true"
+              ><i class="hgi-stroke hgi-arrow-right-01"></i
+            ></span>
+          </button>
+          <button class="experience" type="button" data-experience="galen">
+            <span class="logo"
+              ><img src="/galen-africa-logo.png" alt=""
+            /></span>
+            <span class="experience-copy">
+              <span class="experience-title"><b>Galen Africa</b></span>
+              <span class="meta"
+                >App Developer / Team Lead · 2025 — Present</span
+              >
+              <span class="experience-summary"
+                >Leading architecture and delivery for offline-first healthcare
+                products.</span
+              >
+              <span class="tags"
+                >React Native · Expo · SQLite · Node.js · Product</span
+              >
+            </span>
+            <span class="experience-arrow" aria-hidden="true"
+              ><i class="hgi-stroke hgi-arrow-right-01"></i
+            ></span>
+          </button>
+          <button
+            class="experience"
+            type="button"
+            data-experience="afrigenomed"
+          >
+            <span class="logo"><img src="/afrigenomed-logo.jpg" alt="" /></span>
+            <span class="experience-copy">
+              <span class="experience-title"><b>Afrigenomed</b></span>
+              <span class="meta">Backend Developer · 2024 — 2026</span>
+              <span class="experience-summary"
+                >Built backend systems and data flows for digital-health
+                learning products.</span
+              >
+              <span class="tags"
+                >Node.js · Express · REST APIs · Databases</span
+              >
+            </span>
+            <span class="experience-arrow" aria-hidden="true"
+              ><i class="hgi-stroke hgi-arrow-right-01"></i
+            ></span>
+          </button>
         </div>
       </section>
+
+      <dialog class="experience-dialog" id="experience-dialog">
+        <div class="dialog-header">
+          <div class="dialog-identity">
+            <span class="logo"><img id="dialog-logo" alt="" /></span>
+            <div>
+              <small id="dialog-period"></small>
+              <h2 id="dialog-company"></h2>
+              <p id="dialog-role"></p>
+            </div>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Close details">
+            <i class="hgi-stroke hgi-cancel-01"></i>
+          </button>
+        </div>
+        <p class="dialog-description" id="dialog-description"></p>
+        <h3>What I worked on</h3>
+        <ul id="dialog-work"></ul>
+        <div class="dialog-tags" id="dialog-tags"></div>
+        <a class="dialog-link" id="dialog-link" target="_blank" rel="noreferrer"
+          >Visit <span id="dialog-link-label"></span>
+          <i class="hgi-stroke hgi-arrow-up-right-01"></i
+        ></a>
+      </dialog>
 
       <section class="block" id="projects">
         <h2>Projects</h2>
@@ -393,6 +413,6 @@
     >
       <i class="hgi-stroke hgi-arrow-up-02"></i>
     </button>
-    <script src="/site.js?v=profile-4"></script>
+    <script src="/site.js?v=experience-modal"></script>
   </body>
 </html>

@@ -4,11 +4,14 @@ Mahmud Abdulmalik, known online as Furyengi, is a full-stack engineer based in I
 
 ## Experience
 
-### Galen Africa — App Developer / Team Lead (2025–present)
-Leads development of GalenDesk across application architecture, database workflows, backend integrations, product direction, and reliability.
+### Orvel — Creator & Lead Engineer (2026–present)
+Designs and builds a local-first platform for creating, teaching, evaluating, and running AI agents across local and hosted model providers.
 
 ### Prismor — AI Security Infrastructure Engineer (2026–present)
 Hardens authentication failure handling across buffered and streaming AI responses, builds automated coverage for proxy error paths, and improves local-backend integration guidance.
+
+### Galen Africa — App Developer / Team Lead (2025–present)
+Leads development of GalenDesk across application architecture, database workflows, backend integrations, product direction, and reliability.
 
 ### Afrigenomed — Backend Developer (2024–2026)
 Built Node.js backend logic for users, content, and learning workflows in a learning-management system.

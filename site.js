@@ -73,6 +73,127 @@
       });
   }
 
+  const experienceDetails = {
+    orvel: {
+      company: "Orvel",
+      role: "Creator & Lead Engineer",
+      period: "2026 — Present · Remote",
+      logo: "/orvel-logo.png",
+      description:
+        "Orvel is a local-first platform for creating, teaching, evaluating, and running AI agents. It brings agent configuration, provider-neutral inference, contextual teaching, knowledge, conversations, and repeatable evaluations into one understandable workspace.",
+      work: [
+        "Designed the product architecture around explicit runtime, knowledge, memory, skills, training, and evaluation boundaries.",
+        "Built Orvel Studio for creating agents, configuring providers, chatting, saving corrections, managing knowledge, and running evaluations.",
+        "Implemented local and hosted model workflows through Ollama, Groq, and OpenAI without exposing provider keys to the browser.",
+      ],
+      tags: ["Next.js", "TypeScript", "Agent Runtime", "Local AI", "Evals"],
+      url: "https://github.com/orvel-ai/orvel",
+      linkLabel: "Orvel",
+    },
+    prismor: {
+      company: "Prismor",
+      role: "AI Security Infrastructure Engineer",
+      period: "2026 — Present · Remote",
+      logo: "/prismor-logo.png",
+      description:
+        "Prismor is security infrastructure for AI traffic. My work focuses on making upstream failures explicit, testable, and safer for applications using buffered or streaming model responses.",
+      work: [
+        "Hardened provider authentication failure handling across buffered and streaming AI responses.",
+        "Built automated coverage for proxy error paths and upstream provider failures.",
+        "Improved local-backend integration guidance for safer provider configuration.",
+      ],
+      tags: [
+        "Python",
+        "AI Gateway Security",
+        "HTTP Proxy",
+        "Automated Testing",
+      ],
+      url: "https://github.com/PrismorSec/prismor",
+      linkLabel: "Prismor",
+    },
+    galen: {
+      company: "Galen Africa",
+      role: "App Developer / Team Lead",
+      period: "2025 — Present · Nigeria",
+      logo: "/galen-africa-logo.png",
+      description:
+        "Galen Africa builds software for pharmacy practice, clinical care, and scientific research. I lead application work across architecture, product direction, integrations, and delivery.",
+      work: [
+        "Lead development of GalenDesk across application architecture and product direction.",
+        "Design database workflows, backend integrations, and offline-first operations.",
+        "Own reliability decisions from implementation through delivery.",
+      ],
+      tags: ["React Native", "Expo", "SQLite", "Node.js", "Product"],
+      url: "https://galen.africa",
+      linkLabel: "Galen Africa",
+    },
+    afrigenomed: {
+      company: "Afrigenomed",
+      role: "Backend Developer",
+      period: "2024 — 2026 · Remote",
+      logo: "/afrigenomed-logo.jpg",
+      description:
+        "Afrigenomed works across genomics, digital health, and learning. I developed backend systems and application data flows supporting its learning platform.",
+      work: [
+        "Built Node.js backend logic for users, content, and learning workflows.",
+        "Developed reliable REST APIs and application data flows for an LMS.",
+        "Translated product requirements into maintainable backend behavior.",
+      ],
+      tags: ["Node.js", "Express", "REST APIs", "Databases"],
+      url: "https://afrigenomed.com",
+      linkLabel: "Afrigenomed",
+    },
+  };
+
+  const dialog = document.querySelector("#experience-dialog");
+  const closeDialog = document.querySelector(".dialog-close");
+  const openExperience = (key) => {
+    const detail = experienceDetails[key];
+    if (!dialog || !detail) return;
+    document.querySelector("#dialog-logo").src = detail.logo;
+    document.querySelector("#dialog-company").textContent = detail.company;
+    document.querySelector("#dialog-role").textContent = detail.role;
+    document.querySelector("#dialog-period").textContent = detail.period;
+    document.querySelector("#dialog-description").textContent =
+      detail.description;
+    const work = document.querySelector("#dialog-work");
+    work.replaceChildren(
+      ...detail.work.map((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        return li;
+      }),
+    );
+    const tags = document.querySelector("#dialog-tags");
+    tags.replaceChildren(
+      ...detail.tags.map((item) => {
+        const tag = document.createElement("span");
+        tag.textContent = item;
+        return tag;
+      }),
+    );
+    const link = document.querySelector("#dialog-link");
+    link.href = detail.url;
+    document.querySelector("#dialog-link-label").textContent = detail.linkLabel;
+    dialog.showModal();
+  };
+
+  document.querySelectorAll("[data-experience]").forEach((card) => {
+    card.addEventListener("click", () =>
+      openExperience(card.dataset.experience),
+    );
+  });
+  closeDialog?.addEventListener("click", () => dialog.close());
+  dialog?.addEventListener("click", (event) => {
+    const bounds = dialog.getBoundingClientRect();
+    const outside =
+      event.clientX < bounds.left ||
+      event.clientX > bounds.right ||
+      event.clientY < bounds.top ||
+      event.clientY > bounds.bottom;
+    if (outside) dialog.close();
+  });
+
   const views = document.querySelector("#views");
   if (views) views.textContent = "furyengi";
 })();
