@@ -1013,8 +1013,11 @@ h3 {
 }
 .blog-row {
   position: relative;
-  display: block;
-  padding: 18px 36px 18px 0;
+  display: grid;
+  grid-template-columns: minmax(170px, 230px) minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 18px 42px 18px 0;
   border-top: 1px dashed var(--line);
   border-bottom: 1px dashed var(--line);
   color: var(--text);
@@ -1023,6 +1026,17 @@ h3 {
 }
 .blog-row:hover {
   background: var(--panel);
+}
+.blog-row-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #07080d;
+}
+.blog-row-copy {
+  min-width: 0;
 }
 .blog-row h3 {
   max-width: 610px;
@@ -1342,6 +1356,14 @@ footer {
   }
   .blog-row h3 {
     font-size: 17px;
+  }
+  .blog-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-right: 34px;
+  }
+  .blog-row-thumb {
+    max-width: 100%;
   }
   .blog-row-meta {
     gap: 7px;
