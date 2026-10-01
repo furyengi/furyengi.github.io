@@ -8,5 +8,5 @@ routes = [
 ]
 
 kv_namespaces = [
-  { binding = "SUBSCRIBERS", id = "REPLACE_WITH_CLOUDFLARE_KV_NAMESPACE_ID" }
+  { binding = "SUBSCRIBERS", id = "4ffe6796df4c41ccaa37c482e70def2d" }
 ]
