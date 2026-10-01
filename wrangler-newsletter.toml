@@ -1,0 +1,12 @@
+name = "furyengi-newsletter"
+main = "cloudflare-newsletter-worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+routes = [
+  { pattern = "furyengi.cv/api/newsletter", zone_id = "f4c30d658d092120edbc9521077a9066" }
+]
+
+kv_namespaces = [
+  { binding = "SUBSCRIBERS", id = "REPLACE_WITH_CLOUDFLARE_KV_NAMESPACE_ID" }
+]

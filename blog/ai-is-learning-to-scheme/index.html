@@ -220,11 +220,7 @@
         </section>
         <section class="blog-subscribe">
           <div><h2>Get the next note</h2><p>Short build notes on Orvel, backend systems, AI tooling, and reliable software.</p></div>
-          <form class="newsletter-form" action="https://formsubmit.co/furyengi@gmail.com" method="POST" enctype="multipart/form-data" data-newsletter-form>
-            <input type="hidden" name="_subject" value="New Furyengi blog subscriber" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://blog.furyengi.cv/ai-is-learning-to-scheme/?subscribed=true" />
+          <form class="newsletter-form" action="https://furyengi.cv/api/newsletter" method="POST" data-newsletter-form>
             <input type="email" name="email" placeholder="Email for new posts" aria-label="Email address" required /><button>Subscribe</button><p class="newsletter-status" aria-live="polite"></p>
           </form>
         </section>
@@ -234,3 +230,4 @@
     <script src="/site.js?v=blog-pages"></script>
   </body>
 </html>
+

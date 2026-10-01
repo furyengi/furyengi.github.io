@@ -234,7 +234,7 @@
 
       if (!form.reportValidity()) return;
       const data = new FormData(form);
-      const email = data.get("email");
+      const email = String(data.get("email") || "").trim().toLowerCase();
       if (button) button.disabled = true;
       if (status) {
         status.textContent = "Subscribing…";
@@ -242,23 +242,32 @@
       }
 
       try {
-        const response = await fetch("https://formsubmit.co/ajax/furyengi@gmail.com", {
+        const response = await fetch(form.action || "https://furyengi.cv/api/newsletter", {
           method: "POST",
-          headers: { Accept: "application/json" },
-          body: data,
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            source: location.href,
+          }),
         });
 
-        if (!response.ok) throw new Error("Newsletter service unavailable");
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok)
+          throw new Error(result.error || "Newsletter service unavailable");
 
         form.reset();
         if (status) {
-          status.textContent =
-            "You’re in. Check your email once to confirm the subscription.";
+          status.textContent = result.alreadySubscribed
+            ? "You’re already on the list."
+            : "You’re in. I’ll only email when there’s a new post worth reading.";
           status.dataset.state = "success";
         }
       } catch {
         if (status) {
-          status.innerHTML = `Couldn’t subscribe here right now. Send me your email at <a href="mailto:furyengi@gmail.com?subject=Newsletter%20subscription&body=Please%20add%20${encodeURIComponent(email || "me")}%20to%20the%20newsletter.">furyengi@gmail.com</a>.`;
+          status.innerHTML = `Couldn’t subscribe here right now. Send me your email at <a href="mailto:hi@furyengi.cv?subject=Newsletter%20subscription&body=Please%20add%20${encodeURIComponent(email || "me")}%20to%20the%20newsletter.">hi@furyengi.cv</a>.`;
           status.dataset.state = "error";
         }
       } finally {
