@@ -47,4 +47,4 @@ Discusses controlled AI safety experiments around scheming, oversight evasion, b
 ### Building Orvel: What "Training Your Own AI" Actually Means
 Explains training as a practical product surface for Orvel: shaping memory, tools, corrections, documents, feedback, evaluation, and model portability instead of only training a foundation model from scratch.
 
-Canonical identity and links are maintained at https://furyengi.cv/.
+Canonical profile identity is maintained at https://furyengi.cv/. Long-form writing is maintained at https://blog.furyengi.cv/.

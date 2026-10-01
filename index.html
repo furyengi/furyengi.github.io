@@ -17,7 +17,7 @@
       content="https://furyengi.cv/furyengi-profile.jpeg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/site.css?v=ai-scheming" />
+    <link rel="stylesheet" href="/site.css?v=blog-pages" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -28,12 +28,15 @@
           "alternateName": "Furyengi",
           "jobTitle": "Full-Stack Engineer — Backend, Cloud & AI",
           "url": "https://furyengi.cv/",
-          "sameAs": ["https://github.com/furyengi", "https://x.com/furyengi"]
+          "sameAs": ["https://github.com/furyengi", "https://x.com/furyengi", "https://blog.furyengi.cv/"],
+          "knowsAbout": ["Backend Engineering", "Cloud Infrastructure", "Artificial Intelligence", "Full-Stack Engineering", "AI Agents"],
+          "email": "mailto:furyengi@gmail.com"
         }
       }
     </script>
   </head>
   <body>
+    <script>if (location.hostname === "blog.furyengi.cv" && location.pathname === "/") location.replace("/blog/");</script>
     <main>
       <div
         class="top-grid"
@@ -62,7 +65,7 @@
                 aria-label="Discord — furyengi"
                 title="Discord — furyengi"
                 ><i class="hgi-stroke hgi-discord"></i
-              ></a><a class="blog-link" href="/blog/" data-same-tab aria-label="Blog" title="Blog"><b aria-hidden="true">✎</b><span>Blog</span></a>
+              ></a><a class="blog-link" href="https://blog.furyengi.cv/" data-same-tab aria-label="Blog" title="Blog"><b aria-hidden="true">✎</b><span>Blog</span></a>
             </div>
           </div>
         </div>
@@ -348,9 +351,9 @@
       <section class="block blog-preview" id="blog">
         <div class="section-heading">
           <h2>Blog</h2>
-          <a href="/blog/" data-same-tab>All writing <i class="hgi-stroke hgi-arrow-right-01"></i></a>
+          <a href="https://blog.furyengi.cv/" data-same-tab>All writing <i class="hgi-stroke hgi-arrow-right-01"></i></a>
         </div>
-        <a class="blog-row" href="/blog/#ai-scheming" data-same-tab>
+        <a class="blog-row" href="https://blog.furyengi.cv/ai-is-learning-to-scheme/" data-same-tab>
           <img
             class="blog-row-thumb"
             src="https://raw.githubusercontent.com/furyengi/furyengi.github.io/main/ai-scheming-cover.jpg"
@@ -369,7 +372,7 @@
           </div>
           <i class="hgi-stroke hgi-arrow-up-right-01 blog-row-open"></i>
         </a>
-        <a class="blog-row" href="/blog/#building-orvel" data-same-tab>
+        <a class="blog-row" href="https://blog.furyengi.cv/building-orvel-training-your-own-ai/" data-same-tab>
           <img
             class="blog-row-thumb"
             src="/orvel-training-ai-cover.png"
@@ -416,6 +419,6 @@
     >
       <i class="hgi-stroke hgi-arrow-up-02"></i>
     </button>
-    <script src="/site.js?v=ai-scheming"></script>
+    <script src="/site.js?v=blog-pages"></script>
   </body>
 </html>

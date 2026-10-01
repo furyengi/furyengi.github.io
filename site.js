@@ -288,7 +288,7 @@
 
   document.querySelectorAll("[data-copy-link]").forEach((button) => {
     button.addEventListener("click", async () => {
-      const url = `${location.origin}${location.pathname}#building-orvel`;
+      const url = button.dataset.copyUrl || `${location.origin}${location.pathname}`;
       try {
         await navigator.clipboard.writeText(url);
         const label = button.textContent;
@@ -299,7 +299,7 @@
             : '<i class="hgi-stroke hgi-link-04"></i>';
         }, 1100);
       } catch {
-        location.hash = "building-orvel";
+        location.href = url;
       }
     });
   });

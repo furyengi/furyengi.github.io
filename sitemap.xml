@@ -19,8 +19,20 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://furyengi.cv/blog/</loc>
+    <loc>https://blog.furyengi.cv/</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blog.furyengi.cv/ai-is-learning-to-scheme/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.furyengi.cv/building-orvel-training-your-own-ai/</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
