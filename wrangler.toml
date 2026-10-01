@@ -1,0 +1,8 @@
+name = "furyengi-blog-router"
+main = "cloudflare-blog-worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+routes = [
+  { pattern = "blog.furyengi.cv/*", zone_id = "f4c30d658d092120edbc9521077a9066" }
+]
