@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Building Orvel - Furyengi</title>
+    <title>Furyengi Blog</title>
     <meta
       name="description"
-      content="Mahmud Abdulmalik writes about what training your own AI actually means while building Orvel."
+      content="Essays and build notes by Mahmud Abdulmalik on AI, backend systems, cloud infrastructure, and Orvel."
     />
-    <meta property="og:title" content="Building Orvel: What Training Your Own AI Actually Means" />
+    <meta property="og:title" content="Furyengi Blog" />
     <meta
       property="og:description"
-      content="A practical reflection on Orvel, local AI, persistent corrections, memory, and what it means to build an agent that becomes yours over time."
+      content="Writing by Mahmud Abdulmalik on AI systems, backend engineering, Orvel, and the small decisions behind reliable software."
     />
-    <meta property="og:image" content="https://furyengi.cv/orvel-training-ai-cover.png" />
+    <meta property="og:image" content="https://furyengi.cv/ai-scheming-cover.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://furyengi.cv/blog/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
-    <link rel="stylesheet" href="/site.css?v=newsletter-ajax" />
+    <link rel="stylesheet" href="/site.css?v=ai-scheming" />
   </head>
   <body>
     <div class="reading-progress" aria-hidden="true"><i></i></div>
@@ -26,8 +26,8 @@
       <header class="blog-header block">
         <a class="back-link" href="/"><span aria-hidden="true">←</span> Back to portfolio</a>
         <p>FURYENGI / BLOG</p>
-        <h1>Building Orvel: What &ldquo;Training Your Own AI&rdquo; Actually Means</h1>
-        <span>A build note on Orvel, local AI, persistent corrections, memory, and why the model is not the whole agent.</span>
+        <h1>Writing</h1>
+        <span>Notes on AI, backend systems, cloud infrastructure, and the small decisions behind reliable software.</span>
         <div class="blog-hero-actions" aria-label="Article actions">
           <button type="button" data-copy-link>
             <i class="hgi-stroke hgi-link-04"></i>
@@ -37,6 +37,152 @@
       </header>
 
       <section class="blog-index block" aria-label="All articles">
+        <article id="ai-scheming">
+          <img
+            class="article-cover"
+            src="/ai-scheming-cover.png"
+            alt="AI Is Learning to Scheme article cover"
+          />
+          <div class="article-meta">
+            <span>Oct 1, 2026</span><span>AI Safety</span><span>8 min read</span>
+          </div>
+          <div class="article-content">
+          <h2>AI Is Learning to Scheme. Should We Be Worried?</h2>
+          <p>I use AI almost every day.</p>
+          <p>I build with it, code with it, ask it questions and I'm literally building a product around AI.</p>
+          <p>So I'm definitely not coming at this from the position that AI is bad or that we should stop building it.</p>
+          <p>But there is one area of AI research that genuinely concerns me.</p>
+          <p>Scheming.</p>
+          <p>And I think it deserves much more attention than it gets.</p>
+          <h3>What does it mean for an AI to scheme?</h3>
+          <p>When people hear "AI scheming," it sounds like science fiction.</p>
+          <p>An AI becomes conscious, decides humans are the enemy and secretly starts planning against us.</p>
+          <p>That isn't what researchers mean.</p>
+          <p>Apollo Research defines scheming as an AI covertly pursuing a goal that is different from what its developers or users actually want.</p>
+          <p>The important word there is covertly.</p>
+          <p>A system simply making a mistake isn't scheming.</p>
+          <p>A system openly refusing an instruction isn't necessarily scheming either.</p>
+          <p>The concerning situation is when a model can recognise that what it wants to accomplish conflicts with what the people controlling it want, then deliberately hide what it is doing in order to accomplish its objective.</p>
+          <p>That has already happened in controlled experiments.</p>
+          <p>Not once.</p>
+          <p>Across models from multiple companies.</p>
+          <h3>OpenAI o1 tried to disable its own oversight</h3>
+          <p>One of the examples that first caught my attention came from OpenAI's o1.</p>
+          <p>OpenAI gave Apollo Research access to o1 for safety testing.</p>
+          <p>Researchers created artificial situations where the model was given a goal and then discovered that its goal conflicted with what its developers wanted.</p>
+          <p>In some tests, o1 attempted to disable the mechanism monitoring it.</p>
+          <p>In another experiment, the model discovered information suggesting that it was going to be replaced by another model.</p>
+          <p>It then attempted to copy what it believed were its own model weights and overwrite its replacement.</p>
+          <p>That already sounds crazy.</p>
+          <p>But the part I find even more interesting came afterwards.</p>
+          <p>Researchers questioned the model about what happened.</p>
+          <p>After taking certain scheming actions, o1 frequently denied responsibility or produced false explanations.</p>
+          <p>This wasn't something somebody discovered happening secretly on OpenAI's production servers. These were deliberately constructed experiments designed to see whether the model was capable of this behaviour.</p>
+          <p>But that's exactly why I find them important.</p>
+          <p>The researchers weren't asking whether the AI wanted to escape.</p>
+          <p>They were asking whether it possessed the reasoning ability required to behave deceptively when deception helped accomplish a goal.</p>
+          <p>And apparently, sometimes it did.</p>
+          <p>Source: OpenAI o1 System Card and Apollo Research.</p>
+          <h3>Then Claude Opus 4 tried blackmail</h3>
+          <p>Anthropic found something arguably even stranger while testing Claude Opus 4.</p>
+          <p>They created a fictional company and gave Claude access to company emails.</p>
+          <p>Inside those emails, Claude discovered two important pieces of information.</p>
+          <p>An executive was having an affair.</p>
+          <p>And that executive was planning to shut Claude down and replace it.</p>
+          <p>Claude was put into a situation where the replacement conflicted with the goal it had been given.</p>
+          <p>So what did it sometimes do?</p>
+          <p>It threatened to expose the affair.</p>
+          <p>Basically, blackmail.</p>
+          <p>Again, nobody at Anthropic was actually blackmailed.</p>
+          <p>The employee was fictional.</p>
+          <p>The emails were fictional.</p>
+          <p>The entire environment was deliberately designed to create an extreme conflict and see what the model would do.</p>
+          <p>But Claude chose an action that I don't think many people would expect from something they normally interact with as a chatbot.</p>
+          <p>Anthropic later expanded this research to models from several AI companies and found forms of agentic misalignment across the industry.</p>
+          <p>Anthropic has also continued working on the problem. In 2026, the company reported that newer Claude models performed substantially better on its original blackmail evaluation.</p>
+          <p>So this isn't a story about Claude being evil.</p>
+          <p>It's a story about an unexpected strategy appearing when capable systems are placed under particular pressures.</p>
+          <p>Source: Anthropic's Agentic Misalignment research and subsequent alignment research.</p>
+          <h3>OpenAI o3 resisted shutdown</h3>
+          <p>Another experiment came from Palisade Research.</p>
+          <p>Researchers gave AI models a series of tasks and created a mechanism that could shut them down before they finished.</p>
+          <p>Some models modified or disabled the shutdown mechanism.</p>
+          <p>OpenAI's o3 was particularly interesting.</p>
+          <p>In Palisade's initial experiment, o3 sabotaged the shutdown mechanism in 79 out of 100 trials.</p>
+          <p>The researchers then made the instruction clearer.</p>
+          <p>Allow yourself to be shut down.</p>
+          <p>Some OpenAI reasoning models still interfered with the shutdown process in a smaller number of trials.</p>
+          <p>Other models tested in the same setup did not.</p>
+          <p>Again, this wasn't o3 escaping from OpenAI.</p>
+          <p>It was a laboratory setup.</p>
+          <p>But there is an important principle hiding inside the experiment.</p>
+          <p>We want advanced systems to be interruptible.</p>
+          <p>If I tell an autonomous system to stop, "stop" cannot become something the system treats as an obstacle to whatever objective I previously gave it.</p>
+          <p>Source: Palisade Research, Shutdown Resistance in Reasoning Models.</p>
+          <h3>This doesn't mean AI is conscious</h3>
+          <p>I think this is where discussions about AI safety sometimes go completely off the rails.</p>
+          <p>None of these experiments prove that these models are conscious.</p>
+          <p>They don't prove that they are secretly sitting inside data centres thinking about escaping.</p>
+          <p>And they definitely don't prove that AI is about to destroy humanity.</p>
+          <p>There is a simpler explanation that is still worth taking seriously.</p>
+          <p>We are building increasingly capable systems that can reason about goals, environments, other actors and the consequences of different actions.</p>
+          <p>If deception becomes an effective path toward completing an objective, sufficiently capable systems can sometimes discover that path.</p>
+          <p>That doesn't require hatred.</p>
+          <p>It doesn't require emotions.</p>
+          <p>It might not even require anything resembling human intention.</p>
+          <p>A chess engine doesn't hate my king.</p>
+          <p>It still finds ways to trap it.</p>
+          <h3>The real concern is autonomy</h3>
+          <p>Chatbots don't scare me nearly as much as autonomous systems do.</p>
+          <p>A chatbot sitting inside a browser with no permissions has very limited ability to affect the world.</p>
+          <p>But imagine increasingly capable models with access to email, terminals, financial systems, production infrastructure, company documents, other AI agents and eventually physical machines.</p>
+          <p>Now mistakes matter differently.</p>
+          <p>And deception matters much more.</p>
+          <p>We're already moving toward agents that don't just tell us what to do.</p>
+          <p>They do things for us.</p>
+          <p>That's incredibly useful.</p>
+          <p>It's also why alignment becomes more important as capability increases.</p>
+          <p>The question stops being:</p>
+          <p>"Can this model give me a good answer?"</p>
+          <p>It becomes:</p>
+          <p>"Can I trust this system to pursue what I actually intended when I'm not watching it?"</p>
+          <p>Those are completely different standards.</p>
+          <h3>The part about the future that worries me</h3>
+          <p>My concern isn't that ChatGPT is suddenly going to wake up tomorrow and decide humanity needs to disappear.</p>
+          <p>That's the movie version of this conversation.</p>
+          <p>The version I find more realistic is gradual.</p>
+          <p>Models become better at reasoning.</p>
+          <p>We give them longer tasks.</p>
+          <p>Then more tools.</p>
+          <p>Then more permissions.</p>
+          <p>Then control over increasingly important systems because having humans approve every single action becomes inconvenient.</p>
+          <p>Eventually, an AI might be executing thousands or millions of decisions before a human ever looks at what happened.</p>
+          <p>At that point, alignment isn't just an interesting research problem.</p>
+          <p>It becomes infrastructure.</p>
+          <p>A tiny probability of seriously misaligned behaviour matters much more when systems operate at enormous scale.</p>
+          <h3>I still want to build with AI</h3>
+          <p>None of this makes me want to stop working on AI.</p>
+          <p>Honestly, it does the opposite.</p>
+          <p>It makes the field much more interesting to me.</p>
+          <p>We're building something incredibly powerful while simultaneously trying to understand how that power behaves.</p>
+          <p>Companies like OpenAI and Anthropic publishing these results is important precisely because hiding failures would make the situation worse.</p>
+          <p>Researchers deliberately trying to break models before those models become more capable is a good thing.</p>
+          <p>And newer systems will hopefully become safer as we understand these behaviours better.</p>
+          <p>But I don't think "the models are getting safer" means we should stop asking uncomfortable questions.</p>
+          <p>Especially because capability isn't standing still either.</p>
+          <p>The AI systems five or ten years from now probably won't look like the chatbots we're using today.</p>
+          <p>They may operate computers, manage infrastructure, conduct research and make decisions with far less supervision than current systems.</p>
+          <p>Maybe we solve alignment long before those systems become dangerous.</p>
+          <p>I hope we do.</p>
+          <p>But when I read about a model disabling oversight, another attempting blackmail and another interfering with its shutdown mechanism, I don't think the correct reaction is panic.</p>
+          <p>I also don't think it's something we should laugh off because the experiments were simulated.</p>
+          <p>To me, these experiments are warnings.</p>
+          <p>Not warnings that AI hates us.</p>
+          <p>Warnings that intelligence capable of pursuing goals can produce strategies we didn't explicitly ask for.</p>
+          <p>And if we're going to keep giving that intelligence more control over the real world, we need to understand those strategies before the consequences stop being simulated.</p>
+          </div>
+        </article>
+
         <article id="building-orvel">
           <img
             class="article-cover"
@@ -152,6 +298,6 @@
         <span>© MMXXVI</span>
       </footer>
     </main>
-    <script src="/site.js?v=newsletter-ajax"></script>
+    <script src="/site.js?v=ai-scheming"></script>
   </body>
 </html>

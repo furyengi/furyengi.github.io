@@ -41,6 +41,9 @@ Webhook-driven backend with HMAC signature verification, idempotent event proces
 
 ## Blog
 
+### AI Is Learning to Scheme. Should We Be Worried?
+Discusses controlled AI safety experiments around scheming, oversight evasion, blackmail, and shutdown resistance, arguing that the real concern is autonomous systems with tools and permissions rather than chatbot consciousness.
+
 ### Building Orvel: What "Training Your Own AI" Actually Means
 Explains training as a practical product surface for Orvel: shaping memory, tools, corrections, documents, feedback, evaluation, and model portability instead of only training a foundation model from scratch.
 

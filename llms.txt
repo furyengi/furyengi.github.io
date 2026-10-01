@@ -32,4 +32,5 @@
 - Webhook Billing and Notifications
 
 ## Blog
+- AI Is Learning to Scheme. Should We Be Worried?
 - Building Orvel: What "Training Your Own AI" Actually Means
