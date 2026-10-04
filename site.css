@@ -1961,3 +1961,209 @@ footer {
     animation: none;
   }
 }
+
+.melo-site {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(24, 181, 216, 0.18), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(145, 93, 255, 0.14), transparent 30%),
+    linear-gradient(180deg, #fbfbfb 0%, #f4f7f8 100%);
+}
+.melo-site::before,
+.melo-site::after {
+  z-index: 0;
+}
+.melo-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  padding: 22px;
+}
+.melo-nav,
+.melo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+.melo-brand,
+.melo-nav a,
+.melo-footer a {
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+.melo-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  letter-spacing: -0.05em;
+}
+.melo-brand span {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  font-weight: 900;
+}
+.melo-nav > a:not(.melo-brand),
+.melo-footer {
+  color: var(--muted);
+}
+.melo-hero {
+  max-width: 780px;
+  padding: 76px 0 46px;
+}
+.melo-kicker {
+  margin-bottom: 14px;
+  color: #1687a7;
+  font: 900 12px/1.1 monospace;
+  letter-spacing: 0.18em;
+}
+.melo-hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(54px, 10vw, 112px);
+  line-height: 0.9;
+  letter-spacing: -0.085em;
+}
+.melo-hero > p:not(.melo-kicker) {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.65;
+}
+.melo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.melo-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 17px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+.melo-actions a:first-child {
+  background: #111;
+  color: #fff;
+}
+.melo-preview {
+  padding: 12px 0 34px;
+}
+.melo-phone {
+  max-width: 390px;
+  min-height: 560px;
+  margin-left: auto;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 42px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.56)),
+    radial-gradient(circle at top right, rgba(24, 181, 216, 0.17), transparent 42%);
+  box-shadow: 0 28px 80px rgba(20, 22, 26, 0.14);
+}
+.melo-phone-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px 36px;
+}
+.melo-phone-top span,
+.melo-phone-top i {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.08);
+}
+.melo-phone-top b {
+  font-size: 18px;
+  letter-spacing: -0.04em;
+}
+.melo-chat {
+  max-width: 76%;
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border-radius: 22px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+.melo-chat-left {
+  background: #fff;
+  color: var(--text);
+}
+.melo-chat-right {
+  margin-left: auto;
+  background: #111;
+  color: #fff;
+}
+.melo-compose {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 180px;
+  padding: 15px 16px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.melo-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px 0 30px;
+}
+.melo-notes article {
+  min-height: 150px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.72);
+}
+.melo-notes b,
+.melo-notes span {
+  display: block;
+}
+.melo-notes b {
+  margin-bottom: 10px;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+.melo-notes span {
+  color: var(--muted);
+}
+@media (max-width: 720px) {
+  .melo-shell {
+    padding: 16px;
+  }
+  .melo-hero {
+    padding-top: 46px;
+  }
+  .melo-hero h1 {
+    font-size: 58px;
+  }
+  .melo-phone {
+    margin: 0;
+    min-height: 500px;
+  }
+  .melo-compose {
+    margin-top: 130px;
+  }
+  .melo-notes {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,8 @@
+name = "furyengi-melo-router"
+main = "cloudflare-melo-worker.js"
+compatibility_date = "2026-10-04"
+workers_dev = false
+
+routes = [
+  { pattern = "melo.furyengi.cv/*", zone_id = "f4c30d658d092120edbc9521077a9066" }
+]
