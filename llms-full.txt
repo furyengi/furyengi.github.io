@@ -41,6 +41,9 @@ Webhook-driven backend with HMAC signature verification, idempotent event proces
 
 ## Blog
 
+### RAM vs Ram: Which One Is Actually Worth Buying?
+A playful, completely unserious comparison between computer RAM and the animal ram: memory, speed, upkeep, upgrades, price, and which one is actually worth buying.
+
 ### AI Is Learning to Scheme. Should We Be Worried?
 Discusses controlled AI safety experiments around scheming, oversight evasion, blackmail, and shutdown resistance, arguing that the real concern is autonomous systems with tools and permissions rather than chatbot consciousness.
 
