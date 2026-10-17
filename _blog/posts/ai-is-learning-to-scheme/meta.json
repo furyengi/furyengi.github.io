@@ -1,0 +1,15 @@
+{
+  "title": "AI Is Learning to Scheme. Should We Be Worried?",
+  "description": "A practical look at AI scheming, shutdown resistance, agentic misalignment, and why autonomy changes the safety conversation.",
+  "date": "2026-10-01",
+  "readMinutes": 8,
+  "category": "AI Safety",
+  "tags": [
+    "AI Safety",
+    "Alignment",
+    "Agents"
+  ],
+  "cover": "ai-scheming-cover.jpg",
+  "modified": "2026-10-01",
+  "llmsSummary": "Discusses controlled AI safety experiments around scheming, oversight evasion, blackmail, and shutdown resistance, arguing that the real concern is autonomous systems with tools and permissions rather than chatbot consciousness."
+}

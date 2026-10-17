@@ -7,6 +7,7 @@
 
   root.dataset.theme =
     localStorage.getItem("furyengi-theme") ||
+    root.dataset.theme ||
     (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
   themeButton?.addEventListener("click", () => {
@@ -300,12 +301,10 @@
       const url = button.dataset.copyUrl || `${location.origin}${location.pathname}`;
       try {
         await navigator.clipboard.writeText(url);
-        const label = button.textContent;
+        const original = button.innerHTML;
         button.textContent = "Copied";
         setTimeout(() => {
-          button.innerHTML = label.includes("Copy")
-            ? '<i class="hgi-stroke hgi-link-04"></i> Copy link'
-            : '<i class="hgi-stroke hgi-link-04"></i>';
+          button.innerHTML = original;
         }, 1100);
       } catch {
         location.href = url;

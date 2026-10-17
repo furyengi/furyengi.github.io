@@ -1,0 +1,15 @@
+{
+  "title": "Building Orvel: What “Training Your Own AI” Actually Means",
+  "description": "A build note on Orvel, local AI, persistent corrections, memory, and why the model is not the whole agent.",
+  "date": "2026-09-30",
+  "readMinutes": 7,
+  "category": "Build Notes",
+  "tags": [
+    "AI Agents",
+    "Local Models",
+    "Orvel"
+  ],
+  "cover": "orvel-training-ai-cover.png",
+  "modified": "2026-09-30",
+  "llmsSummary": "Explains training as a practical product surface for Orvel: shaping memory, tools, corrections, documents, feedback, evaluation, and model portability instead of only training a foundation model from scratch."
+}
