@@ -5,10 +5,12 @@
   const months = document.querySelector("#activity-months");
   const total = document.querySelector("#contribution-total");
 
-  root.dataset.theme =
-    localStorage.getItem("furyengi-theme") ||
-    root.dataset.theme ||
-    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  // The portfolio is light-only. Only pages with a theme button (the blog) can switch.
+  root.dataset.theme = themeButton
+    ? localStorage.getItem("furyengi-theme") ||
+      root.dataset.theme ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    : "light";
 
   themeButton?.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
