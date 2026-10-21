@@ -30,6 +30,7 @@
 - Evnar secrets manager
 - GalenDesk pharmacy operations application
 - Webhook Billing and Notifications
+- Marigold Player desktop media player
 
 ## Blog
 - RAM vs Ram: Which One Is Actually Worth Buying?

@@ -750,7 +750,8 @@ h3 {
   object-position: left top;
   transition: transform 0.25s ease;
 }
-.project-mark.galendesk-preview img {
+.project-mark.galendesk-preview img,
+.project-mark.marigold-preview img {
   object-position: center top;
 }
 .project-list > a:hover .project-preview img {

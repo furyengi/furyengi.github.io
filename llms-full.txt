@@ -39,6 +39,9 @@ Offline-first pharmacy inventory and point-of-sale application with transactiona
 ### Webhook Billing and Notifications
 Webhook-driven backend with HMAC signature verification, idempotent event processing, subscription-state synchronization, and queued notifications.
 
+### Marigold Player
+Open-source desktop media player for video and music, built with Electron. Plays almost any format through a bundled FFmpeg conversion engine, remembers playback position, and offers a customizable control layout, rebindable shortcuts, an equalizer, playlists, and light/dark themes. Source: https://github.com/furyengi/marigold-player
+
 ## Blog
 
 ### RAM vs Ram: Which One Is Actually Worth Buying?
