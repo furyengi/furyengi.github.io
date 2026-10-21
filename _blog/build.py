@@ -85,12 +85,6 @@ def icon(name, cls=""):
     return f'<svg class="i {cls}" viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>'
 
 
-THEME_BOOT = (
-    '<script>try{document.documentElement.dataset.theme='
-    'localStorage.getItem("furyengi-theme")||"light"}'
-    'catch(e){document.documentElement.dataset.theme="light"}</script>'
-)
-
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com" />\n'
     '    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n'
@@ -102,7 +96,7 @@ FONTS = (
 
 def head(title, desc, canonical, og_img, og_type, extra=""):
     return f"""<!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -110,7 +104,7 @@ def head(title, desc, canonical, og_img, og_type, extra=""):
     <meta name="description" content="{esc(desc)}" />
     <link rel="canonical" href="{canonical}" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    {THEME_BOOT}
+    <meta name="color-scheme" content="light" />
     {FONTS}
     <link rel="stylesheet" href="/blog.css?v={asset_version('blog.css')}" />
     <meta property="og:type" content="{og_type}" />
@@ -135,10 +129,6 @@ def nav(current=False):
           <a href="{BLOG}" data-same-tab{cur}>Writing</a>
           <a href="{SITE}" data-same-tab>Portfolio</a>
           <a href="{SITE}Mahmud_CV.pdf">CV</a>
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
-            <svg class="i i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-            <svg class="i i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          </button>
         </nav>
       </div>
     </header>"""

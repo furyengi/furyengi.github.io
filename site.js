@@ -1,21 +1,7 @@
 (() => {
-  const root = document.documentElement;
-  const themeButton = document.querySelector("#theme-toggle");
   const activity = document.querySelector("#activity");
   const months = document.querySelector("#activity-months");
   const total = document.querySelector("#contribution-total");
-
-  // The portfolio is light-only. Only pages with a theme button (the blog) can switch.
-  root.dataset.theme = themeButton
-    ? localStorage.getItem("furyengi-theme") ||
-      root.dataset.theme ||
-      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-    : "light";
-
-  themeButton?.addEventListener("click", () => {
-    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("furyengi-theme", root.dataset.theme);
-  });
 
   const drawGraph = (contributions = []) => {
     if (!activity || !months) return;
