@@ -251,7 +251,9 @@
         if (status) {
           status.textContent = result.alreadySubscribed
             ? "You’re already on the list."
-            : "You’re in. I’ll only email when there’s a new post worth reading.";
+            : result.pending
+              ? "Almost there. Check your inbox and tap the confirmation link."
+              : "You’re in. I’ll only email when there’s a new post worth reading.";
           status.dataset.state = "success";
         }
       } catch {

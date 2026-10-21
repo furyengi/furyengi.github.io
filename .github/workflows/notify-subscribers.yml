@@ -1,0 +1,34 @@
+name: Email a post to subscribers
+
+# Manual only, on purpose: run it after the post is live on blog.furyengi.cv.
+# Do a "test_to" run first, then a real run. A post can only be sent once.
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Post slug, e.g. ram-vs-ram-which-is-worth-buying"
+        required: true
+      test_to:
+        description: "Send ONLY to this address (test run). Leave empty to send to all subscribers."
+        required: false
+      dry_run:
+        description: "Count recipients, send nothing"
+        type: boolean
+        default: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Send
+        env:
+          NEWSLETTER_BROADCAST_TOKEN: ${{ secrets.NEWSLETTER_BROADCAST_TOKEN }}
+          SLUG: ${{ inputs.slug }}
+          TEST_TO: ${{ inputs.test_to }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=("$SLUG")
+          if [ -n "$TEST_TO" ]; then args+=(--test "$TEST_TO"); fi
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          python3 _blog/notify.py "${args[@]}"

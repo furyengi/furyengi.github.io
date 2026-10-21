@@ -3,10 +3,20 @@ main = "cloudflare-newsletter-worker.js"
 compatibility_date = "2026-10-01"
 workers_dev = false
 
+# Covers /api/newsletter and /api/newsletter/{confirm,unsubscribe,broadcast}
 routes = [
-  { pattern = "furyengi.cv/api/newsletter", zone_id = "f4c30d658d092120edbc9521077a9066" }
+  { pattern = "furyengi.cv/api/newsletter*", zone_id = "f4c30d658d092120edbc9521077a9066" }
 ]
 
 kv_namespaces = [
   { binding = "SUBSCRIBERS", id = "4ffe6796df4c41ccaa37c482e70def2d" }
 ]
+
+# Secrets are not stored here. Set them once with `wrangler secret put -c wrangler-newsletter.toml <NAME>`:
+#   RESEND_API_KEY   API key from resend.com (sending access)
+#   TOKEN_SECRET     long random string; signs confirm/unsubscribe links
+#   BROADCAST_TOKEN  long random string; lets _blog/notify.py send a post
+[vars]
+FROM_ADDRESS = "Furyengi Blog <blog@furyengi.cv>"
+REPLY_TO = "furyengi@gmail.com"
+PUBLIC_ORIGIN = "https://furyengi.cv"
