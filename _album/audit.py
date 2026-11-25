@@ -147,6 +147,25 @@ def audit_images():
     return count
 
 
+def audit_sources():
+    """Source photos are committed to the public repo, so they must not carry EXIF/GPS/XMP either."""
+    src = ROOT / "_album" / "albums"
+    count = 0
+    for f in sorted(src.rglob("*")) if src.exists() else []:
+        if f.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".heic", ".gif"):
+            continue
+        count += 1
+        try:
+            with Image.open(f) as im:
+                leaked = [k for k in ("exif", "xmp", "XML:com.adobe.xmp") if k in im.info]
+                if leaked or len(im.getexif()):
+                    fail(f.relative_to(ROOT), f"source photo carries metadata ({leaked or 'EXIF tags'}); "
+                                              "publish originals through the private album-inbox, not directly")
+        except OSError as error:
+            fail(f.relative_to(ROOT), f"cannot read image: {error}")
+    return count
+
+
 def audit_sitemap():
     sm = ROOT / "sitemap.xml"
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "i": "http://www.google.com/schemas/sitemap-image/1.1"}
@@ -172,13 +191,14 @@ def main():
     pages = audit_pages()
     audit_links(pages)
     images = audit_images()
+    sources = audit_sources()
     sitemap_images = audit_sitemap()
     if failures:
         print(f"FAILED ({len(failures)} problem{'s' if len(failures) != 1 else ''}):")
         for line in failures:
             print(" -", line)
         sys.exit(1)
-    print(f"OK: {len(pages)} pages, {images} images (no metadata), {sitemap_images} sitemap images")
+    print(f"OK: {len(pages)} pages, {images} published images + {sources} source photos (no metadata), {sitemap_images} sitemap images")
 
 
 if __name__ == "__main__":

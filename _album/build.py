@@ -20,6 +20,7 @@ import hashlib
 import importlib.util
 import json
 import re
+import shutil
 import subprocess
 import sys
 from datetime import date
@@ -60,6 +61,8 @@ def file_hash(path):
 def render_variants(src, dest, slug):
     """Write resized WebP + one JPEG fallback. Pixels only: no metadata is carried over."""
     dest.mkdir(parents=True, exist_ok=True)
+    for stale in list(dest.glob("*.webp")) + list(dest.glob("*.jpg")):
+        stale.unlink()  # sizes can change if the source changes; never leave old variants behind
     with Image.open(src) as opened:
         im = ImageOps.exif_transpose(opened)
         if "A" in im.getbands():
@@ -156,6 +159,24 @@ def load_albums(force):
     albums.sort(key=lambda a: a["items"][0]["date"], reverse=True)
     MANIFEST.write_text(json.dumps(dict(sorted(fresh.items())), indent=2) + "\n")
     return albums
+
+
+def prune_stale(albums):
+    """Remove generated pages/images for albums or photos that no longer exist in the source."""
+    keep = {a["slug"]: {i["slug"] for i in a["items"]} for a in albums}
+    if not OUT.exists():
+        return
+    for album_dir in sorted(OUT.iterdir()):
+        if not album_dir.is_dir():
+            continue
+        if album_dir.name not in keep:
+            shutil.rmtree(album_dir)
+            print(f"  removed album {album_dir.name}")
+            continue
+        for item_dir in sorted(album_dir.iterdir()):
+            if item_dir.is_dir() and item_dir.name not in keep[album_dir.name]:
+                shutil.rmtree(item_dir)
+                print(f"  removed photo {album_dir.name}/{item_dir.name}")
 
 
 # ── html helpers ─────────────────────────────────────────────
@@ -457,6 +478,7 @@ def main():
     if not albums:
         sys.exit("No albums with photos found in _album/albums/")
 
+    prune_stale(albums)
     write(OUT / "index.html", render_hub(albums))
     entries = [
         {
