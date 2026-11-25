@@ -1,0 +1,43 @@
+{
+  "title": "Work & Projects",
+  "description": "Screenshots of the products I build: a self-hosted CI/CD platform, a secrets manager, pharmacy software and a desktop media player.",
+  "cover": "runxr-self-hosted-ci-cd-platform",
+  "items": [
+    {
+      "file": "runxr-self-hosted-ci-cd-platform.png",
+      "slug": "runxr-self-hosted-ci-cd-platform",
+      "title": "RunXR, a self-hosted CI/CD platform",
+      "alt": "RunXR landing page in dark mode with the headline Build. Test. Ship. and a terminal window showing a successful build log",
+      "caption": "RunXR is a self-hosted CI/CD platform with GitHub login, signed webhooks, persistent build jobs, live logs and isolated Docker runners. This is its landing page, with a live build log on the right.",
+      "date": "2026-11-25",
+      "tags": ["RunXR", "CI/CD", "Docker", "Node.js", "Developer tools"]
+    },
+    {
+      "file": "evnar-secrets-manager.png",
+      "slug": "evnar-secrets-manager",
+      "title": "Evnar, a calm secrets manager",
+      "alt": "Evnar landing page on a cream background with the headline Keep the keys. Lose the chaos. next to a workspace showing masked environment variables",
+      "caption": "Evnar is a CLI-first secrets manager with encrypted storage and environment-scoped workflows. The landing page shows a workspace with masked API keys and environment variables.",
+      "date": "2026-11-25",
+      "tags": ["Evnar", "Secrets management", "CLI", "Security", "TypeScript"]
+    },
+    {
+      "file": "galendesk-pharmacy-dashboard.png",
+      "slug": "galendesk-pharmacy-dashboard",
+      "title": "GalenDesk pharmacy dashboard",
+      "alt": "GalenDesk dashboard for Almulik Pharmacy with colourful tiles for sales, expiring stock and out-of-stock items, and a sidebar with inventory and transactions",
+      "caption": "GalenDesk is an offline-first pharmacy inventory and point-of-sale app with FEFO stock deduction and batch tracking. This is the main dashboard with today's sales, expiring and out-of-stock summaries.",
+      "date": "2026-11-25",
+      "tags": ["GalenDesk", "Pharmacy software", "Point of sale", "Offline-first", "React Native"]
+    },
+    {
+      "file": "marigold-player-video-library.webp",
+      "slug": "marigold-player-video-library",
+      "title": "Marigold Player video library",
+      "alt": "Marigold Player desktop media player in dark mode showing a grid of nine colourful video thumbnails in the Aurora Collection folder",
+      "caption": "Marigold Player is an open-source desktop media player for video and music that plays almost any format through a bundled FFmpeg. This is the video library with thumbnails, durations and search.",
+      "date": "2026-11-25",
+      "tags": ["Marigold Player", "Electron", "FFmpeg", "Desktop app", "Open source"]
+    }
+  ]
+}

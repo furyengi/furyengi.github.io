@@ -127,6 +127,7 @@ def nav(current=False):
         <a class="brand" href="{BLOG}" data-same-tab>furyengi<span>.blog</span></a>
         <nav class="nav-links" aria-label="Blog navigation">
           <a href="{BLOG}" data-same-tab{cur}>Writing</a>
+          <a href="{SITE}album/" data-same-tab>Album</a>
           <a href="{SITE}" data-same-tab>Portfolio</a>
           <a href="{SITE}Mahmud_CV.pdf">CV</a>
         </nav>
@@ -156,6 +157,7 @@ def footer():
         <span>© MMXXVI {AUTHOR}</span>
         <nav aria-label="Footer">
           <a href="{SITE}" data-same-tab>Portfolio</a>
+          <a href="{SITE}album/" data-same-tab>Album</a>
           <a href="https://github.com/furyengi">GitHub</a>
           <a href="https://x.com/furyengi">X</a>
         </nav>
@@ -427,9 +429,22 @@ def main():
     urls += [(SITE + path, mod, freq, pri) for path, mod, freq, pri in STATIC_PAGES]
     urls += [(BLOG, latest, "weekly", "0.9")]
     urls += [(p["url"], p["modified"], "monthly", "0.8") for p in posts]
-    sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    album_entries = []
+    entries_file = ROOT / "_album" / "entries.json"
+    if entries_file.exists():
+        album_entries = json.loads(entries_file.read_text(encoding="utf-8"))
+    sm = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+    )
     for loc, mod, freq, pri in urls:
         sm += f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{mod}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>\n  </url>\n"
+    for e in album_entries:
+        sm += f"  <url>\n    <loc>{e['loc']}</loc>\n    <lastmod>{e['lastmod']}</lastmod>\n    <changefreq>{e['changefreq']}</changefreq>\n    <priority>{e['priority']}</priority>\n"
+        for image in e["images"]:
+            sm += f"    <image:image>\n      <image:loc>{image}</image:loc>\n    </image:image>\n"
+        sm += "  </url>\n"
     write("sitemap.xml", sm + "</urlset>\n")
 
     # llms files

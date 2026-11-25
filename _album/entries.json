@@ -1,0 +1,57 @@
+[
+  {
+    "loc": "https://furyengi.cv/album/",
+    "lastmod": "2026-11-25",
+    "changefreq": "weekly",
+    "priority": "0.8",
+    "images": []
+  },
+  {
+    "loc": "https://furyengi.cv/album/work-and-projects/",
+    "lastmod": "2026-11-25",
+    "changefreq": "weekly",
+    "priority": "0.7",
+    "images": [
+      "https://furyengi.cv/album/work-and-projects/runxr-self-hosted-ci-cd-platform/runxr-self-hosted-ci-cd-platform-1265.jpg",
+      "https://furyengi.cv/album/work-and-projects/evnar-secrets-manager/evnar-secrets-manager-1265.jpg",
+      "https://furyengi.cv/album/work-and-projects/galendesk-pharmacy-dashboard/galendesk-pharmacy-dashboard-1600.jpg",
+      "https://furyengi.cv/album/work-and-projects/marigold-player-video-library/marigold-player-video-library-1600.jpg"
+    ]
+  },
+  {
+    "loc": "https://furyengi.cv/album/work-and-projects/runxr-self-hosted-ci-cd-platform/",
+    "lastmod": "2026-11-25",
+    "changefreq": "monthly",
+    "priority": "0.6",
+    "images": [
+      "https://furyengi.cv/album/work-and-projects/runxr-self-hosted-ci-cd-platform/runxr-self-hosted-ci-cd-platform-1265.jpg"
+    ]
+  },
+  {
+    "loc": "https://furyengi.cv/album/work-and-projects/evnar-secrets-manager/",
+    "lastmod": "2026-11-25",
+    "changefreq": "monthly",
+    "priority": "0.6",
+    "images": [
+      "https://furyengi.cv/album/work-and-projects/evnar-secrets-manager/evnar-secrets-manager-1265.jpg"
+    ]
+  },
+  {
+    "loc": "https://furyengi.cv/album/work-and-projects/galendesk-pharmacy-dashboard/",
+    "lastmod": "2026-11-25",
+    "changefreq": "monthly",
+    "priority": "0.6",
+    "images": [
+      "https://furyengi.cv/album/work-and-projects/galendesk-pharmacy-dashboard/galendesk-pharmacy-dashboard-1600.jpg"
+    ]
+  },
+  {
+    "loc": "https://furyengi.cv/album/work-and-projects/marigold-player-video-library/",
+    "lastmod": "2026-11-25",
+    "changefreq": "monthly",
+    "priority": "0.6",
+    "images": [
+      "https://furyengi.cv/album/work-and-projects/marigold-player-video-library/marigold-player-video-library-1600.jpg"
+    ]
+  }
+]

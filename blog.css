@@ -702,7 +702,8 @@ svg.i {
   .feature { grid-template-columns: 1fr; }
   .feature .thumb { aspect-ratio: 16 / 9; min-height: 0; }
   .feature .thumb img { min-height: 0; }
-  .subscribe { grid-template-columns: 1fr; }
+  .subscribe { grid-template-columns: minmax(0, 1fr); }
+  .newsletter-form input { min-width: 0; }
 }
 
 @media (max-width: 560px) {
@@ -718,6 +719,13 @@ svg.i {
   .pager { grid-template-columns: 1fr; }
   .pager .next, .pager .prev { grid-column: auto; text-align: left; }
   .newsletter-form button { width: 100%; }
+}
+
+/* Very narrow phones (<= 360px): let the nav links drop to their own row instead of overflowing. */
+@media (max-width: 360px) {
+  .nav-inner { flex-wrap: wrap; row-gap: 2px; padding-block: 8px; }
+  .nav-links { width: 100%; justify-content: space-between; }
+  .nav-links a { padding: 7px 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
